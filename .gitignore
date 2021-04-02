@@ -1,0 +1,9 @@
+.vscode
+data
+
+docker/nerdsviajantes_com.sql
+
+src/python/tcc-env
+
+src/python/notebooks/__pycache__
+
