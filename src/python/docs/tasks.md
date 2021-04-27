@@ -10,6 +10,11 @@
   * Sugestões: download, &nbsp (avaliar em posts de verdade), blog
 * Remover textos entre colchetes (Exemplo: [caption ... ])
 
+## Treinamento
+
+* Excelente post: [https://towardsdatascience.com/basic-nlp-on-the-texts-of-harry-potter-topic-modeling-with-latent-dirichlet-allocation-f3c00f77b0f5](https://towardsdatascience.com/basic-nlp-on-the-texts-of-harry-potter-topic-modeling-with-latent-dirichlet-allocation-f3c00f77b0f5)
+  * Checar [código fonte](https://github.com/raffg/harry_potter_nlp/blob/master/LDA.ipynb)
+
 ## Similaridade entre textos
 
 * Usando LDA
@@ -18,3 +23,5 @@
 ## Trabalho futuro
 
 * Avaliar uso de collocations
+* Avaliar eliminação de palavras por frequência
+* Testar diferentes tipos de stemmer

@@ -72,3 +72,32 @@ def remover_papeis_parede(posts):
     posts = posts[~papel_parede].reset_index(drop=True)
 
     return posts
+
+# No notebook de exploracao eu explico porque o numero default 42.
+def remover_posts_pequenos(posts, limite=42):
+    posts['n_characters'] = posts['content'].str.len()
+    posts.query("n_characters>=" + str(limite), inplace=True)
+
+    return posts
+
+def limpar_posts(posts,
+    limpar_especificos = True,
+    limpar_papel_parede = True,
+    limpar_pequenos = True
+):
+    
+    if limpar_especificos:
+        posts = remover_posts_especificos(posts)
+
+    if limpar_papel_parede:
+        posts = remover_papeis_parede(posts)
+
+    if limpar_pequenos:
+        posts = remover_posts_pequenos(posts)
+
+    return posts
+
+if __name__ == "__main__":
+    import pandas as pd
+    posts = pd.DataFrame(data = {'name': ['Cerro Torre', 'Cerro Catedral'] })
+    print(limpar_posts(posts))
