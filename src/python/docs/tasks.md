@@ -24,4 +24,12 @@
 
 * Avaliar uso de collocations
 * Avaliar eliminação de palavras por frequência
+  * Para o LDA é muito importante eliminar stopwords e palavras raras para evitar de o modelo fazer sobrecompensação
+* Avaliar variações dos parâmetros alpha (tópicos em documentos) e eta (palavras em tópicos)
 * Testar diferentes tipos de stemmer
+* Avaliar uso de biterm model para documentos pequenos
+  * [Referência](https://pdfs.semanticscholar.org/f499/5dc2a4eb901594578e3780a6f33dee02dad1.pdf)
+
+### Documentação
+
+* Após o treinamento, pegar um texto e mostrar graficamente a distribuição de tópicos para aquela documento, conforme exemplo no post [https://www.kaggle.com/ktattan/lda-and-document-similarity](https://www.kaggle.com/ktattan/lda-and-document-similarity)

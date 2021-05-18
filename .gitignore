@@ -7,3 +7,9 @@ src/python/tcc-env
 
 src/python/notebooks/__pycache__
 
+src/python/docs/relatorio/*.aux
+src/python/docs/relatorio/*.log
+src/python/docs/relatorio/*.toc
+src/python/docs/relatorio/*.pdf
+# !src/python/docs/relatorio/*.tex
+

@@ -33,3 +33,8 @@
 ## General Medium posts
 
 * [Collocations in NLP using NLTK library](https://towardsdatascience.com/collocations-in-nlp-using-nltk-library-2541002998db)
+
+
+## Outros
+
+* [Latex tutorial](https://www.overleaf.com/learn/latex/Sections_and_chapters)

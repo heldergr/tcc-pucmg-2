@@ -1,0 +1,36 @@
+\section{Treinamento de modelo}
+
+Treinamento de modelo para sugestão de posts para determinados conteúdos.
+
+\subsection{LDA}
+
+LDA é um algoritmo de aprendizagem não supervisionado que associa tópicos a documentos. Documentos são como textos e cada um pode conter mais de um tópico.
+Tópicos são formados por palavras e uma mesma palavra pode fazer parte de mais de um tópico, ou seja, uma mesma palavra contribui para a formação de vários 
+tópicos. Os tópicos são descobertos durante o treinamento do modelo mas a quantidade de tópicos deve ser especificada a priori.
+
+Após o treinamento do modelo um documento tem uma distribuição discrete de tópicos e um tópico tem uma distribuição discreta de palavras. 
+
+Como exemplo temos... COLOCAR AQUI EXEMPLO DE UM DOCUMENTO, SEUS TÓPICOS E AS PALAVRAS QUE COMPOEM O TÓPICO.
+
+\begin{itemize}
+    \item DÚVIDA: DEVO EXPLICAR COM MAIS DETALHES A IMPLEMENTAÇÃO DO LDA? ACREDITO QUE NÃO...
+\end{itemize}
+
+Há vários tipos de uso para o algoritmo LDA, como entender melhor o tipo de documento um determinado conjunto de palavras (notícias, artigo na wikipedia, 
+negócios), quantificar as palavras mais usadas e mais importantes em um texto ou mesmo encontrar semelhanças e recomendações de documentos. 
+
+Neste trabalho eu usei LDA para encontrar semalhança entre textos de acordo com os tópicos do modelo treinado e fazer recomendações com base em textos novos.
+
+LDA não tem boa performance com documentos curtos, como tweets, por exemplo, pois ele infere parâmetros a partir da observação de palavras e se não há palavras
+suficientes não há as condições necessárias para um bom aproveitamento.
+
+LDA é um algoritmo que trabalha com modelos do tipo bag of words, ou seja, não há importância na ordem das palavras. Outros algoritmos funcionam bem com sentençãs
+estruturadas.
+
+\subsubsection{Hiperparâmetros}
+
+\begin{itemize}
+    \item $\alpha$: Um valor baixo indica que documentos contém poucos tópicos contribuindo para os mesmos
+    \item $\eta$: Um valor baixo indica que tópicos contém poucas palavras contribuindo para os mesmos, enquanto em um valor alto pode haver maior sobreposição 
+    de palavras entre tópicos diferentes
+\end{itemize}
