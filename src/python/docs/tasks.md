@@ -22,7 +22,12 @@
 
 ## Trabalho futuro
 
+* Melhores Destinos
+  * Ideia: pegar um intervalo de paginas de indices de promocoes, baixar as promocoes do intervalo e treinar com elas
+  * https://www.melhoresdestinos.com.br/promocao/page/300
 * Avaliar uso de collocations
+* Análise de distribuição de tokens por documento após fazer limpezas
+  * Mostrar histograma com tamanho (len(tokenized)) dos documentos
 * Avaliar eliminação de palavras por frequência
   * Para o LDA é muito importante eliminar stopwords e palavras raras para evitar de o modelo fazer sobrecompensação
 * Avaliar variações dos parâmetros alpha (tópicos em documentos) e eta (palavras em tópicos)

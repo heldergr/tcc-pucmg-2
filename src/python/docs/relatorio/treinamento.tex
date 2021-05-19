@@ -34,3 +34,34 @@ estruturadas.
     \item $\eta$: Um valor baixo indica que tópicos contém poucas palavras contribuindo para os mesmos, enquanto em um valor alto pode haver maior sobreposição 
     de palavras entre tópicos diferentes
 \end{itemize}
+
+\subsection{Semelhança entre documentos para textos desconhecidos}
+
+Ao obter a distribuição de frequência de palavras em um novo texto o gensim apenas considera as palavras existentes no dicionário original que foram usadas para 
+treinar o modelo, descartando aquelas que não existiam. Estas últimas não serão consideradas na distribuição de tópicos. Isto é um problema na definição dos tópicos
+do novo texto mas importante para identificar semelhanças com os documentos originais.
+
+Uma forma de mitigar o problema acima é tentar fazer com que os dados de treinamento sejam o mais abrangente possível.
+
+\subsubsection{Cálculo de semelhança (Similarity query)}
+
+Com base na distribuição de tópicos em um novo texto nós podemos calcular a semalhança dele com outros documentos, por exemplo aqueles usados no treinamento
+do modelo. No caso deste trabalho será feita a comparação com os posts do blog Nerds Viajantes. Para o cálculo da semelhança nós usaremos uma métrica chamada
+\textbf{distância Jensen-Shannon} para encontrar os documentos que apresentam maior semalhança.
+
+Esta métrica determina o quão próximos estatisticamente falando dois documentos estão próximos, comparando a divergência entre a distribuição de tópicos
+entre eles. Esta distância é simétrica, ou seja, a distância entre dois documentos A e B é a mesma de B e A, o que está de acordo com o propósito deste trabalho.
+
+Para distribuições discretas P e Q, a \textbf{divergência Jensen-Shannon}, JSD, é definida como:
+
+\[JSD(P||Q) = 1/2D(P||M) + 1/2D(Q||M)\]
+
+onde \(M = 1/2(P + Q)\)
+
+A raiz quadrada da \textbf{divergência Jensen-Shannon} é a \textbf{distância Jensen-Shannon}: \(\sqrt{JSD(P||Q)}\)
+
+Quanto menor a \textbf{Jensen-Shannon distance} maior é a semelhança entre duas distrições, ou seja, maior a semelhança entre dois documentos.
+
+Para encontrar os documentos mais semelhantes a um novo texto nós calculamos as probabilidades dos tópicos do novo texto e calculamos a 
+\textbf{distância Jensen-Shannon} deste para os textos aos quais queremos comparar (usando as probabilidades dos tópicos deles) e ordenamos pelas 
+menores distâncias para obter os mais semelhantes.
