@@ -1,0 +1,67 @@
+\section{Treinamento de modelo}
+
+Treinamento de modelo para sugestão de posts para determinados conteúdos.
+
+\subsection{LDA}
+
+LDA é um algoritmo de aprendizagem não supervisionado que associa tópicos a documentos. Documentos são como textos e cada um pode conter mais de um tópico.
+Tópicos são formados por palavras e uma mesma palavra pode fazer parte de mais de um tópico, ou seja, uma mesma palavra contribui para a formação de vários 
+tópicos. Os tópicos são descobertos durante o treinamento do modelo mas a quantidade de tópicos deve ser especificada a priori.
+
+Após o treinamento do modelo um documento tem uma distribuição discrete de tópicos e um tópico tem uma distribuição discreta de palavras. 
+
+Como exemplo temos... COLOCAR AQUI EXEMPLO DE UM DOCUMENTO, SEUS TÓPICOS E AS PALAVRAS QUE COMPOEM O TÓPICO.
+
+\begin{itemize}
+    \item DÚVIDA: DEVO EXPLICAR COM MAIS DETALHES A IMPLEMENTAÇÃO DO LDA? ACREDITO QUE NÃO...
+\end{itemize}
+
+Há vários tipos de uso para o algoritmo LDA, como entender melhor o tipo de documento um determinado conjunto de palavras (notícias, artigo na wikipedia, 
+negócios), quantificar as palavras mais usadas e mais importantes em um texto ou mesmo encontrar semelhanças e recomendações de documentos. 
+
+Neste trabalho eu usei LDA para encontrar semalhança entre textos de acordo com os tópicos do modelo treinado e fazer recomendações com base em textos novos.
+
+LDA não tem boa performance com documentos curtos, como tweets, por exemplo, pois ele infere parâmetros a partir da observação de palavras e se não há palavras
+suficientes não há as condições necessárias para um bom aproveitamento.
+
+LDA é um algoritmo que trabalha com modelos do tipo bag of words, ou seja, não há importância na ordem das palavras. Outros algoritmos funcionam bem com sentençãs
+estruturadas.
+
+\subsubsection{Hiperparâmetros}
+
+\begin{itemize}
+    \item $\alpha$: Um valor baixo indica que documentos contém poucos tópicos contribuindo para os mesmos
+    \item $\eta$: Um valor baixo indica que tópicos contém poucas palavras contribuindo para os mesmos, enquanto em um valor alto pode haver maior sobreposição 
+    de palavras entre tópicos diferentes
+\end{itemize}
+
+\subsection{Semelhança entre documentos para textos desconhecidos}
+
+Ao obter a distribuição de frequência de palavras em um novo texto o gensim apenas considera as palavras existentes no dicionário original que foram usadas para 
+treinar o modelo, descartando aquelas que não existiam. Estas últimas não serão consideradas na distribuição de tópicos. Isto é um problema na definição dos tópicos
+do novo texto mas importante para identificar semelhanças com os documentos originais.
+
+Uma forma de mitigar o problema acima é tentar fazer com que os dados de treinamento sejam o mais abrangente possível.
+
+\subsubsection{Cálculo de semelhança (Similarity query)}
+
+Com base na distribuição de tópicos em um novo texto nós podemos calcular a semalhança dele com outros documentos, por exemplo aqueles usados no treinamento
+do modelo. No caso deste trabalho será feita a comparação com os posts do blog Nerds Viajantes. Para o cálculo da semelhança nós usaremos uma métrica chamada
+\textbf{distância Jensen-Shannon} para encontrar os documentos que apresentam maior semalhança.
+
+Esta métrica determina o quão próximos estatisticamente falando dois documentos estão próximos, comparando a divergência entre a distribuição de tópicos
+entre eles. Esta distância é simétrica, ou seja, a distância entre dois documentos A e B é a mesma de B e A, o que está de acordo com o propósito deste trabalho.
+
+Para distribuições discretas P e Q, a \textbf{divergência Jensen-Shannon}, JSD, é definida como:
+
+\[JSD(P||Q) = 1/2D(P||M) + 1/2D(Q||M)\]
+
+onde \(M = 1/2(P + Q)\)
+
+A raiz quadrada da \textbf{divergência Jensen-Shannon} é a \textbf{distância Jensen-Shannon}: \(\sqrt{JSD(P||Q)}\)
+
+Quanto menor a \textbf{Jensen-Shannon distance} maior é a semelhança entre duas distrições, ou seja, maior a semelhança entre dois documentos.
+
+Para encontrar os documentos mais semelhantes a um novo texto nós calculamos as probabilidades dos tópicos do novo texto e calculamos a 
+\textbf{distância Jensen-Shannon} deste para os textos aos quais queremos comparar (usando as probabilidades dos tópicos deles) e ordenamos pelas 
+menores distâncias para obter os mais semelhantes.
