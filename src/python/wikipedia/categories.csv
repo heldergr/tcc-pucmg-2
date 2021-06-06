@@ -1,146 +1,388 @@
-,_id,pageid,ns,title,type,download,parent
-0,60b368e9f25e4f45f45ff5ae,3395687,14,Categoria:!Artigos por importância sobre Argentina,subcat,Check,
-1,60b368e9f25e4f45f45ff5af,3700876,14,Categoria:!Artigos por qualidade sobre Argentina,subcat,Check,
-2,60b368e9f25e4f45f45ff5b0,3699279,14,Categoria:!Artigos sobre Argentina por reavaliar,subcat,Check,
-3,60b368e9f25e4f45f45ff5b1,3003965,14,Categoria:!Esboços sobre a Argentina,subcat,Check,
-4,60b368e9f25e4f45f45ff5b2,2316734,14,Categoria:!Portal Argentina,subcat,Check,
-5,60b368e9f25e4f45f45ff5b3,2476268,14,Categoria:!Predefinições sobre a Argentina,subcat,Check,
-6,60b368e9f25e4f45f45ff5b4,3395689,14,Categoria:!WikiProjeto:Argentina,subcat,Check,
-7,60b368e9f25e4f45f45ff5b5,4562944,14,Categoria:Ciência e tecnologia na Argentina,subcat,Check,
-8,60b368e9f25e4f45f45ff5b6,439497,14,Categoria:Cultura da Argentina,subcat,Check,
-9,60b368e9f25e4f45f45ff5b7,439528,14,Categoria:Economia da Argentina,subcat,Check,
-10,60b368e9f25e4f45f45ff5b8,2039113,14,Categoria:Educação na Argentina,subcat,Check,
-11,60b368e9f25e4f45f45ff5b9,67826,14,Categoria:Geografia da Argentina,subcat,Done,
-12,60b368e9f25e4f45f45ff5ba,148415,14,Categoria:História da Argentina,subcat,Done,
-13,60b368e9f25e4f45f45ff5bb,2060768,14,Categoria:Listas da Argentina,subcat,Check,
-14,60b368e9f25e4f45f45ff5bc,178774,14,Categoria:Política da Argentina,subcat,Done,
-15,60b368e9f25e4f45f45ff5bd,2964158,14,Categoria:Saúde na Argentina,subcat,Check,
-16,60b368e9f25e4f45f45ff5be,1861964,14,Categoria:Sociedade da Argentina,subcat,Done,
-17,60b36bb4f25e4f45f45ff5ee,199887,14,Categoria:!Esboços sobre geografia da Argentina,subcat,Done,67826.0
-18,60b36bb4f25e4f45f45ff5ef,1859203,14,Categoria:Acidentes geográficos da Argentina,subcat,Done,67826.0
-19,60b36bb4f25e4f45f45ff5f0,439525,14,Categoria:Demografia da Argentina,subcat,Done,67826.0
-20,60b36bb4f25e4f45f45ff5f1,2037050,14,Categoria:Fronteiras da Argentina,subcat,Done,67826.0
-21,60b36bb4f25e4f45f45ff5f2,2464777,14,Categoria:Geologia da Argentina,subcat,Done,67826.0
-22,60b36bb4f25e4f45f45ff5f3,98041,14,Categoria:Hidrografia da Argentina,subcat,Check,67826.0
-23,60b36bb4f25e4f45f45ff5f4,5359760,14,Categoria:Listas de geografia da Argentina,subcat,Done,67826.0
-24,60b36bb4f25e4f45f45ff5f5,2039114,14,Categoria:Localidades da Argentina,subcat,Done,67826.0
-25,60b36bb4f25e4f45f45ff5f6,2547449,14,Categoria:Meio ambiente da Argentina,subcat,Done,67826.0
-26,60b36bb4f25e4f45f45ff5f7,2151516,14,Categoria:Parques da Argentina,subcat,Done,67826.0
-27,60b36bb4f25e4f45f45ff5f8,1034296,14,Categoria:Portos da Argentina,subcat,Check,67826.0
-28,60b36bb4f25e4f45f45ff5f9,5079160,14,Categoria:Pradarias da Argentina,subcat,Done,67826.0
-29,60b36bb4f25e4f45f45ff5fa,1498368,14,Categoria:Regiões geográficas da Argentina,subcat,Check,67826.0
-30,60b36bb4f25e4f45f45ff5fb,1645079,14,Categoria:Relevo da Argentina,subcat,Check,67826.0
-31,60b36bb4f25e4f45f45ff5fc,1498369,14,Categoria:Subdivisões da Argentina,subcat,Done,67826.0
-32,60b36e43f25e4f45f45ff601,3789724,14,Categoria:Parques de Buenos Aires,subcat,Check,2151516.0
-33,60b36e43f25e4f45f45ff602,2061830,14,Categoria:Monumentos naturais da Argentina,subcat,Done,2151516.0
-34,60b36e43f25e4f45f45ff603,1150382,14,Categoria:Parques nacionais da Argentina,subcat,Done,2151516.0
-35,60b37241f25e4f45f45ff628,5359762,14,Categoria:Listas de acidentes geográficos da Argentina,subcat,Done,1859203.0
-36,60b37241f25e4f45f45ff629,4598896,14,Categoria:Arquipélagos da Argentina,subcat,Check,1859203.0
-37,60b37241f25e4f45f45ff62a,2912659,14,Categoria:Cabos da Argentina,subcat,Done,1859203.0
-38,60b37241f25e4f45f45ff62b,4152823,14,Categoria:Corpos de água da Argentina,subcat,Done,1859203.0
-39,60b37241f25e4f45f45ff62c,2867326,14,Categoria:Desertos da Argentina,subcat,Done,1859203.0
-40,60b37241f25e4f45f45ff62d,3262356,14,Categoria:Estreitos da Argentina,subcat,Done,1859203.0
-41,60b37241f25e4f45f45ff62e,3008808,14,Categoria:Geografia marítima da Argentina,subcat,Check,1859203.0
-42,60b37241f25e4f45f45ff62f,3460824,14,Categoria:Glaciares da Argentina,subcat,Done,1859203.0
-43,60b37241f25e4f45f45ff630,1167045,14,Categoria:Ilhas da Argentina,subcat,Check,1859203.0
-44,60b37241f25e4f45f45ff631,2061798,14,Categoria:Lagos da Argentina,subcat,Done,1859203.0
-45,60b37241f25e4f45f45ff632,575725,14,Categoria:Montanhas da Argentina,subcat,Done,1859203.0
-46,60b37241f25e4f45f45ff633,3472174,14,Categoria:Passos de montanha da Argentina,subcat,Done,1859203.0
-47,60b37241f25e4f45f45ff634,3612303,14,Categoria:Penínsulas da Argentina,subcat,Check,1859203.0
-48,60b37241f25e4f45f45ff635,2117054,14,Categoria:Quedas de água da Argentina,subcat,Check,1859203.0
-49,60b37241f25e4f45f45ff636,65861,14,Categoria:Rios da Argentina,subcat,Done,1859203.0
-50,60b37241f25e4f45f45ff637,3442871,14,Categoria:Nascentes da Argentina,subcat,Check,1859203.0
-51,60b37241f25e4f45f45ff638,1134166,14,Categoria:Vulcões da Argentina,subcat,Done,1859203.0
-52,60b3743ff25e4f45f45ff689,5412037,14,Categoria:Zona vulcânica do Sul,subcat,Done,1134166.0
-53,60b377eaf25e4f45f45ff6ee,4328697,14,Categoria:História da Argentina por período,subcat,Check,148415.0
-54,60b377eaf25e4f45f45ff6ef,6318980,14,Categoria:História da Argentina por tema,subcat,Check,148415.0
-55,60b377eaf25e4f45f45ff6f0,6318990,14,Categoria:História das localidades da Argentina,subcat,Check,148415.0
-56,60b377eaf25e4f45f45ff6f1,1444663,14,Categoria:Batalhas envolvendo a Argentina,subcat,Check,148415.0
-57,60b377eaf25e4f45f45ff6f2,4063241,14,Categoria:Estados extintos da Argentina,subcat,Check,148415.0
-58,60b377eaf25e4f45f45ff6f3,5497444,14,Categoria:Eventos na Argentina,subcat,Check,148415.0
-59,60b377eaf25e4f45f45ff6f4,5500975,14,Categoria:Extinções na Argentina,subcat,Check,148415.0
-60,60b377eaf25e4f45f45ff6f5,5503244,14,Categoria:Fundações na Argentina,subcat,Check,148415.0
-61,60b377eaf25e4f45f45ff6f6,3471462,14,Categoria:Golpes de Estado na Argentina,subcat,Check,148415.0
-62,60b377eaf25e4f45f45ff6f7,2097502,14,Categoria:Guerra Suja na Argentina,subcat,Check,148415.0
-63,60b377eaf25e4f45f45ff6f8,1672107,14,Categoria:Guerras envolvendo a Argentina,subcat,Check,148415.0
-64,60b377eaf25e4f45f45ff6f9,1508170,14,Categoria:Historiadores da Argentina,subcat,Check,148415.0
-65,60b377eaf25e4f45f45ff6fa,2515242,14,Categoria:Independência da Argentina,subcat,Check,148415.0
-66,60b377eaf25e4f45f45ff6fb,4981156,14,Categoria:Manifestações e protestos na Argentina,subcat,Check,148415.0
-67,60b377eaf25e4f45f45ff6fc,1736955,14,Categoria:Missões jesuíticas,subcat,Check,148415.0
-68,60b377eaf25e4f45f45ff6fd,2829495,14,Categoria:Processo de Reorganização Nacional,subcat,Check,148415.0
-69,60b377eaf25e4f45f45ff6fe,2040992,14,Categoria:Tratados da Argentina,subcat,Check,148415.0
-70,60b377ecf25e4f45f45ff715,5908333,14,Categoria:!Predefinições sobre política da Argentina,subcat,Check,178774.0
-71,60b377ecf25e4f45f45ff716,5908257,14,Categoria:Política de Buenos Aires,subcat,Check,178774.0
-72,60b377ecf25e4f45f45ff717,507201,14,Categoria:Direito da Argentina,subcat,Check,178774.0
-73,60b377ecf25e4f45f45ff718,2547427,14,Categoria:Energia na Argentina,subcat,Check,178774.0
-74,60b377ecf25e4f45f45ff719,5597688,14,Categoria:Extrema-direita na Argentina,subcat,Check,178774.0
-75,60b377ecf25e4f45f45ff71a,345708,14,Categoria:Forças armadas da Argentina,subcat,Check,178774.0
-76,60b377ecf25e4f45f45ff71b,2571102,14,Categoria:Governo da Argentina,subcat,Check,178774.0
-77,60b377ecf25e4f45f45ff71c,6318998,14,Categoria:História política da Argentina,subcat,Check,178774.0
-78,60b377ecf25e4f45f45ff71d,5364216,14,Categoria:Peronismo,subcat,Check,178774.0
-79,60b377ecf25e4f45f45ff71e,109314,14,Categoria:Políticos da Argentina,subcat,Check,178774.0
-80,60b377ecf25e4f45f45ff71f,2158419,14,Categoria:Programa nuclear da Argentina,subcat,Check,178774.0
-81,60b377ecf25e4f45f45ff720,2222826,14,Categoria:Relações exteriores da Argentina,subcat,Check,178774.0
-82,60b377ecf25e4f45f45ff721,6486930,14,Categoria:!Esboços sobre política da Argentina,subcat,Check,178774.0
-83,60b377edf25e4f45f45ff724,2669739,14,Categoria:Criminalidade na Argentina,subcat,Check,1861964.0
-84,60b377edf25e4f45f45ff725,3471829,14,Categoria:Famílias da Argentina,subcat,Check,1861964.0
-85,60b377edf25e4f45f45ff726,4170059,14,Categoria:LGBT na Argentina,subcat,Check,1861964.0
-86,60b377edf25e4f45f45ff727,5632855,14,Categoria:Maçonaria na Argentina,subcat,Check,1861964.0
-87,60b377edf25e4f45f45ff728,4982556,14,Categoria:Morte na Argentina,subcat,Check,1861964.0
-88,60b377edf25e4f45f45ff729,6525382,14,Categoria:Mulheres na Argentina,subcat,Check,1861964.0
-89,60b377edf25e4f45f45ff72a,1283530,14,Categoria:Organizações da Argentina,subcat,Check,1861964.0
-90,60b377edf25e4f45f45ff72b,4137881,14,Categoria:Prêmios da Argentina,subcat,Check,1861964.0
-91,60b377edf25e4f45f45ff72c,3815769,14,Categoria:Religião na Argentina,subcat,Check,1861964.0
-92,60b377edf25e4f45f45ff72d,2475521,14,Categoria:Suicidas da Argentina,subcat,Check,1861964.0
-93,60b377f1f25e4f45f45ff7fb,22348,14,Categoria:Argentinos,subcat,Check,439525.0
-94,60b377f1f25e4f45f45ff7fc,2801492,14,Categoria:Diáspora argentina,subcat,Check,439525.0
-95,60b377f1f25e4f45f45ff7fd,2215136,14,Categoria:Grupos étnicos da Argentina,subcat,Check,439525.0
-96,60b377f1f25e4f45f45ff7fe,4131886,14,Categoria:Imigrações na Argentina,subcat,Check,439525.0
-97,60b377f1f25e4f45f45ff7ff,2214755,14,Categoria:Línguas da Argentina,subcat,Check,439525.0
-98,60b377f2f25e4f45f45ff800,2842130,14,Categoria:Fronteira Argentina-Bolívia,subcat,Check,2037050.0
-99,60b377f2f25e4f45f45ff801,2037049,14,Categoria:Fronteira Argentina-Brasil,subcat,Check,2037050.0
-100,60b377f2f25e4f45f45ff802,2842108,14,Categoria:Fronteira Argentina-Chile,subcat,Check,2037050.0
-101,60b377f2f25e4f45f45ff803,2842088,14,Categoria:Fronteira Argentina-Paraguai,subcat,Check,2037050.0
-102,60b377f2f25e4f45f45ff804,6529460,14,Categoria:Rios fronteiriços da Argentina,subcat,Check,2037050.0
-103,60b377f2f25e4f45f45ff805,4166054,14,Categoria:Territórios disputados pela Argentina,subcat,Check,2037050.0
-104,60b377f2f25e4f45f45ff806,2842122,14,Categoria:Fronteira Argentina-Uruguai,subcat,Check,2037050.0
-105,60b377f4f25e4f45f45ff808,3331528,14,Categoria:Minas da Argentina,subcat,Check,2464777.0
-106,60b377f4f25e4f45f45ff809,4764784,14,Categoria:Mineração na Argentina,subcat,Check,2464777.0
-107,60b377f4f25e4f45f45ff80a,2577331,14,Categoria:Sismos na Argentina,subcat,Check,2464777.0
-108,60b377f6f25e4f45f45ff80c,5721114,14,Categoria:Listas de bairros da Argentina,subcat,Check,5359760.0
-109,60b377f7f25e4f45f45ff810,3467098,14,Categoria:Localidades rurais da Argentina,subcat,Check,2039114.0
-110,60b377f7f25e4f45f45ff811,1827524,14,Categoria:Localidades de Adolfo Alsina (Argentina),subcat,Check,2039114.0
-111,60b377f7f25e4f45f45ff812,1830461,14,Categoria:Localidades de Adolfo Gonzales Chaves (Argentina),subcat,Check,2039114.0
-112,60b377f7f25e4f45f45ff813,1830499,14,Categoria:Localidades de Alberti (Argentina),subcat,Check,2039114.0
-113,60b377f7f25e4f45f45ff814,1831909,14,Categoria:Localidades de Almirante Brown (Argentina),subcat,Check,2039114.0
-114,60b377f7f25e4f45f45ff815,1831937,14,Categoria:Localidades de Arrecifes (Argentina),subcat,Check,2039114.0
-115,60b377f7f25e4f45f45ff816,1865805,14,Categoria:Localidades de Avellaneda (Argentina),subcat,Check,2039114.0
-116,60b377f7f25e4f45f45ff817,1865832,14,Categoria:Localidades de Ayacucho (Argentina),subcat,Check,2039114.0
-117,60b377f7f25e4f45f45ff818,1865861,14,Categoria:Localidades de Azul (Argentina),subcat,Check,2039114.0
-118,60b377f7f25e4f45f45ff819,1866494,14,Categoria:Localidades de Bahía Blanca (Argentina),subcat,Check,2039114.0
-119,60b377f7f25e4f45f45ff81a,1866524,14,Categoria:Localidades de Balcarce (Argentina),subcat,Check,2039114.0
-120,60b377f7f25e4f45f45ff81b,1866565,14,Categoria:Localidades de Baradero (Argentina),subcat,Check,2039114.0
-121,60b377f7f25e4f45f45ff81c,1866573,14,Categoria:Localidades de Benito Juárez (Argentina),subcat,Check,2039114.0
-122,60b377f7f25e4f45f45ff81d,3467124,14,Categoria:Localidades de Buenos Aires,subcat,Check,2039114.0
-123,60b377f7f25e4f45f45ff81e,29285,14,Categoria:Cidades da Argentina,subcat,Check,2039114.0
-124,60b377f9f25e4f45f45ff820,4152824,14,Categoria:Água na Argentina,subcat,Check,2547449.0
-125,60b377f9f25e4f45f45ff821,5549505,14,Categoria:Ambientalistas da Argentina,subcat,Check,2547449.0
-126,60b377f9f25e4f45f45ff822,4325159,14,Categoria:Áreas protegidas da Argentina,subcat,Check,2547449.0
-127,60b377f9f25e4f45f45ff823,4134370,14,Categoria:Biota da Argentina,subcat,Check,2547449.0
-128,60b377f9f25e4f45f45ff824,1645088,14,Categoria:Clima da Argentina,subcat,Check,2547449.0
-129,60b377f9f25e4f45f45ff825,4619857,14,Categoria:Conservação na Argentina,subcat,Check,2547449.0
-130,60b377f9f25e4f45f45ff826,4159334,14,Categoria:História natural da Argentina,subcat,Check,2547449.0
-131,60b377f9f25e4f45f45ff827,496862,14,Categoria:Patrimônio Mundial da UNESCO na Argentina,subcat,Check,2547449.0
-132,60b377fcf25e4f45f45ff82f,439489,14,Categoria:Bairros da Argentina,subcat,Check,1498369.0
-133,60b377fcf25e4f45f45ff830,530667,14,Categoria:Comunas da Argentina,subcat,Check,1498369.0
-134,60b377fcf25e4f45f45ff831,439535,14,Categoria:Departamentos da Argentina,subcat,Check,1498369.0
-135,60b377fcf25e4f45f45ff832,2272990,14,Categoria:Municípios da Argentina,subcat,Check,1498369.0
-136,60b377fcf25e4f45f45ff833,65137,14,Categoria:Províncias da Argentina,subcat,Check,1498369.0
-137,60b377fcf25e4f45f45ff834,2541162,14,Categoria:Regiões metropolitanas da Argentina,subcat,Check,1498369.0
-138,60b377fef25e4f45f45ff836,4150686,14,Categoria:Aquíferos da Argentina,subcat,Check,4152823.0
-139,60b377fef25e4f45f45ff837,4581959,14,Categoria:Estuários da Argentina,subcat,Check,4152823.0
-140,60b377fff25e4f45f45ff84a,5944605,14,Categoria:Rio Iguaçu,subcat,Check,65861.0
-141,60b377fff25e4f45f45ff84b,4772450,14,Categoria:Rio Paraguai,subcat,Check,65861.0
-142,60b377fff25e4f45f45ff84c,1470275,14,Categoria:Rio Paraná,subcat,Check,65861.0
-143,60b377fff25e4f45f45ff84d,5523264,14,Categoria:Rio da Prata,subcat,Check,65861.0
-144,60b377fff25e4f45f45ff84e,1470284,14,Categoria:Rio Uruguai,subcat,Check,65861.0
+,_id,pageid,ns,title,type,download,country,parent
+0,60b368e9f25e4f45f45ff5ae,3395687,14,Categoria:!Artigos por importância sobre Argentina,subcat,Skeep,Argentina,
+1,60b368e9f25e4f45f45ff5af,3700876,14,Categoria:!Artigos por qualidade sobre Argentina,subcat,Skeep,Argentina,
+2,60b368e9f25e4f45f45ff5b0,3699279,14,Categoria:!Artigos sobre Argentina por reavaliar,subcat,Skeep,Argentina,
+3,60b368e9f25e4f45f45ff5b1,3003965,14,Categoria:!Esboços sobre a Argentina,subcat,Check,Argentina,
+4,60b368e9f25e4f45f45ff5b2,2316734,14,Categoria:!Portal Argentina,subcat,Skeep,Argentina,
+5,60b368e9f25e4f45f45ff5b3,2476268,14,Categoria:!Predefinições sobre a Argentina,subcat,Skeep,Argentina,
+6,60b368e9f25e4f45f45ff5b4,3395689,14,Categoria:!WikiProjeto:Argentina,subcat,Skeep,Argentina,
+7,60b368e9f25e4f45f45ff5b5,4562944,14,Categoria:Ciência e tecnologia na Argentina,subcat,Skeep,Argentina,
+8,60b368e9f25e4f45f45ff5b6,439497,14,Categoria:Cultura da Argentina,subcat,Check,Argentina,
+9,60b368e9f25e4f45f45ff5b7,439528,14,Categoria:Economia da Argentina,subcat,Skeep,Argentina,
+10,60b368e9f25e4f45f45ff5b8,2039113,14,Categoria:Educação na Argentina,subcat,Skeep,Argentina,
+11,60b368e9f25e4f45f45ff5b9,67826,14,Categoria:Geografia da Argentina,subcat,Done,Argentina,
+12,60b368e9f25e4f45f45ff5ba,148415,14,Categoria:História da Argentina,subcat,Done,Argentina,
+13,60b368e9f25e4f45f45ff5bb,2060768,14,Categoria:Listas da Argentina,subcat,Check,Argentina,
+14,60b368e9f25e4f45f45ff5bc,178774,14,Categoria:Política da Argentina,subcat,Done,Argentina,
+15,60b368e9f25e4f45f45ff5bd,2964158,14,Categoria:Saúde na Argentina,subcat,Skeep,Argentina,
+16,60b368e9f25e4f45f45ff5be,1861964,14,Categoria:Sociedade da Argentina,subcat,Done,Argentina,
+17,60b36bb4f25e4f45f45ff5ee,199887,14,Categoria:!Esboços sobre geografia da Argentina,subcat,Done,Argentina,67826.0
+18,60b36bb4f25e4f45f45ff5ef,1859203,14,Categoria:Acidentes geográficos da Argentina,subcat,Done,Argentina,67826.0
+19,60b36bb4f25e4f45f45ff5f0,439525,14,Categoria:Demografia da Argentina,subcat,Done,Argentina,67826.0
+20,60b36bb4f25e4f45f45ff5f1,2037050,14,Categoria:Fronteiras da Argentina,subcat,Done,Argentina,67826.0
+21,60b36bb4f25e4f45f45ff5f2,2464777,14,Categoria:Geologia da Argentina,subcat,Skeep,Argentina,67826.0
+22,60b36bb4f25e4f45f45ff5f3,98041,14,Categoria:Hidrografia da Argentina,subcat,Check,Argentina,67826.0
+23,60b36bb4f25e4f45f45ff5f4,5359760,14,Categoria:Listas de geografia da Argentina,subcat,Done,Argentina,67826.0
+24,60b36bb4f25e4f45f45ff5f5,2039114,14,Categoria:Localidades da Argentina,subcat,Done,Argentina,67826.0
+25,60b36bb4f25e4f45f45ff5f6,2547449,14,Categoria:Meio ambiente da Argentina,subcat,Done,Argentina,67826.0
+26,60b36bb4f25e4f45f45ff5f7,2151516,14,Categoria:Parques da Argentina,subcat,Done,Argentina,67826.0
+27,60b36bb4f25e4f45f45ff5f8,1034296,14,Categoria:Portos da Argentina,subcat,Skeep,Argentina,67826.0
+28,60b36bb4f25e4f45f45ff5f9,5079160,14,Categoria:Pradarias da Argentina,subcat,Done,Argentina,67826.0
+29,60b36bb4f25e4f45f45ff5fa,1498368,14,Categoria:Regiões geográficas da Argentina,subcat,Check,Argentina,67826.0
+30,60b36bb4f25e4f45f45ff5fb,1645079,14,Categoria:Relevo da Argentina,subcat,Check,Argentina,67826.0
+31,60b36bb4f25e4f45f45ff5fc,1498369,14,Categoria:Subdivisões da Argentina,subcat,Done,Argentina,67826.0
+32,60b36e43f25e4f45f45ff601,3789724,14,Categoria:Parques de Buenos Aires,subcat,Skeep,Argentina,2151516.0
+33,60b36e43f25e4f45f45ff602,2061830,14,Categoria:Monumentos naturais da Argentina,subcat,Done,Argentina,2151516.0
+34,60b36e43f25e4f45f45ff603,1150382,14,Categoria:Parques nacionais da Argentina,subcat,Done,Argentina,2151516.0
+35,60b37241f25e4f45f45ff628,5359762,14,Categoria:Listas de acidentes geográficos da Argentina,subcat,Done,Argentina,1859203.0
+36,60b37241f25e4f45f45ff629,4598896,14,Categoria:Arquipélagos da Argentina,subcat,Check,Argentina,1859203.0
+37,60b37241f25e4f45f45ff62a,2912659,14,Categoria:Cabos da Argentina,subcat,Done,Argentina,1859203.0
+38,60b37241f25e4f45f45ff62b,4152823,14,Categoria:Corpos de água da Argentina,subcat,Done,Argentina,1859203.0
+39,60b37241f25e4f45f45ff62c,2867326,14,Categoria:Desertos da Argentina,subcat,Done,Argentina,1859203.0
+40,60b37241f25e4f45f45ff62d,3262356,14,Categoria:Estreitos da Argentina,subcat,Done,Argentina,1859203.0
+41,60b37241f25e4f45f45ff62e,3008808,14,Categoria:Geografia marítima da Argentina,subcat,Check,Argentina,1859203.0
+42,60b37241f25e4f45f45ff62f,3460824,14,Categoria:Glaciares da Argentina,subcat,Done,Argentina,1859203.0
+43,60b37241f25e4f45f45ff630,1167045,14,Categoria:Ilhas da Argentina,subcat,Check,Argentina,1859203.0
+44,60b37241f25e4f45f45ff631,2061798,14,Categoria:Lagos da Argentina,subcat,Done,Argentina,1859203.0
+45,60b37241f25e4f45f45ff632,575725,14,Categoria:Montanhas da Argentina,subcat,Done,Argentina,1859203.0
+46,60b37241f25e4f45f45ff633,3472174,14,Categoria:Passos de montanha da Argentina,subcat,Done,Argentina,1859203.0
+47,60b37241f25e4f45f45ff634,3612303,14,Categoria:Penínsulas da Argentina,subcat,Check,Argentina,1859203.0
+48,60b37241f25e4f45f45ff635,2117054,14,Categoria:Quedas de água da Argentina,subcat,Check,Argentina,1859203.0
+49,60b37241f25e4f45f45ff636,65861,14,Categoria:Rios da Argentina,subcat,Done,Argentina,1859203.0
+50,60b37241f25e4f45f45ff637,3442871,14,Categoria:Nascentes da Argentina,subcat,Check,Argentina,1859203.0
+51,60b37241f25e4f45f45ff638,1134166,14,Categoria:Vulcões da Argentina,subcat,Done,Argentina,1859203.0
+52,60b3743ff25e4f45f45ff689,5412037,14,Categoria:Zona vulcânica do Sul,subcat,Done,Argentina,1134166.0
+53,60b377eaf25e4f45f45ff6ee,4328697,14,Categoria:História da Argentina por período,subcat,Check,Argentina,148415.0
+54,60b377eaf25e4f45f45ff6ef,6318980,14,Categoria:História da Argentina por tema,subcat,Check,Argentina,148415.0
+55,60b377eaf25e4f45f45ff6f0,6318990,14,Categoria:História das localidades da Argentina,subcat,Check,Argentina,148415.0
+56,60b377eaf25e4f45f45ff6f1,1444663,14,Categoria:Batalhas envolvendo a Argentina,subcat,Check,Argentina,148415.0
+57,60b377eaf25e4f45f45ff6f2,4063241,14,Categoria:Estados extintos da Argentina,subcat,Check,Argentina,148415.0
+58,60b377eaf25e4f45f45ff6f3,5497444,14,Categoria:Eventos na Argentina,subcat,Check,Argentina,148415.0
+59,60b377eaf25e4f45f45ff6f4,5500975,14,Categoria:Extinções na Argentina,subcat,Check,Argentina,148415.0
+60,60b377eaf25e4f45f45ff6f5,5503244,14,Categoria:Fundações na Argentina,subcat,Check,Argentina,148415.0
+61,60b377eaf25e4f45f45ff6f6,3471462,14,Categoria:Golpes de Estado na Argentina,subcat,Check,Argentina,148415.0
+62,60b377eaf25e4f45f45ff6f7,2097502,14,Categoria:Guerra Suja na Argentina,subcat,Check,Argentina,148415.0
+63,60b377eaf25e4f45f45ff6f8,1672107,14,Categoria:Guerras envolvendo a Argentina,subcat,Check,Argentina,148415.0
+64,60b377eaf25e4f45f45ff6f9,1508170,14,Categoria:Historiadores da Argentina,subcat,Check,Argentina,148415.0
+65,60b377eaf25e4f45f45ff6fa,2515242,14,Categoria:Independência da Argentina,subcat,Check,Argentina,148415.0
+66,60b377eaf25e4f45f45ff6fb,4981156,14,Categoria:Manifestações e protestos na Argentina,subcat,Check,Argentina,148415.0
+67,60b377eaf25e4f45f45ff6fc,1736955,14,Categoria:Missões jesuíticas,subcat,Check,Argentina,148415.0
+68,60b377eaf25e4f45f45ff6fd,2829495,14,Categoria:Processo de Reorganização Nacional,subcat,Check,Argentina,148415.0
+69,60b377eaf25e4f45f45ff6fe,2040992,14,Categoria:Tratados da Argentina,subcat,Check,Argentina,148415.0
+70,60b377ecf25e4f45f45ff715,5908333,14,Categoria:!Predefinições sobre política da Argentina,subcat,Check,Argentina,178774.0
+71,60b377ecf25e4f45f45ff716,5908257,14,Categoria:Política de Buenos Aires,subcat,Check,Argentina,178774.0
+72,60b377ecf25e4f45f45ff717,507201,14,Categoria:Direito da Argentina,subcat,Check,Argentina,178774.0
+73,60b377ecf25e4f45f45ff718,2547427,14,Categoria:Energia na Argentina,subcat,Check,Argentina,178774.0
+74,60b377ecf25e4f45f45ff719,5597688,14,Categoria:Extrema-direita na Argentina,subcat,Check,Argentina,178774.0
+75,60b377ecf25e4f45f45ff71a,345708,14,Categoria:Forças armadas da Argentina,subcat,Check,Argentina,178774.0
+76,60b377ecf25e4f45f45ff71b,2571102,14,Categoria:Governo da Argentina,subcat,Check,Argentina,178774.0
+77,60b377ecf25e4f45f45ff71c,6318998,14,Categoria:História política da Argentina,subcat,Check,Argentina,178774.0
+78,60b377ecf25e4f45f45ff71d,5364216,14,Categoria:Peronismo,subcat,Check,Argentina,178774.0
+79,60b377ecf25e4f45f45ff71e,109314,14,Categoria:Políticos da Argentina,subcat,Check,Argentina,178774.0
+80,60b377ecf25e4f45f45ff71f,2158419,14,Categoria:Programa nuclear da Argentina,subcat,Check,Argentina,178774.0
+81,60b377ecf25e4f45f45ff720,2222826,14,Categoria:Relações exteriores da Argentina,subcat,Check,Argentina,178774.0
+82,60b377ecf25e4f45f45ff721,6486930,14,Categoria:!Esboços sobre política da Argentina,subcat,Check,Argentina,178774.0
+83,60b377edf25e4f45f45ff724,2669739,14,Categoria:Criminalidade na Argentina,subcat,Check,Argentina,1861964.0
+84,60b377edf25e4f45f45ff725,3471829,14,Categoria:Famílias da Argentina,subcat,Check,Argentina,1861964.0
+85,60b377edf25e4f45f45ff726,4170059,14,Categoria:LGBT na Argentina,subcat,Check,Argentina,1861964.0
+86,60b377edf25e4f45f45ff727,5632855,14,Categoria:Maçonaria na Argentina,subcat,Check,Argentina,1861964.0
+87,60b377edf25e4f45f45ff728,4982556,14,Categoria:Morte na Argentina,subcat,Check,Argentina,1861964.0
+88,60b377edf25e4f45f45ff729,6525382,14,Categoria:Mulheres na Argentina,subcat,Check,Argentina,1861964.0
+89,60b377edf25e4f45f45ff72a,1283530,14,Categoria:Organizações da Argentina,subcat,Check,Argentina,1861964.0
+90,60b377edf25e4f45f45ff72b,4137881,14,Categoria:Prêmios da Argentina,subcat,Check,Argentina,1861964.0
+91,60b377edf25e4f45f45ff72c,3815769,14,Categoria:Religião na Argentina,subcat,Check,Argentina,1861964.0
+92,60b377edf25e4f45f45ff72d,2475521,14,Categoria:Suicidas da Argentina,subcat,Check,Argentina,1861964.0
+93,60b377f1f25e4f45f45ff7fb,22348,14,Categoria:Argentinos,subcat,Check,Argentina,439525.0
+94,60b377f1f25e4f45f45ff7fc,2801492,14,Categoria:Diáspora argentina,subcat,Check,Argentina,439525.0
+95,60b377f1f25e4f45f45ff7fd,2215136,14,Categoria:Grupos étnicos da Argentina,subcat,Check,Argentina,439525.0
+96,60b377f1f25e4f45f45ff7fe,4131886,14,Categoria:Imigrações na Argentina,subcat,Skeep,Argentina,439525.0
+97,60b377f1f25e4f45f45ff7ff,2214755,14,Categoria:Línguas da Argentina,subcat,Skeep,Argentina,439525.0
+98,60b377f2f25e4f45f45ff800,2842130,14,Categoria:Fronteira Argentina-Bolívia,subcat,Skeep,Argentina,2037050.0
+99,60b377f2f25e4f45f45ff801,2037049,14,Categoria:Fronteira Argentina-Brasil,subcat,Skeep,Argentina,2037050.0
+100,60b377f2f25e4f45f45ff802,2842108,14,Categoria:Fronteira Argentina-Chile,subcat,Check,Argentina,2037050.0
+101,60b377f2f25e4f45f45ff803,2842088,14,Categoria:Fronteira Argentina-Paraguai,subcat,Check,Argentina,2037050.0
+102,60b377f2f25e4f45f45ff804,6529460,14,Categoria:Rios fronteiriços da Argentina,subcat,Check,Argentina,2037050.0
+103,60b377f2f25e4f45f45ff805,4166054,14,Categoria:Territórios disputados pela Argentina,subcat,Skeep,Argentina,2037050.0
+104,60b377f2f25e4f45f45ff806,2842122,14,Categoria:Fronteira Argentina-Uruguai,subcat,Skeep,Argentina,2037050.0
+105,60b377f4f25e4f45f45ff808,3331528,14,Categoria:Minas da Argentina,subcat,Skeep,Argentina,2464777.0
+106,60b377f4f25e4f45f45ff809,4764784,14,Categoria:Mineração na Argentina,subcat,Check,Argentina,2464777.0
+107,60b377f4f25e4f45f45ff80a,2577331,14,Categoria:Sismos na Argentina,subcat,Skeep,Argentina,2464777.0
+108,60b377f6f25e4f45f45ff80c,5721114,14,Categoria:Listas de bairros da Argentina,subcat,Skeep,Argentina,5359760.0
+109,60b377f7f25e4f45f45ff810,3467098,14,Categoria:Localidades rurais da Argentina,subcat,Skeep,Argentina,2039114.0
+110,60b377f7f25e4f45f45ff811,1827524,14,Categoria:Localidades de Adolfo Alsina (Argentina),subcat,Check,Argentina,2039114.0
+111,60b377f7f25e4f45f45ff812,1830461,14,Categoria:Localidades de Adolfo Gonzales Chaves (Argentina),subcat,Skeep,Argentina,2039114.0
+112,60b377f7f25e4f45f45ff813,1830499,14,Categoria:Localidades de Alberti (Argentina),subcat,Check,Argentina,2039114.0
+113,60b377f7f25e4f45f45ff814,1831909,14,Categoria:Localidades de Almirante Brown (Argentina),subcat,Check,Argentina,2039114.0
+114,60b377f7f25e4f45f45ff815,1831937,14,Categoria:Localidades de Arrecifes (Argentina),subcat,Check,Argentina,2039114.0
+115,60b377f7f25e4f45f45ff816,1865805,14,Categoria:Localidades de Avellaneda (Argentina),subcat,Check,Argentina,2039114.0
+116,60b377f7f25e4f45f45ff817,1865832,14,Categoria:Localidades de Ayacucho (Argentina),subcat,Check,Argentina,2039114.0
+117,60b377f7f25e4f45f45ff818,1865861,14,Categoria:Localidades de Azul (Argentina),subcat,Check,Argentina,2039114.0
+118,60b377f7f25e4f45f45ff819,1866494,14,Categoria:Localidades de Bahía Blanca (Argentina),subcat,Check,Argentina,2039114.0
+119,60b377f7f25e4f45f45ff81a,1866524,14,Categoria:Localidades de Balcarce (Argentina),subcat,Check,Argentina,2039114.0
+120,60b377f7f25e4f45f45ff81b,1866565,14,Categoria:Localidades de Baradero (Argentina),subcat,Check,Argentina,2039114.0
+121,60b377f7f25e4f45f45ff81c,1866573,14,Categoria:Localidades de Benito Juárez (Argentina),subcat,Check,Argentina,2039114.0
+122,60b377f7f25e4f45f45ff81d,3467124,14,Categoria:Localidades de Buenos Aires,subcat,Check,Argentina,2039114.0
+123,60b377f7f25e4f45f45ff81e,29285,14,Categoria:Cidades da Argentina,subcat,Check,Argentina,2039114.0
+124,60b377f9f25e4f45f45ff820,4152824,14,Categoria:Água na Argentina,subcat,Check,Argentina,2547449.0
+125,60b377f9f25e4f45f45ff821,5549505,14,Categoria:Ambientalistas da Argentina,subcat,Check,Argentina,2547449.0
+126,60b377f9f25e4f45f45ff822,4325159,14,Categoria:Áreas protegidas da Argentina,subcat,Check,Argentina,2547449.0
+127,60b377f9f25e4f45f45ff823,4134370,14,Categoria:Biota da Argentina,subcat,Check,Argentina,2547449.0
+128,60b377f9f25e4f45f45ff824,1645088,14,Categoria:Clima da Argentina,subcat,Check,Argentina,2547449.0
+129,60b377f9f25e4f45f45ff825,4619857,14,Categoria:Conservação na Argentina,subcat,Check,Argentina,2547449.0
+130,60b377f9f25e4f45f45ff826,4159334,14,Categoria:História natural da Argentina,subcat,Check,Argentina,2547449.0
+131,60b377f9f25e4f45f45ff827,496862,14,Categoria:Patrimônio Mundial da UNESCO na Argentina,subcat,Check,Argentina,2547449.0
+132,60b377fcf25e4f45f45ff82f,439489,14,Categoria:Bairros da Argentina,subcat,Check,Argentina,1498369.0
+133,60b377fcf25e4f45f45ff830,530667,14,Categoria:Comunas da Argentina,subcat,Check,Argentina,1498369.0
+134,60b377fcf25e4f45f45ff831,439535,14,Categoria:Departamentos da Argentina,subcat,Check,Argentina,1498369.0
+135,60b377fcf25e4f45f45ff832,2272990,14,Categoria:Municípios da Argentina,subcat,Check,Argentina,1498369.0
+136,60b377fcf25e4f45f45ff833,65137,14,Categoria:Províncias da Argentina,subcat,Check,Argentina,1498369.0
+137,60b377fcf25e4f45f45ff834,2541162,14,Categoria:Regiões metropolitanas da Argentina,subcat,Check,Argentina,1498369.0
+138,60b377fef25e4f45f45ff836,4150686,14,Categoria:Aquíferos da Argentina,subcat,Check,Argentina,4152823.0
+139,60b377fef25e4f45f45ff837,4581959,14,Categoria:Estuários da Argentina,subcat,Check,Argentina,4152823.0
+140,60b377fff25e4f45f45ff84a,5944605,14,Categoria:Rio Iguaçu,subcat,Check,Argentina,65861.0
+141,60b377fff25e4f45f45ff84b,4772450,14,Categoria:Rio Paraguai,subcat,Check,Argentina,65861.0
+142,60b377fff25e4f45f45ff84c,1470275,14,Categoria:Rio Paraná,subcat,Check,Argentina,65861.0
+143,60b377fff25e4f45f45ff84d,5523264,14,Categoria:Rio da Prata,subcat,Check,Argentina,65861.0
+144,60b377fff25e4f45f45ff84e,1470284,14,Categoria:Rio Uruguai,subcat,Check,Argentina,65861.0
+145,60bc9aa46b45e1b4a9a89a40,3700984,14,Categoria:!Artigos por importância sobre Chile,subcat,Skeep,Chile,
+146,60bc9aa46b45e1b4a9a89a41,3700985,14,Categoria:!Artigos por qualidade sobre Chile,subcat,Skeep,Chile,
+147,60bc9aa46b45e1b4a9a89a42,3699321,14,Categoria:!Artigos sobre Chile por reavaliar,subcat,Skeep,Chile,
+148,60bc9aa46b45e1b4a9a89a43,2379014,14,Categoria:!Portal Chile,subcat,Skeep,Chile,
+149,60bc9aa46b45e1b4a9a89a44,423964,14,Categoria:!Predefinições sobre o Chile,subcat,Skeep,Chile,
+150,60bc9aa46b45e1b4a9a89a45,478950,14,Categoria:Listas do Chile,subcat,Done,Chile,
+151,60bc9aa46b45e1b4a9a89a46,4562952,14,Categoria:Ciência e tecnologia no Chile,subcat,Skeep,Chile,
+152,60bc9aa46b45e1b4a9a89a47,494086,14,Categoria:Cultura do Chile,subcat,Check,Chile,
+153,60bc9aa46b45e1b4a9a89a48,105127,14,Categoria:Economia do Chile,subcat,Skeep,Chile,
+154,60bc9aa46b45e1b4a9a89a49,2039123,14,Categoria:Educação no Chile,subcat,Check,Chile,
+155,60bc9aa46b45e1b4a9a89a4a,100654,14,Categoria:Geografia do Chile,subcat,Done,Chile,
+156,60bc9aa46b45e1b4a9a89a4b,185719,14,Categoria:História do Chile,subcat,Done,Chile,
+157,60bc9aa46b45e1b4a9a89a4c,76181,14,Categoria:Política do Chile,subcat,Skeep,Chile,
+158,60bc9aa46b45e1b4a9a89a4d,6131249,14,Categoria:Saúde no Chile,subcat,Skeep,Chile,
+159,60bc9aa46b45e1b4a9a89a4e,3922878,14,Categoria:Sociedade do Chile,subcat,Check,Chile,
+160,60bc9b4c6b45e1b4a9a89a5f,5401039,14,Categoria:Listas de acidentes geográficos do Chile,subcat,Done,Chile,478950.0
+161,60bc9b4e6b45e1b4a9a89a6f,913225,14,Categoria:!Esboços sobre geografia do Chile,subcat,Done,Chile,100654.0
+162,60bc9b4e6b45e1b4a9a89a70,1859224,14,Categoria:Acidentes geográficos do Chile,subcat,Done,Chile,100654.0
+163,60bc9b4e6b45e1b4a9a89a71,4935985,14,Categoria:Clima do Chile,subcat,Done,Chile,100654.0
+164,60bc9b4e6b45e1b4a9a89a72,863184,14,Categoria:Demografia do Chile,subcat,Check,Chile,100654.0
+165,60bc9b4e6b45e1b4a9a89a73,2867322,14,Categoria:Desertos do Chile,subcat,Done,Chile,100654.0
+166,60bc9b4e6b45e1b4a9a89a74,2082458,14,Categoria:Fronteiras do Chile,subcat,Check,Chile,100654.0
+167,60bc9b4e6b45e1b4a9a89a75,5411377,14,Categoria:Geografia da Ilha de Páscoa,subcat,Done,Chile,100654.0
+168,60bc9b4e6b45e1b4a9a89a76,3927317,14,Categoria:Geografia do Chile por região,subcat,Done,Chile,100654.0
+169,60bc9b4e6b45e1b4a9a89a77,2464766,14,Categoria:Geologia do Chile,subcat,Done,Chile,100654.0
+170,60bc9b4e6b45e1b4a9a89a78,1379267,14,Categoria:Hidrografia do Chile,subcat,Done,Chile,100654.0
+171,60bc9b4e6b45e1b4a9a89a79,5665967,14,Categoria:Localidades do Chile,subcat,Done,Chile,100654.0
+172,60bc9b4e6b45e1b4a9a89a7a,4135052,14,Categoria:Meio ambiente do Chile,subcat,Done,Chile,100654.0
+173,60bc9b4e6b45e1b4a9a89a7b,4125130,14,Categoria:Parques do Chile,subcat,Done,Chile,100654.0
+174,60bc9b4e6b45e1b4a9a89a7c,2262625,14,Categoria:Regiões geográficas do Chile,subcat,Done,Chile,100654.0
+175,60bc9b4e6b45e1b4a9a89a7d,5302400,14,Categoria:Pontos extremos do Chile,subcat,Done,Chile,100654.0
+176,60bc9b4e6b45e1b4a9a89a7e,2343521,14,Categoria:Portos do Chile,subcat,Check,Chile,100654.0
+177,60bc9b4e6b45e1b4a9a89a7f,5079202,14,Categoria:Pradarias do Chile,subcat,Check,Chile,100654.0
+178,60bc9b4e6b45e1b4a9a89a80,1645161,14,Categoria:Relevo do Chile,subcat,Done,Chile,100654.0
+179,60bc9b4e6b45e1b4a9a89a81,742877,14,Categoria:Subdivisões do Chile,subcat,Done,Chile,100654.0
+180,60bc9b4e6b45e1b4a9a89a82,1645169,14,Categoria:Vegetação do Chile,subcat,Check,Chile,100654.0
+181,60bc9b506b45e1b4a9a89aab,4907782,14,Categoria:História do Chile por período,subcat,Skeep,Chile,185719.0
+182,60bc9b506b45e1b4a9a89aac,6338274,14,Categoria:História do Chile por tema,subcat,Check,Chile,185719.0
+183,60bc9b506b45e1b4a9a89aad,4205125,14,Categoria:Arqueologia do Chile,subcat,Skeep,Chile,185719.0
+184,60bc9b506b45e1b4a9a89aae,1444661,14,Categoria:Batalhas envolvendo o Chile,subcat,Check,Chile,185719.0
+185,60bc9b506b45e1b4a9a89aaf,4848013,14,Categoria:Ditadura militar no Chile (1973-1990),subcat,Skeep,Chile,185719.0
+186,60bc9b506b45e1b4a9a89ab0,4063223,14,Categoria:Estados extintos do Chile,subcat,Check,Chile,185719.0
+187,60bc9b506b45e1b4a9a89ab1,6504245,14,Categoria:Eventos no Chile,subcat,Check,Chile,185719.0
+188,60bc9b506b45e1b4a9a89ab2,2050410,14,Categoria:Fortificações do Chile,subcat,Check,Chile,185719.0
+189,60bc9b506b45e1b4a9a89ab3,5616768,14,Categoria:Fundações no Chile,subcat,Check,Chile,185719.0
+190,60bc9b506b45e1b4a9a89ab4,3482491,14,Categoria:Golpes de Estado no Chile,subcat,Check,Chile,185719.0
+191,60bc9b506b45e1b4a9a89ab5,1443959,14,Categoria:Governadores do Reino do Chile,subcat,Check,Chile,185719.0
+192,60bc9b506b45e1b4a9a89ab6,1979620,14,Categoria:Guerras envolvendo o Chile,subcat,Check,Chile,185719.0
+193,60bc9b506b45e1b4a9a89ab7,839123,14,Categoria:Historiadores do Chile,subcat,Check,Chile,185719.0
+194,60bc9b506b45e1b4a9a89ab8,4855054,14,Categoria:Imigrações no Chile,subcat,Check,Chile,185719.0
+195,60bc9b506b45e1b4a9a89ab9,3167082,14,Categoria:Manifestações e protestos no Chile,subcat,Check,Chile,185719.0
+196,60bc9b506b45e1b4a9a89aba,2347478,14,Categoria:Monumentos nacionais do Chile,subcat,Check,Chile,185719.0
+197,60bc9b506b45e1b4a9a89abb,185730,14,Categoria:Presidentes do Chile,subcat,Check,Chile,185719.0
+198,60bc9b506b45e1b4a9a89abc,2041031,14,Categoria:Tratados do Chile,subcat,Check,Chile,185719.0
+199,60bca1d26b45e1b4a9a89abf,3307228,14,Categoria:Chile na Antártida,subcat,Check,Chile,4562952.0
+200,60bca1d26b45e1b4a9a89ac0,153953,14,Categoria:Cientistas do Chile,subcat,Check,Chile,4562952.0
+201,60bca1d26b45e1b4a9a89ac1,2209138,14,Categoria:Observatórios astronômicos do Chile,subcat,Check,Chile,4562952.0
+202,60bca1d66b45e1b4a9a89ac4,4935982,14,Categoria:Enchentes no Chile,subcat,Check,Chile,4935985.0
+203,60bca1d76b45e1b4a9a89ac6,5589133,14,Categoria:Deserto de Atacama,subcat,Done,Chile,2867322.0
+204,60bca1d96b45e1b4a9a89ac7,5411378,14,Categoria:Acidentes geográficos da Ilha de Páscoa,subcat,Check,Chile,5411377.0
+205,60bca1db6b45e1b4a9a89ac8,3935198,14,Categoria:Geografia da Região da Araucanía,subcat,Done,Chile,3927317.0
+206,60bca1db6b45e1b4a9a89ac9,3936972,14,Categoria:Geografia da Região de Aisén,subcat,Done,Chile,3927317.0
+207,60bca1db6b45e1b4a9a89aca,3927720,14,Categoria:Geografia da Região de Antofagasta,subcat,Check,Chile,3927317.0
+208,60bca1db6b45e1b4a9a89acb,3927316,14,Categoria:Geografia da Região de Arica e Parinacota,subcat,Check,Chile,3927317.0
+209,60bca1db6b45e1b4a9a89acc,3928290,14,Categoria:Geografia da Região de Atacama,subcat,Done,Chile,3927317.0
+210,60bca1db6b45e1b4a9a89acd,3934528,14,Categoria:Geografia da Região de Biobío,subcat,Check,Chile,3927317.0
+211,60bca1db6b45e1b4a9a89ace,3928423,14,Categoria:Geografia da Região de Coquimbo,subcat,Check,Chile,3927317.0
+212,60bca1db6b45e1b4a9a89acf,3936454,14,Categoria:Geografia da Região de Los Lagos,subcat,Done,Chile,3927317.0
+213,60bca1db6b45e1b4a9a89ad0,3936073,14,Categoria:Geografia da Região de Los Rios,subcat,Done,Chile,3927317.0
+214,60bca1db6b45e1b4a9a89ad1,3937374,14,Categoria:Geografia da Região de Magalhães e Antártica Chilena,subcat,Done,Chile,3927317.0
+215,60bca1db6b45e1b4a9a89ad2,3933953,14,Categoria:Geografia da Região de Maule,subcat,Check,Chile,3927317.0
+216,60bca1db6b45e1b4a9a89ad3,5814477,14,Categoria:Geografia da Região de Ñuble,subcat,Check,Chile,3927317.0
+217,60bca1db6b45e1b4a9a89ad4,3930110,14,Categoria:Geografia da Região de O'Higgins,subcat,Done,Chile,3927317.0
+218,60bca1db6b45e1b4a9a89ad5,3927493,14,Categoria:Geografia da Região de Tarapacá,subcat,Check,Chile,3927317.0
+219,60bca1db6b45e1b4a9a89ad6,3930242,14,Categoria:Geografia da Região Metropolitana de Santiago,subcat,Done,Chile,3927317.0
+220,60bca1db6b45e1b4a9a89ad7,3928579,14,Categoria:Geografia de Valparaíso (região),subcat,Check,Chile,3927317.0
+221,60bca1dc6b45e1b4a9a89add,2192723,14,Categoria:Geólogos do Chile,subcat,Check,Chile,2464766.0
+222,60bca1dc6b45e1b4a9a89ade,1088987,14,Categoria:Minas do Chile,subcat,Check,Chile,2464766.0
+223,60bca1dc6b45e1b4a9a89adf,4764781,14,Categoria:Mineração no Chile,subcat,Check,Chile,2464766.0
+224,60bca1dc6b45e1b4a9a89ae0,2577297,14,Categoria:Sismos no Chile,subcat,Check,Chile,2464766.0
+225,60bca1de6b45e1b4a9a89ae1,4155783,14,Categoria:Água no Chile,subcat,Done,Chile,4135052.0
+226,60bca1de6b45e1b4a9a89ae2,5200257,14,Categoria:Áreas protegidas do Chile,subcat,Done,Chile,4135052.0
+227,60bca1de6b45e1b4a9a89ae3,4134390,14,Categoria:Biota do Chile,subcat,Check,Chile,4135052.0
+228,60bca1de6b45e1b4a9a89ae4,2347499,14,Categoria:Conservação no Chile,subcat,Check,Chile,4135052.0
+229,60bca1de6b45e1b4a9a89ae5,5589135,14,Categoria:Ecorregiões do Chile,subcat,Done,Chile,4135052.0
+230,60bca1de6b45e1b4a9a89ae6,4348331,14,Categoria:Energia no Chile,subcat,Check,Chile,4135052.0
+231,60bca1de6b45e1b4a9a89ae7,4159328,14,Categoria:História natural do Chile,subcat,Done,Chile,4135052.0
+232,60bca1df6b45e1b4a9a89ae9,1593174,14,Categoria:Parques nacionais do Chile,subcat,Done,Chile,4125130.0
+233,60bca1e16b45e1b4a9a89aea,2262608,14,Categoria:Patagônia,subcat,Done,Chile,2262625.0
+234,60bca1e16b45e1b4a9a89aeb,2736296,14,Categoria:Zonas geográficas gerais do Chile,subcat,Done,Chile,2262625.0
+235,60bca1e46b45e1b4a9a89af2,233079,14,Categoria:Comunas do Chile,subcat,Check,Chile,742877.0
+236,60bca1e46b45e1b4a9a89af3,232966,14,Categoria:Províncias do Chile,subcat,Done,Chile,742877.0
+237,60bca1e46b45e1b4a9a89af4,100653,14,Categoria:Regiões do Chile,subcat,Done,Chile,742877.0
+238,60bca1e46b45e1b4a9a89af5,5603620,14,Categoria:Regiões metropolitanas do Chile,subcat,Check,Chile,742877.0
+239,60bca3816b45e1b4a9a89bc4,4598890,14,Categoria:Arquipélagos do Chile,subcat,Check,Chile,1859224.0
+240,60bca3816b45e1b4a9a89bc5,2912660,14,Categoria:Cabos do Chile,subcat,Done,Chile,1859224.0
+241,60bca3816b45e1b4a9a89bc6,4763375,14,Categoria:Cordilheiras do Chile,subcat,Check,Chile,1859224.0
+242,60bca3816b45e1b4a9a89bc7,4155784,14,Categoria:Corpos de água do Chile,subcat,Done,Chile,1859224.0
+243,60bca3816b45e1b4a9a89bc8,3262343,14,Categoria:Estreitos do Chile,subcat,Done,Chile,1859224.0
+244,60bca3816b45e1b4a9a89bc9,4605864,14,Categoria:Falésias do Chile,subcat,Check,Chile,1859224.0
+245,60bca3816b45e1b4a9a89bca,3460848,14,Categoria:Glaciares do Chile,subcat,Done,Chile,1859224.0
+246,60bca3816b45e1b4a9a89bcb,1124918,14,Categoria:Ilhas do Chile,subcat,Check,Chile,1859224.0
+247,60bca3816b45e1b4a9a89bcc,737679,14,Categoria:Montanhas do Chile,subcat,Done,Chile,1859224.0
+248,60bca3816b45e1b4a9a89bcd,3472175,14,Categoria:Passos de montanha do Chile,subcat,Done,Chile,1859224.0
+249,60bca3816b45e1b4a9a89bce,2374272,14,Categoria:Penínsulas do Chile,subcat,Check,Chile,1859224.0
+250,60bca3816b45e1b4a9a89bcf,5589141,14,Categoria:Planaltos do Chile,subcat,Done,Chile,1859224.0
+251,60bca3816b45e1b4a9a89bd0,178780,14,Categoria:Praias do Chile,subcat,Check,Chile,1859224.0
+252,60bca3816b45e1b4a9a89bd1,1438407,14,Categoria:Rios do Chile,subcat,Check,Chile,1859224.0
+253,60bca3816b45e1b4a9a89bd2,4336280,14,Categoria:Vales do Chile,subcat,Done,Chile,1859224.0
+254,60bca3816b45e1b4a9a89bd3,1134119,14,Categoria:Vulcões do Chile,subcat,Done,Chile,1859224.0
+255,60bca3856b45e1b4a9a89bd4,1646765,14,Categoria:Planícies do Chile,subcat,Done,Chile,1645161.0
+256,60bca3866b45e1b4a9a89bde,4969031,14,Categoria:Observatório Europeu do Sul,subcat,Check,Chile,5589133.0
+257,60bca3886b45e1b4a9a89be0,3935190,14,Categoria:Comunas da Região da Araucanía,subcat,Check,Chile,3935198.0
+258,60bca3896b45e1b4a9a89be1,3936969,14,Categoria:Comunas da Região de Aisén,subcat,Check,Chile,3936972.0
+259,60bca38b6b45e1b4a9a89be2,3928285,14,Categoria:Comunas da Região de Atacama,subcat,Check,Chile,3928290.0
+260,60bca38d6b45e1b4a9a89be4,3937009,14,Categoria:Comunas da Região de Magalhães e Antártica Chilena,subcat,Check,Chile,3937374.0
+261,60bca38d6b45e1b4a9a89be5,5302402,14,Categoria:Estreito de Magalhães,subcat,Check,Chile,3937374.0
+262,60bca38e6b45e1b4a9a89be6,3930109,14,Categoria:Comunas da Região de O'Higgins,subcat,Check,Chile,3930110.0
+263,60bca3906b45e1b4a9a89be7,5645785,14,Categoria:Geografia de Santiago (Chile),subcat,Check,Chile,3930242.0
+264,60bca3906b45e1b4a9a89be8,3930239,14,Categoria:Comunas da Região Metropolitana de Santiago,subcat,Check,Chile,3930242.0
+265,60bca3936b45e1b4a9a89bf9,6414758,14,Categoria:Peixes da Patagônia,subcat,Check,Chile,2262608.0
+266,60bca3966b45e1b4a9a89c0d,5433786,14,Categoria:Naturais do Chile por região,subcat,Done,Chile,100653.0
+267,60bca3966b45e1b4a9a89c0e,1987468,14,Categoria:Região de Aisén,subcat,Done,Chile,100653.0
+268,60bca3966b45e1b4a9a89c0f,1987472,14,Categoria:Região de Antofagasta,subcat,Check,Chile,100653.0
+269,60bca3966b45e1b4a9a89c10,1987479,14,Categoria:Região da Araucanía,subcat,Check,Chile,100653.0
+270,60bca3966b45e1b4a9a89c11,1987500,14,Categoria:Região de Arica e Parinacota,subcat,Check,Chile,100653.0
+271,60bca3966b45e1b4a9a89c12,1987502,14,Categoria:Região de Atacama,subcat,Done,Chile,100653.0
+272,60bca3966b45e1b4a9a89c13,1987508,14,Categoria:Região do Biobío,subcat,Check,Chile,100653.0
+273,60bca3966b45e1b4a9a89c14,1987510,14,Categoria:Região de Coquimbo,subcat,Check,Chile,100653.0
+274,60bca3966b45e1b4a9a89c15,1987514,14,Categoria:Região de Los Lagos,subcat,Done,Chile,100653.0
+275,60bca3966b45e1b4a9a89c16,1987518,14,Categoria:Região de Los Ríos,subcat,Check,Chile,100653.0
+276,60bca3966b45e1b4a9a89c17,1987521,14,Categoria:Região de Magallanes e da Antártica Chilena,subcat,Done,Chile,100653.0
+277,60bca3966b45e1b4a9a89c18,1987523,14,Categoria:Região do Maule,subcat,Check,Chile,100653.0
+278,60bca3966b45e1b4a9a89c19,5810381,14,Categoria:Região do Ñuble,subcat,Check,Chile,100653.0
+279,60bca3966b45e1b4a9a89c1a,1987525,14,Categoria:Região de O'Higgins,subcat,Check,Chile,100653.0
+280,60bca3966b45e1b4a9a89c1b,1987529,14,Categoria:Região Metropolitana de Santiago,subcat,Check,Chile,100653.0
+281,60bca3966b45e1b4a9a89c1c,1987546,14,Categoria:Região de Tarapacá,subcat,Check,Chile,100653.0
+282,60bca3966b45e1b4a9a89c1d,1980584,14,Categoria:Valparaíso (região),subcat,Check,Chile,100653.0
+283,60bca4e96b45e1b4a9a89c1f,46786,14,Categoria:Cidades do Chile,subcat,Check,Chile,5665967.0
+284,60bca4eb6b45e1b4a9a89c20,3936452,14,Categoria:Comunas da Região de Los Lagos,subcat,Check,Chile,3936454.0
+285,60bca4ed6b45e1b4a9a89c21,3936071,14,Categoria:Comunas da Região de Los Rios,subcat,Check,Chile,3936073.0
+286,60bca4ee6b45e1b4a9a89c23,4298179,14,Categoria:Transporte hidroviário no Chile,subcat,Check,Chile,4155783.0
+287,60bca4f36b45e1b4a9a89c25,4935984,14,Categoria:Desastres naturais no Chile,subcat,Check,Chile,4159328.0
+288,60bca4f56b45e1b4a9a89c4a,4943900,14,Categoria:Naturais do Chile por província,subcat,Check,Chile,232966.0
+289,60bca4f56b45e1b4a9a89c4b,4944218,14,Categoria:Antofagasta (província),subcat,Check,Chile,232966.0
+290,60bca4f56b45e1b4a9a89c4c,4944225,14,Categoria:Arauco (província),subcat,Check,Chile,232966.0
+291,60bca4f56b45e1b4a9a89c4d,4976320,14,Categoria:Arica (província),subcat,Check,Chile,232966.0
+292,60bca4f56b45e1b4a9a89c4e,5004051,14,Categoria:Cachapoal (província),subcat,Check,Chile,232966.0
+293,60bca4f56b45e1b4a9a89c4f,4944180,14,Categoria:Cautín,subcat,Check,Chile,232966.0
+294,60bca4f56b45e1b4a9a89c50,4942110,14,Categoria:Chiloé (província),subcat,Check,Chile,232966.0
+295,60bca4f56b45e1b4a9a89c51,4920985,14,Categoria:Concepción (província do Chile),subcat,Check,Chile,232966.0
+296,60bca4f56b45e1b4a9a89c52,5004080,14,Categoria:Curicó (província),subcat,Check,Chile,232966.0
+297,60bca4f56b45e1b4a9a89c53,5814465,14,Categoria:Diguillín,subcat,Check,Chile,232966.0
+298,60bca4f56b45e1b4a9a89c54,4977273,14,Categoria:Elqui,subcat,Check,Chile,232966.0
+299,60bca4f56b45e1b4a9a89c55,4944193,14,Categoria:Iquique (província),subcat,Check,Chile,232966.0
+300,60bca4f56b45e1b4a9a89c56,5814467,14,Categoria:Itata,subcat,Check,Chile,232966.0
+301,60bca4f56b45e1b4a9a89c57,4943897,14,Categoria:Limarí,subcat,Check,Chile,232966.0
+302,60bca4f56b45e1b4a9a89c58,4944213,14,Categoria:Linares (província),subcat,Check,Chile,232966.0
+303,60bca4f56b45e1b4a9a89c59,4944207,14,Categoria:Llanquihue (província),subcat,Check,Chile,232966.0
+304,60bca4f56b45e1b4a9a89c5a,5438280,14,Categoria:Los Andes (província),subcat,Check,Chile,232966.0
+305,60bca4f56b45e1b4a9a89c5b,4880419,14,Categoria:Magallanes (província),subcat,Check,Chile,232966.0
+306,60bca4f56b45e1b4a9a89c5c,4944185,14,Categoria:Maipo (província),subcat,Check,Chile,232966.0
+307,60bca4f56b45e1b4a9a89c5d,4944176,14,Categoria:Ñuble,subcat,Check,Chile,232966.0
+308,60bca4f56b45e1b4a9a89c5e,5346749,14,Categoria:Osorno (província),subcat,Check,Chile,232966.0
+309,60bca4f56b45e1b4a9a89c5f,4984939,14,Categoria:Petorca (província),subcat,Check,Chile,232966.0
+310,60bca4f56b45e1b4a9a89c60,5814466,14,Categoria:Punilla,subcat,Check,Chile,232966.0
+311,60bca4f56b45e1b4a9a89c61,4944168,14,Categoria:San Antonio (província),subcat,Check,Chile,232966.0
+312,60bca4f56b45e1b4a9a89c62,4944234,14,Categoria:San Felipe de Aconcágua,subcat,Check,Chile,232966.0
+313,60bca4f56b45e1b4a9a89c63,5438792,14,Categoria:Santiago (província),subcat,Check,Chile,232966.0
+314,60bca4f56b45e1b4a9a89c64,4912658,14,Categoria:Talagante (província),subcat,Check,Chile,232966.0
+315,60bca4f56b45e1b4a9a89c65,4925453,14,Categoria:Talca (província),subcat,Check,Chile,232966.0
+316,60bca4f56b45e1b4a9a89c66,5438291,14,Categoria:Tocopilla (província),subcat,Check,Chile,232966.0
+317,60bca4f56b45e1b4a9a89c67,5346757,14,Categoria:Valdivia (província),subcat,Check,Chile,232966.0
+318,60bca4f56b45e1b4a9a89c68,4944202,14,Categoria:Valparaíso (província),subcat,Check,Chile,232966.0
+319,60bca4f86b45e1b4a9a89c70,2552724,14,Categoria:Baías do Chile,subcat,Check,Chile,4155784.0
+320,60bca4f86b45e1b4a9a89c71,5302403,14,Categoria:Canais do Chile,subcat,Check,Chile,4155784.0
+321,60bca4f86b45e1b4a9a89c72,1379266,14,Categoria:Lagos do Chile,subcat,Check,Chile,4155784.0
+322,60bca5036b45e1b4a9a89cde,5402967,14,Categoria:Cones de cinza do Chile,subcat,Check,Chile,1134119.0
+323,60bca5036b45e1b4a9a89cdf,5401909,14,Categoria:Estratovulcões do Chile,subcat,Check,Chile,1134119.0
+324,60bca5036b45e1b4a9a89ce0,5411372,14,Categoria:Vulcões da Ilha de Páscoa,subcat,Check,Chile,1134119.0
+325,60bca5036b45e1b4a9a89ce1,5425212,14,Categoria:Maars do Chile,subcat,Check,Chile,1134119.0
+326,60bca5036b45e1b4a9a89ce2,5401907,14,Categoria:Vulcões do Chile por região,subcat,Check,Chile,1134119.0
+327,60bca5066b45e1b4a9a89ce4,5433791,14,Categoria:Naturais de Antofagasta (região),subcat,Check,Chile,5433786.0
+328,60bca5066b45e1b4a9a89ce5,5433795,14,Categoria:Naturais de Arica e Parinacota (região),subcat,Check,Chile,5433786.0
+329,60bca5066b45e1b4a9a89ce6,5433784,14,Categoria:Naturais de Tarapacá (região),subcat,Check,Chile,5433786.0
+330,60bca61a6b45e1b4a9a89d03,4562929,14,Categoria:Ciência e tecnologia na Nova Zelândia,subcat,Check,Nova Zelandia,
+331,60bca61a6b45e1b4a9a89d04,994848,14,Categoria:Cultura da Nova Zelândia,subcat,Done,Nova Zelandia,
+332,60bca61a6b45e1b4a9a89d05,486820,14,Categoria:Economia da Nova Zelândia,subcat,Check,Nova Zelandia,
+333,60bca61a6b45e1b4a9a89d06,2039047,14,Categoria:Educação na Nova Zelândia,subcat,Check,Nova Zelandia,
+334,60bca61a6b45e1b4a9a89d07,1646640,14,Categoria:Forças armadas da Nova Zelândia,subcat,Check,Nova Zelandia,
+335,60bca61a6b45e1b4a9a89d08,6080643,14,Categoria:Fósseis da Nova Zelândia,subcat,Check,Nova Zelandia,
+336,60bca61a6b45e1b4a9a89d09,134030,14,Categoria:Geografia da Nova Zelândia,subcat,Done,Nova Zelandia,
+337,60bca61a6b45e1b4a9a89d0a,924189,14,Categoria:História da Nova Zelândia,subcat,Done,Nova Zelandia,
+338,60bca61a6b45e1b4a9a89d0b,3177252,14,Categoria:Listas da Nova Zelândia,subcat,Done,Nova Zelandia,
+339,60bca61a6b45e1b4a9a89d0c,4131772,14,Categoria:Meio ambiente da Nova Zelândia,subcat,Done,Nova Zelandia,
+340,60bca61a6b45e1b4a9a89d0d,893777,14,Categoria:Mídia da Nova Zelândia,subcat,Check,Nova Zelandia,
+341,60bca61a6b45e1b4a9a89d0e,563782,14,Categoria:Niue,subcat,Check,Nova Zelandia,
+342,60bca61a6b45e1b4a9a89d0f,423663,14,Categoria:Política da Nova Zelândia,subcat,Check,Nova Zelandia,
+343,60bca61a6b45e1b4a9a89d10,3922680,14,Categoria:Sociedade da Nova Zelândia,subcat,Check,Nova Zelandia,
+344,60bca61a6b45e1b4a9a89d11,2766537,14,Categoria:Toquelau,subcat,Check,Nova Zelandia,
+345,60bca61a6b45e1b4a9a89d12,3455506,14,Categoria:!Esboços sobre a Nova Zelândia,subcat,Done,Nova Zelandia,
+346,60bca61a6b45e1b4a9a89d13,425125,14,Categoria:!Predefinições sobre a Nova Zelândia,subcat,Check,Nova Zelandia,
+347,60bca61a6b45e1b4a9a89d14,3206668,14,Categoria:!Portal Nova Zelândia,subcat,Done,Nova Zelandia,
+348,60bca6926b45e1b4a9a89d24,3467006,14,Categoria:Cultura das Ilhas Cook,subcat,Check,Nova Zelandia,994848.0
+349,60bca6926b45e1b4a9a89d25,2210168,14,Categoria:Arquitetura da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+350,60bca6926b45e1b4a9a89d26,125050,14,Categoria:Artes da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+351,60bca6926b45e1b4a9a89d27,2878692,14,Categoria:Bibliotecas da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+352,60bca6926b45e1b4a9a89d28,1125147,14,Categoria:Culinária da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+353,60bca6926b45e1b4a9a89d29,370571,14,Categoria:Desporto da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+354,60bca6926b45e1b4a9a89d2a,2083016,14,Categoria:Línguas da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+355,60bca6926b45e1b4a9a89d2b,3472985,14,Categoria:Maori,subcat,Check,Nova Zelandia,994848.0
+356,60bca6926b45e1b4a9a89d2c,1897866,14,Categoria:Museus da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+357,60bca6926b45e1b4a9a89d2d,1628662,14,Categoria:Patrimônio Mundial da UNESCO na Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+358,60bca6926b45e1b4a9a89d2e,3466998,14,Categoria:Religião na Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+359,60bca6926b45e1b4a9a89d2f,2033758,14,Categoria:Símbolos da Nova Zelândia,subcat,Check,Nova Zelandia,994848.0
+360,60bca6946b45e1b4a9a89d39,5435185,14,Categoria:Geografia das Ilhas Cook,subcat,Check,Nova Zelandia,134030.0
+361,60bca6946b45e1b4a9a89d3a,5639904,14,Categoria:Geografia de Toquelau,subcat,Check,Nova Zelandia,134030.0
+362,60bca6946b45e1b4a9a89d3b,1978489,14,Categoria:!Esboços sobre geografia da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+363,60bca6946b45e1b4a9a89d3c,2088789,14,Categoria:Acidentes geográficos da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+364,60bca6946b45e1b4a9a89d3d,2033816,14,Categoria:Demografia da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+365,60bca6946b45e1b4a9a89d3e,2867356,14,Categoria:Desertos da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+366,60bca6946b45e1b4a9a89d3f,5513179,14,Categoria:Geologia da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+367,60bca6946b45e1b4a9a89d40,3014474,14,Categoria:Hidrografia da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+368,60bca6946b45e1b4a9a89d41,1629173,14,Categoria:Parques da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+369,60bca6946b45e1b4a9a89d42,6267121,14,Categoria:Pontos extremos da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+370,60bca6946b45e1b4a9a89d43,1063362,14,Categoria:Subdivisões da Nova Zelândia,subcat,Check,Nova Zelandia,134030.0
+371,60bca6956b45e1b4a9a89d53,4907713,14,Categoria:História da Nova Zelândia por período,subcat,Check,Nova Zelandia,924189.0
+372,60bca6956b45e1b4a9a89d54,4595939,14,Categoria:Batalhas envolvendo a Nova Zelândia,subcat,Check,Nova Zelandia,924189.0
+373,60bca6956b45e1b4a9a89d55,4635182,14,Categoria:Desastres na Nova Zelândia,subcat,Check,Nova Zelandia,924189.0
+374,60bca6956b45e1b4a9a89d56,5549640,14,Categoria:História militar da Nova Zelândia,subcat,Check,Nova Zelandia,924189.0
+375,60bca6956b45e1b4a9a89d57,2500201,14,Categoria:Províncias da Nova Zelândia,subcat,Check,Nova Zelandia,924189.0
+376,60bca6956b45e1b4a9a89d58,3763540,14,Categoria:Tratados da Nova Zelândia,subcat,Check,Nova Zelandia,924189.0
+377,60bca6976b45e1b4a9a89d61,3257471,14,Categoria:Listas de Niue,subcat,Check,Nova Zelandia,3177252.0
+378,60bca6996b45e1b4a9a89d62,4131771,14,Categoria:Água na Nova Zelândia,subcat,Check,Nova Zelandia,4131772.0
+379,60bca6996b45e1b4a9a89d63,6572957,14,Categoria:Áreas protegidas da Nova Zelândia,subcat,Check,Nova Zelandia,4131772.0
+380,60bca6996b45e1b4a9a89d64,4133149,14,Categoria:Biota da Nova Zelândia,subcat,Check,Nova Zelandia,4131772.0
+381,60bca6996b45e1b4a9a89d65,4619851,14,Categoria:Conservação na Nova Zelândia,subcat,Check,Nova Zelandia,4131772.0
+382,60bca6996b45e1b4a9a89d66,4133146,14,Categoria:História natural da Nova Zelândia,subcat,Check,Nova Zelandia,4131772.0
+383,60bca69a6b45e1b4a9a89d74,6321164,14,Categoria:!Esboços sobre filmes da Nova Zelândia,subcat,Check,Nova Zelandia,3455506.0
+384,60bca69c6b45e1b4a9a89d92,3706060,14,Categoria:!Artigos por importância sobre Nova Zelândia,subcat,Check,Nova Zelandia,3206668.0
+385,60bca69c6b45e1b4a9a89d93,3706061,14,Categoria:!Artigos por qualidade sobre Nova Zelândia,subcat,Check,Nova Zelandia,3206668.0
+386,60bca69c6b45e1b4a9a89d94,3699298,14,Categoria:!Artigos sobre Nova Zelândia por reavaliar,subcat,Check,Nova Zelandia,3206668.0
