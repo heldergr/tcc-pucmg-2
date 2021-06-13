@@ -1,0 +1,26 @@
+\section{Download Wikipedia}
+
+\subsection{Download de páginas}
+
+Na wikipedia as categorias tem dois tipos de membros filhos: páginas e outras categorias.
+A estratégia de donwload de páginas envolveu escolher as categorias desejadas e fazer donwload tanto das subcategorias quanto das páginas filhas.
+
+ESCREVER SOBRE ESCOLHA DAS CATEGORIAS
+
+\subsubsection{Problemas}
+
+Primeiro problema
+
+Árvore inteiro iria ficar muito grande
+Uma mesma página foi baixada mais de uma vez já que era referenciada por mais de uma categoria. Teve caso em que a mesma página foi baixada 5 vezes pois era 
+referenciada por 5 categorias diferentes. Isto fez com que o conteúdo fosse também baixado mais de uma vez. A estratégia utilizada para resolver este problema 
+envolveu selecionar ids da páginas para download do conteúdo usando distinct e ao fazer o download marcar como pronto utilizando updatemany (inicialmente estava 
+usando) updateone, o que fez com que o conteúdo da mesma página fosse feito download mais de uma vez.
+
+\subsubsection{Solução definitiva}
+
+Para corrigir o problema optamos por trabalhar utilizamos apenas o conjunto de dados que temos no MongoDB para evitar acessos extras à API da Wikipedia.
+
+\begin{itemize}
+    \item Renomear collection de pages errada de "pages" para "pages\_incorreto". Feito no mongo shell com commando (db.pages.renameCollection('pages\_incorreto'))
+\end{itemize}
