@@ -23,4 +23,10 @@ Para corrigir o problema optamos por trabalhar utilizamos apenas o conjunto de d
 
 \begin{itemize}
     \item Renomear collection de pages errada de "pages" para "pages\_incorreto". Feito no mongo shell com commando (db.pages.renameCollection('pages\_incorreto'))
+    \item Pegar todos as páginas no incorreto e manter apenas uma por pageid. Trocar os dados de categoria por um array de categorias para o caso de quando uma 
+    página for referenciada por mais de uma categoria. 
+    \item Inserir páginas corrigidas na collection anterior
+    \item Renomear collection de páginas com conteúdo para pages\_content\_incorreto através do comando 
+    db.pages\_content.renameCollection('pages\_content\_incorreto')
+
 \end{itemize}
