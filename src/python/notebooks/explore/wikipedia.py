@@ -1,0 +1,24 @@
+from limpeza.wikipedia import WikipediaCleaner
+
+import pandas as pd
+
+class WikipediaExplorer:
+
+    def __init__(self, wikipedia_repo):
+        self.wikipedia_repo = wikipedia_repo
+
+    def create_dataframe(self):
+        pages = self.wikipedia_repo.find_all()
+        return pd.DataFrame(pages)
+
+    def show_pages_count(self, pages_df):
+        print(f'Foram encontradas {len(pages_df)} páginas com contéudo')
+
+    def explore(self):
+        print('Running wikipedia explorer...')
+        pages_df = self.create_dataframe()
+        pages_df = pages_df.drop(['_id', 'ns', 'type', 'download', 'categories', 'wikitext'], axis='columns')
+        self.show_pages_count(pages_df)
+
+        wikipedia_cleaner = WikipediaCleaner()
+        # pages_df['text_processed'] =  wikipedia_cleaner.
