@@ -1,5 +1,7 @@
 from limpeza.limpeza_texto import remover_html_tags
 
+from bs4 import BeautifulSoup
+
 class WikipediaCleaner:
 
     def __init__(self):

@@ -1,6 +1,7 @@
 from limpeza.wikipedia import WikipediaCleaner
 
 import pandas as pd
+from bs4 import BeautifulSoup
 
 class WikipediaExplorer:
 
@@ -22,3 +23,5 @@ class WikipediaExplorer:
 
         wikipedia_cleaner = WikipediaCleaner()
         # pages_df['text_processed'] =  wikipedia_cleaner.
+
+    def extract_text(self, raw_text)
