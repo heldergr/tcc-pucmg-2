@@ -24,4 +24,12 @@ class WikipediaExplorer:
         wikipedia_cleaner = WikipediaCleaner()
         # pages_df['text_processed'] =  wikipedia_cleaner.
 
-    def extract_text(self, raw_text)
+    def extract_text(self, raw_text):
+        soup = BeautifulSoup(raw_text, 'html.parser')
+        ps = soup.find_all('p')
+        pres = soup.find_all('pre')
+
+        ps_text = ' '.join([p.getText() for p in ps])
+        pres_text = ' '.join([pre.getText() for pre in pres])
+
+        return (ps_text, pres_text)
