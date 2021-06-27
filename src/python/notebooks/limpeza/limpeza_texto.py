@@ -20,7 +20,21 @@ def remover_html_tags(text):
     return re.sub(clean, '', text)
 
 def remover_pontuacoes(text):
-    tokeniser = RegexpTokenizer(r'[A-Za-z]{3,}')
+    # tokeniser = RegexpTokenizer(r'[A-Za-z]{3,}')
+
+    """
+    Tentativa de resolver problema de palavras com acento
+
+    Possibilidades:
+    - Adicionar lista de letras com acento
+    - Usar \w+ para pegar todas as palavas
+
+    Ideia adotada pelo presente momento:
+    - Usar \w+ para pegar todas as palavas
+    """
+    # tokeniser = RegexpTokenizer(r'[A-Za-z]{3,}')
+    tokeniser = RegexpTokenizer(r'\w{3,}')
+
     tokens = tokeniser.tokenize(text)
     return ' '.join(tokens)
 
@@ -59,4 +73,5 @@ def limpar_texto(texto, limpar_stopwords = True, stemming = True):
 
 if __name__ == '__main__':
     print('Modulo de limpeza de texto...')
+    print(limpar_texto('Meu nome. eh Hélder, Ribeiro!'))
     print(limpar_texto('Meu nome. eh Helder, Ribeiro!'))
