@@ -3,20 +3,11 @@ import pandas as pd
 from gensim.corpora import Dictionary
 from gensim.models import LdaModel, CoherenceModel
 
-def ajustar_modelo(documentos, num_topics = 5):
-    # Creates a dictionary, mapping words to ids
-    id2word = Dictionary(documentos)
-
-    # Mapeamento de id para palavras
-    # id2word.token2id
-    # We can see word: word id pairs in this output.
-
+def ajustar_modelo(documentos, id2word, num_topics = 13):
     # Cria corpus com base nos documentos e no mapeamento de id para palavra
     # Para cada documento faz a contagem de vezes que um determinado topico
     # aparece no documento
     corpus = [id2word.doc2bow(documento) for documento in documentos]
-
-    # print(corpus[0])
     
     lda = LdaModel(corpus=corpus, id2word=id2word, 
                num_topics=num_topics, passes=20, 
@@ -55,7 +46,7 @@ def imprimir_topicos(lda_model, num_topics):
 # Calcula probabilidades que um determinado documento tenha 
 # os topicos encontrados em um modelo lda.
 # Metodo espera um documento que ja venha divido em tokens
-def calcular_probabilidades(documento, id2word, lda_model):
+def calcular_probabilidades_documento(documento, id2word, lda_model):
     """Add probabilities for topics for a document."""
     corpus = id2word.doc2bow(documento)
 

@@ -15,7 +15,12 @@ docker run --name some-mysql -e MYSQL_ROOT_PASSWORD=my-secret-pw -d mysql:tag
 
 ### Dockerfile
 
-COLAR AQUI CONTEUDO DO DOCKERFILE
+FROM mysql:latest
+
+ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_DATABASE=tcc
+
+ADD nerdsviajantes_com.sql /docker-entrypoint-initdb.d/
 
 ### Criar imagem
 
