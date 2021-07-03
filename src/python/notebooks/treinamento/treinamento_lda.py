@@ -18,7 +18,13 @@ class TreinamentoLda:
         self.num_topics = num_topics
         self.passes = passes
 
-    def ajustar_modelo(self, documentos):
+    # dictionary = corpora.Dictionary(data['tokenized'])
+    # corpus = [dictionary.doc2bow(doc) for doc in data['tokenized']]
+    # lda = LdaModel(corpus=corpus, num_topics=num_topics, id2word=dictionary,
+    #                alpha=1e-2, eta=0.5e-2, chunksize=chunksize, minimum_probability=0.0, passes=2)
+
+
+    def ajustar_modelo(self, documentos, alpha=1e-2, eta=0.5e-2):
         # Cria dicionario
         id2word = dicionario.criar(documentos)
 
@@ -27,9 +33,12 @@ class TreinamentoLda:
         # aparece no documento
         corpus = [id2word.doc2bow(documento) for documento in documentos]
 
+        print(f'Ajustando modelo com {self.num_topics} topicos e {self.passes} passes')
+
         # Treina modelo LDA        
         lda = LdaModel(corpus=corpus, id2word=id2word, 
                 num_topics=self.num_topics, passes=self.passes, 
+                alpha=alpha, eta=eta,
                 random_state=0)
 
         return ResultadoTreinamentoLda(id2word, corpus, lda)
