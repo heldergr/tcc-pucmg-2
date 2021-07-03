@@ -17,4 +17,4 @@
     * Fazer treinamento utilizando LDA
     * Definir tópicos para cada post
         * Gravar em repositorio local para posterior comparação
-2. 
+2. Trabalhar conteúdo 

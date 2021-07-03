@@ -1,4 +1,5 @@
 from gensim.corpora import Dictionary
+# Documentacao Dictionary: https://radimrehurek.com/gensim/corpora/dictionary.html
 
 default_dir = '/home/helder/estudos/tcc-pucmg-2/data'
 default_filename = f'{default_dir}/dicionario.txt'
