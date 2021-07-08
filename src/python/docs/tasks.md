@@ -62,6 +62,8 @@
 * Testar diferentes tipos de stemmer
 * Avaliar uso de biterm model para documentos pequenos
   * [Referência](https://pdfs.semanticscholar.org/f499/5dc2a4eb901594578e3780a6f33dee02dad1.pdf)
+* [Testar com algoritmo PLSA](https://towardsdatascience.com/topic-modelling-with-plsa-728b92043f41)
+
 
 ### Documentação
 
