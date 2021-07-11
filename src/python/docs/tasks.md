@@ -9,6 +9,7 @@
 * Elaborar lista com stopwords customizáveis, palavras que aparecem muito nos textos mas que não são interessantes do ponto de vista da classificação
   * Sugestões: download, &nbsp (avaliar em posts de verdade), blog
 * Remover textos entre colchetes (Exemplo: [caption ... ])
+* Remover propaganda do booking no final do texto 
 
 ### Wikipedia
 - Categorias Parques Nacionais
@@ -49,10 +50,6 @@
 * Melhores Destinos
   * Ideia: pegar um intervalo de paginas de indices de promocoes, baixar as promocoes do intervalo e treinar com elas
   * https://www.melhoresdestinos.com.br/promocao/page/300
-* Passagens imperdiveis
-  * Exemplo de post: [https://www.passagensimperdiveis.com.br/promocao-de-passagens-2-em-1fortaleza-ou-salvador-2021-3/](https://www.passagensimperdiveis.com.br/promocao-de-passagens-2-em-1fortaleza-ou-salvador-2021-3/)
-* Passageiro de primeira
-  * Exemplo de post: [https://passageirodeprimeira.com/tap-oferece-ate-15-de-milhas-de-volta-no-resgate-de-passagem-para-quem-assinar-ou-renovar-o-club-tap-milesgo/](https://passageirodeprimeira.com/tap-oferece-ate-15-de-milhas-de-volta-no-resgate-de-passagem-para-quem-assinar-ou-renovar-o-club-tap-milesgo/)
 * Avaliar uso de collocations
 * Análise de distribuição de tokens por documento após fazer limpezas
   * Mostrar histograma com tamanho (len(tokenized)) dos documentos
