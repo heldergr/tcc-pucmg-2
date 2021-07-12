@@ -1,0 +1,31 @@
+\section{Limpeza de texto}
+
+Nem sempre utilizamos o texto inteiro quando queremos extrair conhecimento deste texto, que no nosso caso significa encontrar tópicos com suas palavras e 
+encontrar documentos que estes tópicos estão presentes. Muitas palavras não são interessantes, como por exemplo conjuntos de palavras que não possuem 
+significado mas influenciam o treinamento de modelos, como as conhecidas stopwords. 
+
+A limpeza de texto consiste então de remover dos nossos documentos 
+este conjunto de palavras que não somente não agregam ao treinamento como atrapalham o seu funcionamento adequado. Parte da limpeza é comum a todas as 
+fontes de dados e parte é específica por fonte de dados escolhida.
+
+\subsection{Limpeza comum}
+
+\begin{itemize}
+    \item Remoção de tags HTML
+    \item Remoção de pontuações
+    \item Remoção de stopwords: contempla a remoção de stopwords gerais da linguagem dos textos, em nosso caso português
+    \item Remoção de stopwords adicionais: é uma tarefa que será executada para todas as fontes de dados mas o conjunto de stopwords adicionais é diferente para cada fonte de dados
+    \item Stemming
+\end{itemize}
+
+\subsection{Posts Nerds Viajantes}
+
+Obtenção de posts do banco de dados do blog Nerds Viajantes.
+
+\subsection{Wikipedia}
+
+Limpeza de textos obtidos da Wikipedia.
+
+\subsection{Melhores Destinos}
+
+Obtenção de posts com conteúdo de promoções do blog Melhores Destinos.

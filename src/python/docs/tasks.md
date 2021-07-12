@@ -2,14 +2,14 @@
 
 ## Coleta e limpeza de dados
 
-* Remover tags html do texto
-* Remover stopwords em português
-* Fazer stemming em português
-* Remover posts dos papéis de parede e outros desnecessários
+* :heavy_check_mark: Remover tags html do texto
+* :heavy_check_mark: Remover stopwords em português
+* :heavy_check_mark: Fazer stemming em português
+* :heavy_check_mark: Remover posts dos papéis de parede e outros desnecessários
 * Elaborar lista com stopwords customizáveis, palavras que aparecem muito nos textos mas que não são interessantes do ponto de vista da classificação
   * Sugestões: download, &nbsp (avaliar em posts de verdade), blog
-* Remover textos entre colchetes (Exemplo: [caption ... ])
-* Remover propaganda do booking no final do texto 
+* :heavy_check_mark: Remover textos entre colchetes (Exemplo: [caption ... ])
+* :heavy_check_mark: Remover propaganda do booking no final do texto 
 
 ### Wikipedia
 - Categorias Parques Nacionais

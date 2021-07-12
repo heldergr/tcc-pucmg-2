@@ -41,6 +41,9 @@ def remover_pontuacoes(text):
 def remove_stopwords(tokens):
     return [word for word in tokens if not word in pt_stopwords]
 
+def remove_extra_stopwords(tokens, extra_stopwords):
+    return [word for word in tokens if not word in extra_stopwords]
+
 def stemm_text(tokens):
     return [stemmer.stem(token) for token in tokens]
 
@@ -56,7 +59,7 @@ def preprocess_content(content):
     result = content.apply(lambda x: limpar_texto(x))
     return result
 
-def limpar_texto(texto, limpar_stopwords = True, stemming = True):
+def limpar_texto(texto, limpar_stopwords = True, stemming = True, extra_stopwords = []):
     texto = remover_html_tags(texto)
     texto = remover_caption(texto)
     texto = remover_pontuacoes(texto)
@@ -65,6 +68,8 @@ def limpar_texto(texto, limpar_stopwords = True, stemming = True):
 
     if limpar_stopwords:
         tokens = remove_stopwords(tokens)
+        if len(extra_stopwords) > 0:
+            tokens = remove_extra_stopwords(tokens, extra_stopwords)
 
     if stemming:
         tokens = stemm_text(tokens)
