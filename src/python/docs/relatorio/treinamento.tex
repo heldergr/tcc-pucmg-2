@@ -35,33 +35,32 @@ estruturadas.
     de palavras entre tópicos diferentes
 \end{itemize}
 
-\subsection{Semelhança entre documentos para textos desconhecidos}
+\subsection{Testes de análise de tópicos}
 
-Ao obter a distribuição de frequência de palavras em um novo texto o gensim apenas considera as palavras existentes no dicionário original que foram usadas para 
-treinar o modelo, descartando aquelas que não existiam. Estas últimas não serão consideradas na distribuição de tópicos. Isto é um problema na definição dos tópicos
-do novo texto mas importante para identificar semelhanças com os documentos originais.
+Após a definição de modelo com base nos documentos de origem foram feitos testes para avaliação de quais tópicos determinavam melhor os documentos e quais 
+palavras definiam os tópicos com maior probabilidade. Como a execução deste algoritmo é não determinística as palavras (e seus id's) que definem 
+um tópico pode ser alteradas de uma execução para outra. O resultado exibido aqui pode não ser o mesmo de execuções seguintes com os mesmos parâmetros mas 
+o objetivo deste teste inicial é identificar palavras que estão contribuindo muito para definição dos tópicos mas que podem não ser interessantes 
+para o objetivo de encontrar documentos semelhantes, então isto não é um problema.
 
-Uma forma de mitigar o problema acima é tentar fazer com que os dados de treinamento sejam o mais abrangente possível.
+A sequência de testes abaixo ilustra cenários de execução e está documentado o que foi feito até aquela cenário. A execução foi incremental, sendo que 
+qualquer limpeza ou tratamento de dados feita em cenários anteriores se aplica ao cenário corrente.
 
-\subsubsection{Cálculo de semelhança (Similarity query)}
+Começamos os testes com 100 tópicos e 2 passos.
 
-Com base na distribuição de tópicos em um novo texto nós podemos calcular a semalhança dele com outros documentos, por exemplo aqueles usados no treinamento
-do modelo. No caso deste trabalho será feita a comparação com os posts do blog Nerds Viajantes. Para o cálculo da semelhança nós usaremos uma métrica chamada
-\textbf{distância Jensen-Shannon} para encontrar os documentos que apresentam maior semalhança.
+\subsubsection{Código fonte}
 
-Esta métrica determina o quão próximos estatisticamente falando dois documentos estão próximos, comparando a divergência entre a distribuição de tópicos
-entre eles. Esta distância é simétrica, ou seja, a distância entre dois documentos A e B é a mesma de B e A, o que está de acordo com o propósito deste trabalho.
+O código fonte para análise de tópicos está listado abaixo:
 
-Para distribuições discretas P e Q, a \textbf{divergência Jensen-Shannon}, JSD, é definida como:
+\lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Análise de tópicos]{sourcecode/analise_topicos.py}
 
-\[JSD(P||Q) = 1/2D(P||M) + 1/2D(Q||M)\]
+\subsubsection{Execução inicial após limpeza de textos básica}
 
-onde \(M = 1/2(P + Q)\)
+Primeira execução, executada após uma primeira limpeza de textos e remoção de alguns posts que inicialmente já estava previsto que não eram interessantes.
 
-A raiz quadrada da \textbf{divergência Jensen-Shannon} é a \textbf{distância Jensen-Shannon}: \(\sqrt{JSD(P||Q)}\)
+\lstinputlisting[breaklines]{analisetopicos/cenario_inicial_10topicos_20words.txt}
 
-Quanto menor a \textbf{Jensen-Shannon distance} maior é a semelhança entre duas distrições, ou seja, maior a semelhança entre dois documentos.
+\subsubsection{Execução após remoção de palavras avançada}
 
-Para encontrar os documentos mais semelhantes a um novo texto nós calculamos as probabilidades dos tópicos do novo texto e calculamos a 
-\textbf{distância Jensen-Shannon} deste para os textos aos quais queremos comparar (usando as probabilidades dos tópicos deles) e ordenamos pelas 
-menores distâncias para obter os mais semelhantes.
+No cenário anterior identificamos um conjunto de palavras que estavam contribuindo muito na definição de tópicos mas que não estavam agregando na obtenção
+de documentos semelhantes de acordo com o objetivo inicial.
