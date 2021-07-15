@@ -28,4 +28,4 @@ class AnaliseEstatisticaPalavras:
     alem dos percentiles selecionados
     """
     def analisar_tamanhos_documentos(self):
-        print(self.__informacoes_fonte_de_dados[['tamanho', 'tamanho_sem_verbo']].describe(percentiles=[.05, .1, .25, .5, .75, .9, .95]))
+        print(self.__informacoes_fonte_de_dados[['tamanho', 'tamanho_sem_verbo', 'tamanho_sem_verbo_sw']].describe(percentiles=[.05, .1, .25, .5, .75, .9, .95]))
