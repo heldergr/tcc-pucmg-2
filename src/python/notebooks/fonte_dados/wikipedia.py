@@ -13,7 +13,7 @@ class Wikipedia(FonteDados):
         super().__init__(carregar_previamente=carregar_previamente)
         self.__pages = None
 
-    def carregar_dados(self):
+    def carregar_dados(self, limpar_stopwords_especificas=True):
         pages = wikipedia_repo.find_all()
         self.__pages = pages
 

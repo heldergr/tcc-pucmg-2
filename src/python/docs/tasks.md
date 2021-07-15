@@ -2,11 +2,13 @@
 
 ## Coleta e limpeza de dados
 
+* Refatoração de código - mover código de notebooks para módulos
+    * analise-palavras-fontes-dados.ipynb
 * :heavy_check_mark: Remover tags html do texto
 * :heavy_check_mark: Remover stopwords em português
 * :heavy_check_mark: Fazer stemming em português
 * :heavy_check_mark: Remover posts dos papéis de parede e outros desnecessários
-* Elaborar lista com stopwords customizáveis, palavras que aparecem muito nos textos mas que não são interessantes do ponto de vista da classificação
+* :heavy_check_mark:Elaborar lista com stopwords customizáveis, palavras que aparecem muito nos textos mas que não são interessantes do ponto de vista da classificação
   * Sugestões: download, &nbsp (avaliar em posts de verdade), blog
 * :heavy_check_mark: Remover textos entre colchetes (Exemplo: [caption ... ])
 * :heavy_check_mark: Remover propaganda do booking no final do texto 

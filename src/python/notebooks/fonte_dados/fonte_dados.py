@@ -7,7 +7,7 @@ class FonteDados:
             self.carregar_dados()
         self.__df = None
 
-    def carregar_dados():
+    def carregar_dados(self, limpar_stopwords_especificas=True):
         pass
 
     def get_dataframe(self):

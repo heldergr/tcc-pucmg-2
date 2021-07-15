@@ -1,6 +1,8 @@
 from fonte_dados.fonte_dados import FonteDados
 from limpeza import limpeza_posts, limpeza_texto
+from limpeza.stopwords_especificas import StopwordsSpecificas
 from repository import nerds_viajantes as nerds_viajantes_repo
+from util import constants
 
 class NerdsViajantes(FonteDados):
 
@@ -17,11 +19,20 @@ class NerdsViajantes(FonteDados):
             return texto
 
     def __limpar_texto(self, texto):
-        texto_limpo = limpeza_texto.limpar_texto(texto)
+        texto_limpo = limpeza_texto.limpar_texto(texto, extra_stopwords=self.__stopwords_especificas)
         texto_limpo = self.__remover_propaganda_hoteis(texto_limpo)
         return texto_limpo
 
-    def carregar_dados(self):
+    def __carregar_stopwords_especificas(self, limpar_stopwords_especificas):
+        if limpar_stopwords_especificas:
+            stopwords_especificas = StopwordsSpecificas()
+            self.__stopwords_especificas = stopwords_especificas.carregar_palavras_especificas(constants.NERDS_VIAJANTES)
+        else:
+            self.__stopwords_especificas = []
+
+    def carregar_dados(self, limpar_stopwords_especificas=True):
+        self.__carregar_stopwords_especificas(limpar_stopwords_especificas)
+        
         self.__published = nerds_viajantes_repo.read_published()
         
         # Remove posts desnecessarios
@@ -31,7 +42,6 @@ class NerdsViajantes(FonteDados):
         posts.rename(columns={'content': 'documento', 'id': 'id_documento', 'name': 'nome', 'title': 'titulo'}, inplace=True)
 
         # Limpa texto e gera documentos para treinamento
-        # tokens = posts['documento'].apply(limpeza_texto.limpar_texto)
         tokens = posts['documento'].apply(self.__limpar_texto)
         posts['tokens'] = tokens
         n_tokens = [len(tks) for tks in tokens]

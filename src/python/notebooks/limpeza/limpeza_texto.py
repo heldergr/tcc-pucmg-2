@@ -77,6 +77,5 @@ def limpar_texto(texto, limpar_stopwords = True, stemming = True, extra_stopword
     return tokens
 
 if __name__ == '__main__':
-    print('Modulo de limpeza de texto...')
-    print(limpar_texto('Meu nome. eh Hélder, Ribeiro!'))
-    print(limpar_texto('Meu nome. eh Helder, Ribeiro!'))
+    extra_stopwords = ['fot', 'fic', 'visit', 'fotograf', 'dia', 'algum', 'par', 'bem', 'restaurant', 'viag', 'cas', 'hotel', 'tir', 'outr', 'pod', 'cheg', 'conhec', 'faz', 'viaj', 'tod', 'rio', 'aplic', 'abert', 'com', 'por', 'víde', 'muit', 'and']
+    print(remove_extra_stopwords(['fot', 'fota', 'casa', 'torre', 'dia'], extra_stopwords))
