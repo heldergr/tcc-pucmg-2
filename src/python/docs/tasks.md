@@ -2,7 +2,11 @@
 
 ## Coleta e limpeza de dados
 
-* Refatoração de código - mover código de notebooks para módulos
+* Baixar páginas da wikipedia
+    * Parques nacionais do Brasil
+    * Reservas do Brasil
+    * Parques estaduais do Brasil
+* :heavy_check_mark: Refatoração de código - mover código de notebooks para módulos
     * analise-palavras-fontes-dados.ipynb
 * :heavy_check_mark: Remover tags html do texto
 * :heavy_check_mark: Remover stopwords em português

@@ -32,6 +32,5 @@ class FonteDados:
     def remover_verbos(self, tokens):
         todos_verbos = verbos_repo.find_all_stemmed()
         tokens_sem_verbos = [token for token in tokens if token not in todos_verbos]
-        print(f'Tamanho com verbos: {len(tokens)}, tamanho sem verbos: {len(tokens_sem_verbos)}')
         return tokens_sem_verbos
 

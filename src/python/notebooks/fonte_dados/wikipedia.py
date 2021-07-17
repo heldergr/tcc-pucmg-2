@@ -9,7 +9,7 @@ wikipedia_repo = WikipediaRepo(collection=get_pages_content_collection())
 
 class Wikipedia(FonteDados):
 
-    def __init__(self, carregar_previamente=True):
+    def __init__(self, carregar_previamente=False):
         super().__init__(carregar_previamente=carregar_previamente)
         self.__pages = None
 

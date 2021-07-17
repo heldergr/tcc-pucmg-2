@@ -6,7 +6,7 @@ from util import constants
 
 class NerdsViajantes(FonteDados):
 
-    def __init__(self, carregar_previamente=True):
+    def __init__(self, carregar_previamente=False):
         super().__init__(carregar_previamente=carregar_previamente)
         self.__posts = None
 
