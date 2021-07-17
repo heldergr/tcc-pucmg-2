@@ -30,7 +30,7 @@ class NerdsViajantes(FonteDados):
         else:
             self.__stopwords_especificas = []
 
-    def carregar_dados(self, limpar_stopwords_especificas=True):
+    def carregar_dados(self, limpar_stopwords_especificas=True, limpar_verbos=True):
         self.__carregar_stopwords_especificas(limpar_stopwords_especificas)
         
         self.__published = nerds_viajantes_repo.read_published()
@@ -43,6 +43,10 @@ class NerdsViajantes(FonteDados):
 
         # Limpa texto e gera documentos para treinamento
         tokens = posts['documento'].apply(self.__limpar_texto)
+
+        if limpar_verbos:
+            tokens = [self.remover_verbos(tokens_documento) for tokens_documento in tokens]
+
         posts['tokens'] = tokens
         n_tokens = [len(tks) for tks in tokens]
         posts['n_tokens'] = n_tokens

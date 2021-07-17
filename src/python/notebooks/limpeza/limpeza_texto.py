@@ -38,10 +38,10 @@ def remover_pontuacoes(text):
     tokens = tokeniser.tokenize(text)
     return ' '.join(tokens)
 
-def remove_stopwords(tokens):
+def remover_stopwords(tokens):
     return [word for word in tokens if not word in pt_stopwords]
 
-def remove_extra_stopwords(tokens, extra_stopwords):
+def remover_extra_stopwords(tokens, extra_stopwords):
     return [word for word in tokens if not word in extra_stopwords]
 
 def stemm_text(tokens):
@@ -59,6 +59,9 @@ def preprocess_content(content):
     result = content.apply(lambda x: limpar_texto(x))
     return result
 
+"""
+Lista de stopwords extra deve vir ja stemmed e por isso sua limpeza eh o ultimo passo.
+"""
 def limpar_texto(texto, limpar_stopwords = True, stemming = True, extra_stopwords = []):
     texto = remover_html_tags(texto)
     texto = remover_caption(texto)
@@ -67,15 +70,17 @@ def limpar_texto(texto, limpar_stopwords = True, stemming = True, extra_stopword
     tokens = word_tokenize(texto)
 
     if limpar_stopwords:
-        tokens = remove_stopwords(tokens)
-        if len(extra_stopwords) > 0:
-            tokens = remove_extra_stopwords(tokens, extra_stopwords)
+        tokens = remover_stopwords(tokens)
 
     if stemming:
         tokens = stemm_text(tokens)
+
+    # Deve ocorrer apos stemming
+    if len(extra_stopwords) > 0:
+        tokens = remover_extra_stopwords(tokens, extra_stopwords)
 
     return tokens
 
 if __name__ == '__main__':
     extra_stopwords = ['fot', 'fic', 'visit', 'fotograf', 'dia', 'algum', 'par', 'bem', 'restaurant', 'viag', 'cas', 'hotel', 'tir', 'outr', 'pod', 'cheg', 'conhec', 'faz', 'viaj', 'tod', 'rio', 'aplic', 'abert', 'com', 'por', 'víde', 'muit', 'and']
-    print(remove_extra_stopwords(['fot', 'fota', 'casa', 'torre', 'dia'], extra_stopwords))
+    print(remover_extra_stopwords(['fot', 'fota', 'casa', 'torre', 'dia'], extra_stopwords))

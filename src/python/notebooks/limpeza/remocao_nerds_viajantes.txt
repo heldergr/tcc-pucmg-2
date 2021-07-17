@@ -5,6 +5,7 @@ fotograf - 16
 dia - 15
 algum - 13
 par - 11
+passei - 11
 bem - 8
 restaurant - 7
 viag - 6

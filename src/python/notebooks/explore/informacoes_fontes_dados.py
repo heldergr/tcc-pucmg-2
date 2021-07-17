@@ -1,7 +1,6 @@
 from fonte_dados.fabrica import FabricaFonteDados
 from limpeza.stopwords_especificas import StopwordsSpecificas
 from repository.verbos import VerbosRepo
-from util import constants
 from limpeza.stopwords_especificas import StopwordsSpecificas
 
 import numpy as np
@@ -29,9 +28,9 @@ def obter_documentos_sem_stopwords(documentos, stopwords):
 def obter_tamanhos_documentos(documentos):
     return [len(doc) for doc in documentos]
 
-def obter_informacoes_palavras(descricao_fonte_de_dados, limpar_stopwords_especificas=False):
+def obter_informacoes_palavras(descricao_fonte_de_dados, limpar_stopwords_especificas=False, limpar_verbos=False):
     fonte_dados_origem = fabrica.get_fonte_dados(descricao_fonte_de_dados)
-    fonte_dados_origem.carregar_dados(limpar_stopwords_especificas=limpar_stopwords_especificas)
+    fonte_dados_origem.carregar_dados(limpar_stopwords_especificas=limpar_stopwords_especificas, limpar_verbos=limpar_verbos)
     
     documentos_origem = fonte_dados_origem.get_tokens()
     tamanhos_documentos = obter_tamanhos_documentos(documentos_origem)
