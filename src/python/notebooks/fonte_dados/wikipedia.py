@@ -13,17 +13,19 @@ class Wikipedia(FonteDados):
         super().__init__(carregar_previamente=carregar_previamente)
         self.__pages = None
 
-    def carregar_dados(self, limpar_stopwords_especificas=True):
+    def carregar_dados(self, limpar_stopwords_especificas=True, limpar_verbos=True):
         pages = wikipedia_repo.find_all()
         self.__pages = pages
 
         pages_df = pd.DataFrame(pages)
         pages_df = pages_df.drop(['_id', 'ns', 'type', 'download', 'categories', 'wikitext', 'text'], axis='columns')
 
-        # Remove posts desnecessarios
-
         # Limpa texto e gera documentos para treinamento
         tokens = pages_df['text_clean'].apply(limpeza_texto.limpar_texto)
+
+        if limpar_verbos:
+            tokens = [self.remover_verbos(tokens_documento) for tokens_documento in tokens]
+
         pages_df['tokens'] = tokens
         n_tokens = [len(tks) for tks in tokens]
         pages_df['n_tokens'] = n_tokens

@@ -1,9 +1,10 @@
 from util import constants
 from exception import FonteDeDadosNotFoundError
 
-caminho_base_pasta_limpeza = '/home/helder/estudos/tcc-pucmg-2/src/python/notebooks/limpeza'
+caminho_base_pasta_limpeza = '/home/helder/estudos/tcc-pucmg-2/src/python/notebooks/data'
 arquivos_limpeza_especificos = {
-    constants.NERDS_VIAJANTES: f'{caminho_base_pasta_limpeza}/remocao_nerds_viajantes.txt'
+    constants.NERDS_VIAJANTES: f'{caminho_base_pasta_limpeza}/remocao_nerds_viajantes.txt',
+    constants.WIKIPEDIA: f'{caminho_base_pasta_limpeza}/remocao_wikipedia.txt'
 }
 
 class StopwordsSpecificas:
@@ -13,7 +14,7 @@ class StopwordsSpecificas:
 
     def carregar_palavras_especificas(self, fonte_de_dados):
         arquivo_limpeza_especificos = arquivos_limpeza_especificos.get(fonte_de_dados, None)
-        if arquivos_limpeza_especificos:
+        if arquivos_limpeza_especificos is not None:
             palavras = []
             with open(arquivo_limpeza_especificos) as f:
                 palavras = f.readlines()
