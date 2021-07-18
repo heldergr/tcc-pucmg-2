@@ -10,6 +10,29 @@ Obtenção de posts do banco de dados do blog Nerds Viajantes.
 
 Obtenção de páginas da Wikipedia para treinamento.
 
+\subsection{Verbos em língua portuguesa}
+
+Como parte do trabalho eu precisei da lista de verbos em língua portuguesa para analisar o levantamento de tópicos em documentos após remoção de verbos, 
+que no contexto deste trabalho poderiam ser pouco relevantes ou até mesmo atrapalhar na definição dos tópicos.
+
+A lista de verbos foi recuperada fazendo webscraping do site \url{https://www.conjugacao.com.br/verbos-populares}. Foi utilizada o pacote requests do Python 
+para fazer a requisição das páginas e o pacote Beautiful Soap para extrair o conteúdo do resultado html retornado.
+
+O total de verbos contidos nesta página é de 5000 e para que fossem retornados todos foram necessárias 50 requisições (são 100 verbos em cada página), 
+uma para cada página de conteúdo no site.
+
+Os verbos são gravados localmente em uma collection do MongoDB para que possam ser utilizados mais de uma vez sem necessidade de download a cada execução.
+Cada documento gravado no MongoDB tem dois campos, o verbo original e o verbo \textit{stemmed}, conforme exemplo abaixo para o verbo \textit{falar}.
+
+\begin{lstlisting}
+    {
+        'verbo': 'falar',
+        'verbo_stemmed': 'fal'
+    }
+\end{lstlisting}
+
+\begin{comment}
 \subsection{Melhores Destinos}
 
-Obtenção de posts com conteúdo de promoções do blog Melhores Destinos.
+Obtenção de posts com conteúdo de promoções do blog Melhores Destinos.    
+\end{comment}

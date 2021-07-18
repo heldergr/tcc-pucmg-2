@@ -18,12 +18,6 @@ class TreinamentoLda:
         self.num_topics = num_topics
         self.passes = passes
 
-    # dictionary = corpora.Dictionary(data['tokenized'])
-    # corpus = [dictionary.doc2bow(doc) for doc in data['tokenized']]
-    # lda = LdaModel(corpus=corpus, num_topics=num_topics, id2word=dictionary,
-    #                alpha=1e-2, eta=0.5e-2, chunksize=chunksize, minimum_probability=0.0, passes=2)
-
-
     def ajustar_modelo(self, documentos, alpha=1e-2, eta=0.5e-2):
         # Cria dicionario
         id2word = dicionario.criar(documentos)
@@ -95,24 +89,3 @@ def imprimir_topicos(lda_model, num_topics):
     for i in range(num_topics):
         print(f"********** Topic {i+1} **********")
         print(lda_model.print_topic(i), '\n')
-
-# Adiciona probabilidades que um documento tenham os topicos
-# definidos para um modelo.
-
-# Calcula probabilidades que um determinado documento tenha 
-# os topicos encontrados em um modelo lda.
-# Metodo espera um documento que ja venha divido em tokens
-# def calcular_probabilidades_documento(documento, id2word, lda_model):
-#     """Add probabilities for topics for a document."""
-#     corpus = id2word.doc2bow(documento)
-
-#     predictions = lda_model.get_document_topics(corpus, minimum_probability=0.0)
-#     topics = [topic for topic, probability in predictions]
-#     return [prediction[1] for prediction in predictions]
-
-# Metodo espera uma lista de documentos divididos em tokens
-# def calcular_probabilidades(id2word, lda_model, content, num_topics):
-#     train = pd.DataFrame(content)
-#     columns = ['topic' + str(i+1) for i in range(num_topics)]
-#     train[columns] = train['content'].apply(lambda x: calcular_probabilidades(id2word, lda_model, x)).to_list()    
-#     return train

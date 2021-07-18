@@ -2,6 +2,12 @@
 
 ## Coleta e limpeza de dados
 
+* Executar baterias de testes
+    * Fonte: sempre nerds viajantes
+    * Destino: fazer para nerds viajantes e wikipedia
+    * Parâmetros a variar
+        * num_topics, eta, alpha
+    * Usando nerds
 * Baixar páginas da wikipedia
     * Parques nacionais do Brasil
     * Reservas do Brasil

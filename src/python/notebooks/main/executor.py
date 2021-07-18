@@ -1,13 +1,12 @@
 from fonte_dados.fabrica import FabricaFonteDados
 from similarity.similarity import SimilarityCalculator
 from treinamento.treinamento_lda import TreinamentoLda
-from util import constants
 
 import pandas as pd
 
 fabrica = FabricaFonteDados()
 
-def executar_treinamento(fonte_origem, fonte_destino, num_topics):
+def executar_treinamento(id_cenario, fonte_origem, fonte_destino, num_topics):
     print("Carregando dados de origem...")
     fonte_dados_origem = fabrica.get_fonte_dados(fonte_origem)
     fonte_dados_origem.carregar_dados()
@@ -34,8 +33,10 @@ def executar_treinamento(fonte_origem, fonte_destino, num_topics):
     similarity_calculator = SimilarityCalculator(probabilidades_topicos_destino)
 
     print("Calculando documentos mais parecidos...")
-    destinos_mais_parecidos = [similarity_calculator.get_most_similar_documents(pto) for pto in probabilidades_topicos_origem]
-    destino_mais_parecido = [dmp[0] for dmp in destinos_mais_parecidos]
+    destinos_mais_parecidos = [similarity_calculator.get_most_similar_documents(pto, return_distances=True) for pto in probabilidades_topicos_origem]
+    
+    destino_mais_parecido = [dmp[0][0] for dmp in destinos_mais_parecidos]
+    distancia_mais_parecido = [dmp[1][0] for dmp in destinos_mais_parecidos]
 
     print("Montando resultado...")
     destino_df = fonte_dados_destino.get_dataframe()
@@ -50,14 +51,19 @@ def executar_treinamento(fonte_origem, fonte_destino, num_topics):
         'id_documento_origem': fonte_dados_origem.get_dataframe()['id_documento'].values,
         'titulo_documento_origem': fonte_dados_origem.get_dataframe()['titulo'].values,
         'id_documento_destino': ids_documentos_mais_parecidos,
-        'titulo_documento_destino': titulos_mais_parecidos
+        'titulo_documento_destino': titulos_mais_parecidos,
+        'distancia_destino': distancia_mais_parecido,
+        'id_cenario': id_cenario,
+        'fonte_origem': fonte_origem,
+        'fonte_destino': fonte_destino
     })
 
     return resultado_df
 
 class ExecutorTreinamento():
 
-    def __init__(self, fonte_origem, fonte_destino, num_topics):
+    def __init__(self, id_cenario, fonte_origem, fonte_destino, num_topics):
+        self.__id_cenario = id_cenario
         self.__fonte_origem = fonte_origem
         self.__fonte_destino = fonte_destino
         self.__num_topics = num_topics
@@ -82,8 +88,10 @@ class ExecutorTreinamento():
 
         similarity_calculator = SimilarityCalculator(probabilidades_topicos_destino)
 
-        destinos_mais_parecidos = [similarity_calculator.get_most_similar_documents(pto) for pto in probabilidades_topicos_origem]
-        destino_mais_parecido = [dmp[0] for dmp in destinos_mais_parecidos]
+        destinos_mais_parecidos = [similarity_calculator.get_most_similar_documents(pto, return_distances=True) for pto in probabilidades_topicos_origem]
+        
+        destino_mais_parecido = [dmp[0][0] for dmp in destinos_mais_parecidos]
+        distancia_mais_parecido = [dmp[1][0] for dmp in destinos_mais_parecidos]
 
         destino_df = fonte_dados_destino.get_dataframe()
 
@@ -97,11 +105,11 @@ class ExecutorTreinamento():
             'id_documento_origem': fonte_dados_origem.get_dataframe()['id_documento'].values,
             'titulo_documento_origem': fonte_dados_origem.get_dataframe()['titulo'].values,
             'id_documento_destino': ids_documentos_mais_parecidos,
-            'titulo_documento_destino': titulos_mais_parecidos
+            'titulo_documento_destino': titulos_mais_parecidos,
+            'distancia_destino': distancia_mais_parecido,
+            'id_cenario': self.__id_cenario,
+            'fonte_origem': self.__fonte_origem,
+            'fonte_destino': self.__fonte_destino
         })
 
         return resultado_df
-
-if __name__ == '__main__':
-    executor_treinamento = ExecutorTreinamento(fonte_origem=constants.NERDS_VIAJANTES, fonte_destino=constants.WIKIPEDIA, num_topics=100)
-    executor_treinamento.executar_treinamento()
