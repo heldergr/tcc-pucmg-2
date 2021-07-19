@@ -1,0 +1,12 @@
+-
+  fonte_origem: &NV NERDS_VIAJANTES
+  fonte_destino: &WIKIPEDIA WIKIPEDIA
+  topics: 
+    - 100
+    - 13
+  eta:
+    - 0.005
+  alpha:
+    - 0.01
+  passes:
+    - 2
