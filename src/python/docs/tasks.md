@@ -2,6 +2,9 @@
 
 ## Coleta e limpeza de dados
 
+* O cálculo de coerência foi feito com os valores default de alpha e eta, que são 1/número de tópicos.
+  * Após selecionar os 7 números de tópicos mais relevantes, calcular a coerência com o intervalo de eta e alpha escolhidos para os testes
+  * Dar ênfase especial a tupla (num_topics, alpha, etc), que contribuem com a maior coerencia
 * Executar baterias de testes
     * Fonte: sempre nerds viajantes
     * Destino: fazer para nerds viajantes e wikipedia

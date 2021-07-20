@@ -18,11 +18,21 @@
 \BOOKMARK [3][-]{subsubsection.6.1.1}{Problemas}{subsection.6.1}% 18
 \BOOKMARK [3][-]{subsubsection.6.1.2}{Solu\347\343o definitiva}{subsection.6.1}% 19
 \BOOKMARK [2][-]{subsection.6.2}{Explora\347\343o e limpeza de dados}{section.6}% 20
-\BOOKMARK [1][-]{section.7}{Semelhan\347a entre documentos para textos desconhecidos}{}% 21
-\BOOKMARK [2][-]{subsection.7.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.7}% 22
-\BOOKMARK [1][-]{section.8}{Resutados}{}% 23
-\BOOKMARK [1][-]{section.9}{Tecnologias}{}% 24
-\BOOKMARK [1][-]{section.10}{Links}{}% 25
-\BOOKMARK [1][-]{section.11}{Refer\352ncias}{}% 26
-\BOOKMARK [2][-]{subsection.11.1}{Artigos}{section.11}% 27
-\BOOKMARK [2][-]{subsection.11.2}{Ferramentas e tecnologias}{section.11}% 28
+\BOOKMARK [1][-]{section.7}{Treinamento de modelo}{}% 21
+\BOOKMARK [2][-]{subsection.7.1}{LDA}{section.7}% 22
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Hiperpar\342metros}{subsection.7.1}% 23
+\BOOKMARK [2][-]{subsection.7.2}{C\341lculo de coer\352ncia}{section.7}% 24
+\BOOKMARK [3][-]{subsubsection.7.2.1}{An\341lise de coer\352ncias}{subsection.7.2}% 25
+\BOOKMARK [3][-]{subsubsection.7.2.2}{C\363digo fonte}{subsection.7.2}% 26
+\BOOKMARK [2][-]{subsection.7.3}{Testes de an\341lise de t\363picos}{section.7}% 27
+\BOOKMARK [3][-]{subsubsection.7.3.1}{C\363digo fonte}{subsection.7.3}% 28
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.7.3}% 29
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras avan\347ada}{subsection.7.3}% 30
+\BOOKMARK [1][-]{section.8}{Semelhan\347a entre documentos para textos desconhecidos}{}% 31
+\BOOKMARK [2][-]{subsection.8.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.8}% 32
+\BOOKMARK [1][-]{section.9}{Resutados}{}% 33
+\BOOKMARK [1][-]{section.10}{Tecnologias}{}% 34
+\BOOKMARK [1][-]{section.11}{Links}{}% 35
+\BOOKMARK [1][-]{section.12}{Refer\352ncias}{}% 36
+\BOOKMARK [2][-]{subsection.12.1}{Artigos}{section.12}% 37
+\BOOKMARK [2][-]{subsection.12.2}{Ferramentas e tecnologias}{section.12}% 38
