@@ -6,8 +6,8 @@ import time
 
 fabrica = FabricaFonteDados()
 
-topicos_from = 5
-topicos_to = 6
+topicos_from = 117
+topicos_to = 120
 
 inicio = time.time()
 fonte_dados_origem = fabrica.get_fonte_dados(constants.NERDS_VIAJANTES)
