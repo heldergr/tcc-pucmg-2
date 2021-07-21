@@ -1,31 +1,61 @@
 \section{Limpeza de texto}
 
-Nem sempre utilizamos o texto inteiro quando queremos extrair conhecimento deste texto, que no nosso caso significa encontrar tópicos com suas palavras e 
-encontrar documentos que estes tópicos estão presentes. Muitas palavras não são interessantes, como por exemplo conjuntos de palavras que não possuem 
-significado mas influenciam o treinamento de modelos, como as conhecidas stopwords. 
+Nem sempre utilizamos o texto inteiro quando queremos extrair conhecimento do seu conteúdo, que no nosso caso significa encontrar tópicos com suas palavras e 
+encontrar documentos em que estes tópicos estão presentes. Muitas palavras não são interessantes, como por exemplo aquelas que não agregam valor 
+mas influenciam o treinamento de modelos, como as conhecidas \textit{stopwords}. Estas podem, inclusive, atrapalhar o processo de aprendizado 
+ao adicionar ruído ao conjunto de dados e aumentar o custo computacional e o tempo de execução.
 
-A limpeza de texto consiste então de remover dos nossos documentos 
-este conjunto de palavras que não somente não agregam ao treinamento como atrapalham o seu funcionamento adequado. Parte da limpeza é comum a todas as 
-fontes de dados e parte é específica por fonte de dados escolhida.
+A limpeza de texto consiste então de remover dos nossos documentos originais este conjunto de palavras que não somente não agregam ao treinamento como atrapalham 
+o seu funcionamento adequado. Parte das tarefas de limpeza é comum a todas as fontes de dados e parte é específica por fonte de dados escolhida.
+
+Estas atividades são na essência uma tentativa de conversão de linguagem de texto para algo mais próximo do que o computador consegue entender melhor,
+preparando os dados de textos para o processamento de linguagem natural.
 
 \subsection{Limpeza comum}
 
+Algumas tarefas de limpeza de texto são úteis e devem ser empregadas a qualquer fonte de dados, mesmo que com parâmetros diferentes.
+
 \begin{itemize}
-    \item Remoção de tags HTML
+    \item Remoção de tags HTML: são apenas marcadores para definir a formatação de conteúdo html e não devem fazer parte dos dados de treinamento ou teste
+    \item Remoção de pontuações: servem apenas para definir a estrutura do texto e não devem ser utilizados no treinamento
+    \item Conversão para minúsculo: todo o conteúdo deve ser normalizado convertendo as letras para minúsculas de forma que palavras escritas com 
+    \textit{case} diferente não sejam tratadas como entidades distintas
+    \item Remoção de \textit{stopwords}: contempla a remoção de \textit{stopwords} gerais da linguagem dos textos, em nosso caso português. Esta lista é 
+    obtida de um pacote de processamento de linguagem natural
+    \item Remoção de palavras adicionais: remover do texto palavras que não são \textit{stopwords} mas atrapalham o treinamento de alguma forma. 
+    É uma questão deve ser avaliada especificamente para cada fonte de dados
+    adicionais é diferente para cada fonte de dados. Esta lista é obtida após análise de exploração e conhecimento da fonte de dados 
+    \item \textit{Stemming}: redução de palavras para sua forma raiz, necessário para uma mesma palavra que seja escrita de formas distintas seja 
+    tratada como apenas uma entidade. Além disso este tratamento diminui a dimensão do conjunto total de palavras e reduz custo computacional.
+    Como exemplo podemos citar as palavras \textit{visitei} e \textit{visita} que seriam reduzidas a \textit{visit}
+\end{itemize}
+
+Para exemplificar a execução de limpeza de texto vamos usar a seguinte frase: 
+
+\textit{"Após visitar a Lagoa Dourada nós decidimos voltar o hotel. Foi um dia muito bonito, esta foi uma das lagoas mais bonitas que já visitamos."}
+
+Após a limpeza temos como resultado a seguinte lista de palavras: 
+
+\textit{['após', 'visit', 'lago', 'dour', 'decid', 'volt', 'hotel', 'foi', 'dia', 'bonit', 'lago', 'bonit', 'visit']}
+
+Importante perceber alguns alterações importantes em relação ao texto inicial:
+
+\begin{itemize}
+    \item Conversão da palavra \textit{Após} para \textit{após} com o \textit{a} minúsculo
+    \item Remoção de \textit{stopwords} como \textit{a, nós, o, um, esta, uma, das, mais, que, já}
+    \item Alteração de \textit{case} e conversão da palavra \textit{Lagoa}, desta forma as duas referências a \textit{lagoa} que estavam escritas de 
+    forma diferente agora são tratados como uma mesma entidades
     \item Remoção de pontuações
-    \item Remoção de stopwords: contempla a remoção de stopwords gerais da linguagem dos textos, em nosso caso português
-    \item Remoção de stopwords adicionais: é uma tarefa que será executada para todas as fontes de dados mas o conjunto de stopwords adicionais é diferente para cada fonte de dados
-    \item Stemming
 \end{itemize}
 
 \subsection{Posts Nerds Viajantes}
+
+\begin{itemize}
+    \item Remoção de \textit{caption}
+\end{itemize}
 
 Obtenção de posts do banco de dados do blog Nerds Viajantes.
 
 \subsection{Wikipedia}
 
 Limpeza de textos obtidos da Wikipedia.
-
-\subsection{Melhores Destinos}
-
-Obtenção de posts com conteúdo de promoções do blog Melhores Destinos.

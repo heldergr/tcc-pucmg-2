@@ -1,5 +1,6 @@
 import nltk
 import re
+from nltk import stem
 
 """
 A list of stopwords can be found in the corpus module of nltk package. We are going to try to use the portuguese version. The download code is necessary only once.
@@ -82,5 +83,8 @@ def limpar_texto(texto, limpar_stopwords = True, stemming = True, extra_stopword
     return tokens
 
 if __name__ == '__main__':
-    extra_stopwords = ['fot', 'fic', 'visit', 'fotograf', 'dia', 'algum', 'par', 'bem', 'restaurant', 'viag', 'cas', 'hotel', 'tir', 'outr', 'pod', 'cheg', 'conhec', 'faz', 'viaj', 'tod', 'rio', 'aplic', 'abert', 'com', 'por', 'víde', 'muit', 'and']
-    print(remover_extra_stopwords(['fot', 'fota', 'casa', 'torre', 'dia'], extra_stopwords))
+    # print(limpar_texto("Após visitar a Lagoa Dourada nós decidimos voltar o hotel. Foi um dia muito bonito, esta foi uma das lagoas mais bonitas que já visitamos."))
+    print('RSLP', stemmer.stem("visitei"), stemmer.stem("visita"))
+    print('RSLP', stemmer.stem("choveu"), stemmer.stem("chuva"))
+    # extra_stopwords = ['fot', 'fic', 'visit', 'fotograf', 'dia', 'algum', 'par', 'bem', 'restaurant', 'viag', 'cas', 'hotel', 'tir', 'outr', 'pod', 'cheg', 'conhec', 'faz', 'viaj', 'tod', 'rio', 'aplic', 'abert', 'com', 'por', 'víde', 'muit', 'and']
+    # print(remover_extra_stopwords(['fot', 'fota', 'casa', 'torre', 'dia'], extra_stopwords))

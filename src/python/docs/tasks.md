@@ -75,8 +75,26 @@
 * Avaliar uso de biterm model para documentos pequenos
   * [Referência](https://pdfs.semanticscholar.org/f499/5dc2a4eb901594578e3780a6f33dee02dad1.pdf)
 * [Testar com algoritmo PLSA](https://towardsdatascience.com/topic-modelling-with-plsa-728b92043f41)
+* Testes sem remoção de stopwords
+* Explicar porque não foi feito lematização e part of speech em português
 
 
 ### Documentação
 
-* Após o treinamento, pegar um texto e mostrar graficamente a distribuição de tópicos para aquela documento, conforme exemplo no post [https://www.kaggle.com/ktattan/lda-and-document-similarity](https://www.kaggle.com/ktattan/lda-and-document-similarity)
+- Partes
+    * Motivação
+    * Limpeza de dados
+    * Coleta de dados
+    * Algoritmos e estruturas de dados
+    * Exploração de dados
+    * Semelhança entre documentos
+    * :heavy_check_mark: Coerência
+    * Trabalho futuro
+    * Tecnologias
+    * Link
+    * Referência
+    * Código fonte
+    * Treinamento
+    * Resultados
+
+- Após o treinamento, pegar um texto e mostrar graficamente a distribuição de tópicos para aquela documento, conforme exemplo no post [https://www.kaggle.com/ktattan/lda-and-document-similarity](https://www.kaggle.com/ktattan/lda-and-document-similarity)

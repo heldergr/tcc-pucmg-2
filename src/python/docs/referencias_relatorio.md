@@ -13,6 +13,8 @@
     * <https://stats.stackexchange.com/questions/375062/how-does-topic-coherence-score-in-lda-intuitively-makes-sense>
     * <https://radimrehurek.com/gensim/models/coherencemodel.html>
     * <https://ieeexplore.ieee.org/document/8259775>
+    * <https://nlp.stanford.edu/IR-book/html/htmledition/stemming-and-lemmatization-1.html>
+    * <https://towardsdatascience.com/stemming-lemmatization-what-ba782b7c0bd8>
 
 ## Rever devido a complexidade
 
