@@ -4,11 +4,75 @@ Parte dedicada a documentação de coleta de dados para treinamento.
 
 \subsection{Posts Nerds Viajantes}
 
-Obtenção de posts do banco de dados do blog Nerds Viajantes.
+A coleta de dados dos posts do blog foi mais simples. O blog é publicado utilizando a ferramenta de gerenciamento de conteúdo Wordpress. Para manter 
+o conteúdo ele usa o banco de dados MySql. Como sou editor e proprietário do blog, eu fiz um dump do banco de dados através da ferramenta de 
+gerenciamento do serviço de hospedagem e carreguei localmente.
+
+Em meu computador pessoal eu executo o MySql através de container da ferramenta Docker. Usando uma imagem de MySql como base, eu criei uma imagem própria 
+que já carrega o dump gerado com os posts do blog como parte da imagem. Sendo assim, ao criar e executar um container eu já tenho os dados pré-carregados.
+
 
 \subsection{Wikipedia}
 
-Obtenção de páginas da Wikipedia para treinamento.
+A coleta de dados da Wikipedia deu mais trabalho e digamos que foi muito mais interessante. Tive dois desafios nesta parte: o que baixar e como baixar.
+
+\subsubsection{Definindo o subconjunto de páginas}
+
+Fazer a coleta de todas as páginas da Wikipedia nunca foi minha intenção. Nem sei quantas páginas há mas imagina que seja um número tão grande que não daria pra fazer nesse trabalho. Se não me engano há formas de baixar o conteúdo ou parte do conteúdo mas eu queria fazer a coleta utilizando a API oficial deles, então não poderia ser um conjunto tão grande e seria até complexo de gerenciar localmente. Além disso, o subconjunto de páginas que me interessa no trabalho é muito pequeno perto do universo completo da Wikipedia.
+
+Meu blog sempre foi mais um hobby que algo profissional. Não temos muito conteúdo como aqueles que vivem desse ramo profissionalmente e geograficamente meus posts são limitados. A maioria de nossos posts vem dos seguintes países: Argentina, Chile, Estados Unidos, Nova Zelândia, Islândia, além do Brasil. Decidi então procurar na Wikipedia conteúdo relacionado a estes países, mas não todos. E também não seria qualquer conteúdo, fiquei em textos de alguma forma relacionados a Geografia, assunto que eu gosto muito e que influencia o conteúdo do blog, que tem muito conteúdo de lugares relacionados a contato com natureza.
+
+\subsubsection{Coletando o subconjunto de páginas}
+
+A Wikipedia tem dois tipos de conteúdo importantes, categorias e páginas. Categorias são páginas especiais que tem uma lista de páginas ou subcategorias que a compõem. Páginas contém apenas conteúdo relacionado a um assunto.
+
+Localmente eu resolvi guardar o conteúdo no MongoDB. A escolha se deu pelo fato de que eu não sabia direito como seria meu modelo de dados e com a estrutura flexível de modelo orientado a documentos eu poderia mudar a estrutura a qualquer momento sem me preocupar com esquema. Com o tempo se mostrou uma boa escolha acabei adicionando novos campos, alterando valores de documentos anteriores sem grandes problemas. A performance das operações também não se mostrou um problema.
+
+Decidi usar duas collections principais, uma para categorias e outra para páginas.
+
+Para fazer a coleta, inicialmente pensei em entrar na categoria principal de cada país, pegar a referência da categoria de Geografia (quase todos têm uma) e coletar toda a árvore a partir dela, começando pela Argentina. Logo de cara eu percebi que não era uma boa ideia pois diversas categorias tinham subcategorias ou até mesmo páginas que não eram relacionadas a Geografia. E além disso notei que algumas subcategorias da Argentina envolviam inclusive referências a categorias de coisas do Brasil. 
+
+Resolvi então fazer uma espécie de curadoria. Eu usei a collection de categorias para adicionar um status, que poderia ter um dos três valores:
+
+\begin{itemize}
+    \item Aguardando aprovação
+    \item Aguardando download
+    \item Download feito com sucesso
+    \item Marcada para não fazer download no momento
+\end{itemize}
+
+Com base nesses status eu segui o seguinte algoritmo: 
+
+\begin{enumerate}
+    \item Lê da collection categorias todas as categorias com status waiting
+    \begin{enumerate}
+        \item Para cada subcategoria cujo assunto me interessava eu marcava para download
+    \end{enumerate}
+    \item Lê da collection categorias todas as categorias com status download
+    \item Para cada categoria para download, executar os passos: 
+    \begin{enumerate}
+        \item Coleta os dados da categoria
+        \item Grava cada subcategoria na collection categorias com o status "aguardando aprovação"
+        \begin{enumerate}
+            \item Estas ficam aguardando aprovação manual
+        \end{enumerate}
+        \item Grava cada páginas na collection de páginas
+    \end{enumerate}
+    \item Volta para o passo 1
+\end{enumerate}
+
+Eu executei esta sequência de passos até ter uma quantidade de páginas boa o suficiente para identificar as semelhanças e ao final eu tinha XXX páginas na collection pages do MongoDB.
+
+Eu coloquei um campo no documento para indicar de qual país era o conteúdo e após o término da execução da execução eu fiz um agrupamento:
+\begin{itemize}
+    \item Argentina: xxx
+    \item Chile: xxx
+    \item Estados Unidos: xxx
+    \item Nova Zelândia: xxx
+\end{itemize}
+
+Acabei não fazendo downloads dos outros países por já ter páginas suficientes e também eu queria avaliar qual seria o conteúdo recomendado para posts relacionados a lugares de onde eu não tinha coletado nenhuma página.
+
 
 \subsection{Verbos em língua portuguesa}
 
