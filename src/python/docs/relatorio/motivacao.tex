@@ -1,22 +1,21 @@
+Motivação
+
 \section{Motivação}
 
-Hoje em dia a geração de conteúdo acontece de forma muito rápida. Acompanhar tudo que é gerado de forma manual é impraticável, senão impossível, e é
-preciso automatizar determinadas tarefas. Uma das áreas onde a automatização pode ser feita é no processamento de textos e diversas informações podem ser 
-extraídos dos textos que são escritos e compartilhados na internet, assim como em mídias privadas também.
+Hoje em dia a geração de conteúdo acontece de forma muito rápida. A quantidade e complexidade dos dados faz com que o processamento manual de tudo que é gerado de seja impraticável, senão impossível, e é preciso automatizar determinadas tarefas para que tenhamos mais eficiência e agilidade para tirar valor e conhecimento dos dados. Uma das áreas onde a automatização pode ser feita é no processamento de textos e diversas informações podem ser extraídos dos textos que são escritos e compartilhados na internet, assim como em mídias privadas também.
 
-Uma área que se destaca neste contexto é o processamento de linguagem natural (PLN), que consiste em um conjunto de técnicas que aplicadas a textos
-permitem que diversas tarefas sejam executadas sobre esses textos. Uma destas tarefas é processar este conteúdo e identificar contextos dentro dele, 
-permitindo que possamos levantar algumas informações como tópicos que relacionam estes documentos. A identificação deste contexto pode não ser simples
-porque a mesma informação pode ser escrita de formas distintas utilizando linguagem natural.
+Neste contexto se destaca o Processamento de Linguagem Natural (PLN), uma área que une Ciência da Computação, Linguística e Inteligência Artificial focada na interação entre computadores e linguagem humana e em especial na programação de máquinas para processar e analisar grandes volumes de textos em linguagem natural. Esta área contém um conjunto de técnicas que quando aplicadas a textos permitem que diversas tarefas sejam executadas sobre os mesmos. 
 
-\begin{itemize}
-    \item velocidade de geração de conteúdo - Ok
-    \item Geração de tráfego
-    \item time to market
-    \item sugestão de conteúdo para enriquecer textos
-    \item sugestão de novas leiturs
-    \item encontrar cópia do próprio
-\end{itemize}
+Uma destas tarefas é processar este conteúdo escrito em linguagem humana e identificar contextos dentro dele, permitindo que possamos levantar algumas informações como tópicos que relacionam estes documentos. A identificação deste contexto pode não ser simples porque a mesma informação pode ser escrita de formas distintas utilizando linguagem natural. Ao mesmo tempo, extrair e analisar estas informações nos permite extrair conhecimento de nosso conjunto de textos como um todo.
 
-Natural language is messy, ambiguous and full of subjective interpretation, and sometimes trying to cleanse ambiguity reduces the language to an 
-unnatural form.
+Alguns desafios da PLN envolvem reconhecimento de voz, compreensão de linguagem natural e até mesmo geração de conteúdo em linguagem natural. Neste trabalho o objetivo foi desenvolver um \textbf{mecanismo para fazer recomendação de documentos que tenham contextos semelhantes a outros documentos}, sendo estes de uma mesma base ou de bases diferentes. Para ilustrar vamos dar um exemplo de dois blogs, aqui chamados de A e B. Com o mecanismo de recomendações que propomos é possível extrair contextos ocultos do conjunto completo de ambos os blogs e com base neste conhecimento identificar posts no blog B que são parecidos com os posts do blog A.
+
+Há várias utilidades para este tipo de recomendação. Como, como escritor de um blog, posso escrever um texto e antes mesmo de publicar posso usar meu algoritmo de recomendação para procurar em um outro conjunto de textos conteúdos de alguma forma semelhantes ao que eu estou escrevendo. Isto permite com que eu possa enriquecer e agregar valor ao meu conteúdo. Além disso é também uma excelente forma de aumentar o conhecimento próprio em áreas de meu interesse pessoal.
+
+Mas o treinamento e recomendação não se limita apenas a comparar posts de blogs. Qualquer conjunto de textos pode ser usado como base ou destino da comparação, desde que sejam processados de forma a servirem de insumos para algoritmos de extração de conteúdo oculto.
+
+Neste trabalho eu usei duas fontes de dados diferentes, chamados aqui de origem e destino. A fonte de origem é a que eu usei seu conjunto completo de palavras (dicionário) para treinar o algoritmo de identificação de contextos ocultos (explicado na seção Treinamento - COLOCAR LINK AQUI). Para cada documento da fonte de origem eu usei o modelo de aprendizado gerado e algoritmos matemáticos para cálculo de distância entre valores de probabilidades para identificar o documento mais parecido na fonte de dados destino, que seria o que tivesse menor distância.
+
+Como base de origem eu usei os posts do blog \textbf{Nerds Viajantes}, do qual sou editor e como base de destino eu usei um conjunto de páginas da \textbf{Wikipedia} e o resultado do trabalho foi encontrar entre a dentro daquele conjunto a página que mais se assemelha-se a cada post do blog.
+
+Apesar de ter estas fontes específicas usadas neste trabalho, a implementação foi feita de forma que seja fácil trabalhar com qualquer conjunto de textos como fonte e origem da recomendação. A coleta e limpeza devem ser feitos de forma específica por causa da variedade das fontes de textos mas o treinamento do modelo e o cálculo da semelhança foi feita em estruturas de dados genéricas abstraídas de forma a executar esta parte tão importante sobre qualquer conjunto de documentos.   
