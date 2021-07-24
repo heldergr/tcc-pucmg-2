@@ -50,11 +50,27 @@ Importante perceber alguns alterações importantes em relação ao texto inicia
 
 \subsection{Posts Nerds Viajantes}
 
+\subsubsection{Limpeza de palavras nos posts}
+
+Além da limpeza de texto padrão, foi necessário eliminar outros conjuntos de palavras dos posts do blog. Após execução da análise dos tópicos nas primeiras 
+execuções de treinamento do modelo foi identificado que alguns conjuntos de palavras não fazem sentido ser usados na definição do dicionário.
+
 \begin{itemize}
-    \item Remoção de \textit{caption}
+    \item Remoção de \textit{caption}: A ferramenta \textit{Wordpress} utilizada uma notação específica para adicionar legendas às imagens, que não corresponde ao padrão html e por isto foi necessária uma limpeza específica deste conteúdo
+    \item Remoção de \textit{stopwords} específicas: Palavras que não fazem parte da lista de \textit{stopwords} da linguagem mas que mesmo assim 
+    atrapalham no treinamento do modelo
+    \begin{itemize}
+        \item Exemplos: fot, fic, visit, fotograf, dia, algum, par, passei, bem, restaurant
+        \item A lista completa destas palavras se encontra no arquivo \href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/data/remocao_nerds_viajantes.txt}{remocao\_nerds\_viajantes.txt} no repositório do projeto.
+    \end{itemize}
+    \item Remoção de verbos: A ideia da comparação dos documentos foi mais direcionada a características dos locais visitados e decidi remover os verbos do texto pois estes contribuiam muito na composição dos tópicos
 \end{itemize}
 
-Obtenção de posts do banco de dados do blog Nerds Viajantes.
+\subsubsection{Limpeza de posts inteiros}
+
+Além da limpeza de palavras dentro dos posts, foi necessário também remover alguns posts do conjunto a ser utilizado no treinamento.
+
+ESCREVER MAIS A RESPEITO.
 
 \subsection{Wikipedia}
 

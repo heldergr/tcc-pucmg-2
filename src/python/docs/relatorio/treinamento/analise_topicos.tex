@@ -1,0 +1,61 @@
+\subsection{Testes de análise de tópicos}
+
+Após a definição de modelo com base nos documentos de origem foram feitos testes para avaliação de quais tópicos determinavam melhor os documentos e quais 
+palavras definiam os tópicos com maior probabilidade. Como a execução deste algoritmo é não determinística as palavras (e seus id's) que definem 
+um tópico pode ser alteradas de uma execução para outra. O resultado exibido aqui pode não ser o mesmo de execuções seguintes com os mesmos parâmetros mas 
+o objetivo deste teste inicial é identificar palavras que estão contribuindo muito para definição dos tópicos mas que podem não ser interessantes 
+para o objetivo de encontrar documentos semelhantes, então isto não é um problema.
+
+Os testes foram feitos utilizando a fonte de dados do blog, que foi a que usei para o treinamento do modelo. A quantidade de tópicos utilizada foi 
+57, que foi o número de melhor valor nos testes de coerência.
+Cenários de execução:
+
+\begin{itemize}
+    \item Sem limpeza de \textit{stopwords} e sem remoção de verbos
+    \item Com limpeza de \textit{stopwords} e sem remoção de verbos
+    \item Com limpeza de \textit{stopwords} e com remoção de verbos
+\end{itemize}
+
+Para ilustrar os resultados eu coloquei aqui listas menores mas os resultados completos podem ser encontrados na pasta 
+\href{https://github.com/heldergr/tcc-pucmg-2/tree/main/src/python/docs/relatorio/analisetopicos}{docs/relatorio/analisetopicos} do repositório do projeto.
+
+Por exemplo, ao ilustrar as palavras que mais contribuem para um determinado tópico, aqui estou exibindo apenas as 5 enquanto na pasta acima mencionada eu 
+coloquei as 20 mais importantes.
+
+\subsubsection{Código fonte}
+
+O código fonte para análise de tópicos está listado abaixo:
+
+\lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Análise de tópicos]{./resources/analise_topicos.py}
+
+No repositório do projeto pode ser consultado o \href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/nerds-viajantes-lda-analise-topicos.ipynb}{código fonte completo do Notebook utilizada para a análise dos tópicos}.
+
+\subsubsection{Execução inicial após limpeza de textos básica}
+
+A primeira análise de tópicos foi feita eliminando da limpeza de conteúdo dos posts a remoções de \textit{stopwords} específicas ou dos verbos, ou seja,
+nesta análise estes conjuntos fizeram parte do dicionário completo. Os resultados aqui obtidos, inclusive, serviram de insumo para levantar a lista
+de palavras específicas a serem removidas, assim como da necessidade de remoção dos verbos, cuja lista completa foi obtida de site mencionado na seção de coleta.
+
+Nos resultados abaixo, assim como nos cenários seguintes, para cada tópico é exibida um tupla onde o primeiro elemento é o id do tópico
+e o segunda a lista de 5 palavras que mais contribuíram na definição do tópico, assim como seus respectivos pesos.
+
+\lstinputlisting[breaklines]{analisetopicos/cenario_inicial_10topicos_5palavras.txt}
+
+Na listagem acima podemos ver várias palavras que contribuíram muito para o levantamento de tópicos neste cenário de execução mas que julgamos não serem
+interessantes na comparação com documentos de outras fontes.
+
+Um exemplo é a palavra \textbf{fot}, que se refere a foto. Além de falar sobre viagens o blog sempre se propôs também a ter conteúdo de fotografia e esta
+palabra aparece em boa parte dos documentos. No entanto não julgamos ser interessante para o propósito de comparação.
+
+\subsubsection{Execução após remoção de palavras específicas}
+
+No cenário anterior identificamos um conjunto de palavras que estavam contribuindo muito na definição de tópicos mas que não estavam agregando na obtenção
+de documentos semelhantes de acordo com o objetivo inicial. Neste cenário os tópicos foram identificados após remover este conjunto de palavras.
+
+\lstinputlisting[breaklines]{analisetopicos/stopwordsespecificas_10topicos_5palavras.txt}
+
+\subsubsection{Execução após remoção de verbos}
+
+O último cenário foi a análise de tópicos após a remoção de verbos.
+
+\lstinputlisting[breaklines]{analisetopicos/verbos_stopwordsespecificas_10topicos_5palavras.txt}

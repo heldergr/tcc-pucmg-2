@@ -17,6 +17,11 @@ def treinar_modelo(fonte_origem, num_topics, limpar_stopwords_especificas=False,
     return lda
 
 
+# Fonte NERDS_VIAJANTES, 57 tópicos, sem limpeza de stopwords específicas, sem limpeza de verbos
 lda_inicial = treinar_modelo(fonte_origem=constants.NERDS_VIAJANTES, num_topics=57)
+
+# Fonte NERDS_VIAJANTES, 57 tópicos, com limpeza de stopwords específicas, sem limpeza de verbos
 lda_limpeza_stopwords_especificas = treinar_modelo(fonte_origem=constants.NERDS_VIAJANTES, num_topics=57, limpar_stopwords_especificas=True)
+
+# Fonte NERDS_VIAJANTES, 57 tópicos, com limpeza de stopwords específicas, com limpeza de verbos
 lda_limpeza_verbos = treinar_modelo(fonte_origem=constants.NERDS_VIAJANTES, num_topics=57, limpar_stopwords_especificas=True, limpar_verbos=True)

@@ -16,28 +16,31 @@
 \BOOKMARK [1][-]{section.5}{Limpeza de texto}{}% 16
 \BOOKMARK [2][-]{subsection.5.1}{Limpeza comum}{section.5}% 17
 \BOOKMARK [2][-]{subsection.5.2}{Posts Nerds Viajantes}{section.5}% 18
-\BOOKMARK [2][-]{subsection.5.3}{Wikipedia}{section.5}% 19
-\BOOKMARK [1][-]{section.6}{Download Wikipedia}{}% 20
-\BOOKMARK [2][-]{subsection.6.1}{Download de p\341ginas}{section.6}% 21
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Problemas}{subsection.6.1}% 22
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Solu\347\343o definitiva}{subsection.6.1}% 23
-\BOOKMARK [2][-]{subsection.6.2}{Explora\347\343o e limpeza de dados}{section.6}% 24
-\BOOKMARK [1][-]{section.7}{Treinamento de modelo}{}% 25
-\BOOKMARK [2][-]{subsection.7.1}{LDA}{section.7}% 26
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Hiperpar\342metros}{subsection.7.1}% 27
-\BOOKMARK [2][-]{subsection.7.2}{C\341lculo de coer\352ncia}{section.7}% 28
-\BOOKMARK [3][-]{subsubsection.7.2.1}{An\341lise de coer\352ncias}{subsection.7.2}% 29
-\BOOKMARK [3][-]{subsubsection.7.2.2}{C\363digo fonte}{subsection.7.2}% 30
-\BOOKMARK [2][-]{subsection.7.3}{Testes de an\341lise de t\363picos}{section.7}% 31
-\BOOKMARK [3][-]{subsubsection.7.3.1}{C\363digo fonte}{subsection.7.3}% 32
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.7.3}% 33
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras avan\347ada}{subsection.7.3}% 34
-\BOOKMARK [1][-]{section.8}{Semelhan\347a entre documentos para textos desconhecidos}{}% 35
-\BOOKMARK [2][-]{subsection.8.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.8}% 36
-\BOOKMARK [1][-]{section.9}{Resutados}{}% 37
-\BOOKMARK [1][-]{section.10}{Tecnologias}{}% 38
-\BOOKMARK [1][-]{section.11}{Links}{}% 39
-\BOOKMARK [1][-]{section.12}{Refer\352ncias}{}% 40
-\BOOKMARK [2][-]{subsection.12.1}{Artigos}{section.12}% 41
-\BOOKMARK [3][-]{subsubsection.12.1.1}{Processamento de linguagem natural}{subsection.12.1}% 42
-\BOOKMARK [2][-]{subsection.12.2}{Ferramentas e tecnologias}{section.12}% 43
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Limpeza de palavras nos posts}{subsection.5.2}% 19
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Limpeza de posts inteiros}{subsection.5.2}% 20
+\BOOKMARK [2][-]{subsection.5.3}{Wikipedia}{section.5}% 21
+\BOOKMARK [1][-]{section.6}{Download Wikipedia}{}% 22
+\BOOKMARK [2][-]{subsection.6.1}{Download de p\341ginas}{section.6}% 23
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Problemas}{subsection.6.1}% 24
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Solu\347\343o definitiva}{subsection.6.1}% 25
+\BOOKMARK [2][-]{subsection.6.2}{Explora\347\343o e limpeza de dados}{section.6}% 26
+\BOOKMARK [1][-]{section.7}{Treinamento de modelo}{}% 27
+\BOOKMARK [2][-]{subsection.7.1}{LDA}{section.7}% 28
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Hiperpar\342metros}{subsection.7.1}% 29
+\BOOKMARK [2][-]{subsection.7.2}{C\341lculo de coer\352ncia}{section.7}% 30
+\BOOKMARK [3][-]{subsubsection.7.2.1}{An\341lise de coer\352ncias}{subsection.7.2}% 31
+\BOOKMARK [3][-]{subsubsection.7.2.2}{C\363digo fonte}{subsection.7.2}% 32
+\BOOKMARK [2][-]{subsection.7.3}{Testes de an\341lise de t\363picos}{section.7}% 33
+\BOOKMARK [3][-]{subsubsection.7.3.1}{C\363digo fonte}{subsection.7.3}% 34
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.7.3}% 35
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras espec\355ficas}{subsection.7.3}% 36
+\BOOKMARK [3][-]{subsubsection.7.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.7.3}% 37
+\BOOKMARK [1][-]{section.8}{Semelhan\347a entre documentos para textos desconhecidos}{}% 38
+\BOOKMARK [2][-]{subsection.8.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.8}% 39
+\BOOKMARK [1][-]{section.9}{Resutados}{}% 40
+\BOOKMARK [1][-]{section.10}{Tecnologias}{}% 41
+\BOOKMARK [1][-]{section.11}{Links}{}% 42
+\BOOKMARK [1][-]{section.12}{Refer\352ncias}{}% 43
+\BOOKMARK [2][-]{subsection.12.1}{Artigos}{section.12}% 44
+\BOOKMARK [3][-]{subsubsection.12.1.1}{Processamento de linguagem natural}{subsection.12.1}% 45
+\BOOKMARK [2][-]{subsection.12.2}{Ferramentas e tecnologias}{section.12}% 46
