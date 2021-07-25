@@ -6,8 +6,11 @@ pages_content = wikipedia_db.pages_content
 
 class WikipediaRepo:
 
-    def __init__(self, collection):
-        self.collection = collection
+    def __init__(self, collection=None, collection_name=None):
+        if collection is not None:
+            self.collection = collection
+        else:
+            self.collection = wikipedia_db[collection_name]
 
     def find_all(self):
         return list(self.collection.find({}))

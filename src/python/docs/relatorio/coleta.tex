@@ -32,13 +32,13 @@ Decidi usar duas collections principais, uma para categorias e outra para págin
 
 Para fazer a coleta, inicialmente pensei em entrar na categoria principal de cada país, pegar a referência da categoria de Geografia (quase todos têm uma) e coletar toda a árvore a partir dela, começando pela Argentina. Logo de cara eu percebi que não era uma boa ideia pois diversas categorias tinham subcategorias ou até mesmo páginas que não eram relacionadas a Geografia. E além disso notei que algumas subcategorias da Argentina envolviam inclusive referências a categorias de coisas do Brasil. 
 
-Resolvi então fazer uma espécie de curadoria. Eu usei a collection de categorias para adicionar um status, que poderia ter um dos três valores:
+Resolvi então fazer uma espécie de curadoria. Eu usei a collection de categorias para adicionar um status, que poderia ter um dos valores:
 
 \begin{itemize}
-    \item Aguardando aprovação
-    \item Aguardando download
-    \item Download feito com sucesso
-    \item Marcada para não fazer download no momento
+    \item \textbf{Check}: Aguardando aprovação
+    \item \textbf{Waiting}: Aguardando download
+    \item \textbf{Skeep}: Download feito com sucesso
+    \item \textbf{Done}: Marcada para não fazer download no momento
 \end{itemize}
 
 Com base nesses status eu segui o seguinte algoritmo: 
@@ -56,12 +56,23 @@ Com base nesses status eu segui o seguinte algoritmo:
         \begin{enumerate}
             \item Estas ficam aguardando aprovação manual
         \end{enumerate}
-        \item Grava cada páginas na collection de páginas
+        \item Grava cada páginas na collection de páginas, mas ainda sem gravar os conteúdos, cujo download foi feito na iteração seguinte
     \end{enumerate}
     \item Volta para o passo 1
 \end{enumerate}
 
 Eu executei esta sequência de passos até ter uma quantidade de páginas boa o suficiente para identificar as semelhanças e ao final eu tinha XXX páginas na collection pages do MongoDB.
+
+\textbf{Download de Páginas}
+
+Para as páginas eu fiz download do conteúdo tanto em \textit{wikitext} como \textit{text}, mesmo que no final só tenha trabalhado a versão \textit{text}.
+
+\begin{itemize}
+    \item download: Status do download do wikitext
+    \item download_text: Status do download do wikitext
+\end{itemize}
+
+falar de pages_brasil e pages_content_brasil, sendo que a primeira não inclui conteúdo.
 
 Eu coloquei um campo no documento para indicar de qual país era o conteúdo e após o término da execução da execução eu fiz um agrupamento:
 \begin{itemize}
