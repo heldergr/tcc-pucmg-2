@@ -1,5 +1,4 @@
-from  coleta import download_status
-from repository.wikipedia import WikipediaRepo
+from coleta import download_status
 
 from pymongo import MongoClient
 import requests

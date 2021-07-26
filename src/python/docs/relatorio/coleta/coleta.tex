@@ -1,0 +1,156 @@
+\section{Coleta de dados}
+
+Parte dedicada a documentação de coleta de dados para treinamento.
+
+\subsection{Posts Nerds Viajantes}
+
+A coleta de dados dos posts do blog foi mais simples. O blog é publicado utilizando a ferramenta de gerenciamento de conteúdo Wordpress. Para manter 
+o conteúdo ele usa o banco de dados MySql. Como sou editor e proprietário do blog, eu fiz um dump do banco de dados através da ferramenta de 
+gerenciamento do serviço de hospedagem e carreguei localmente.
+
+Em meu computador pessoal eu executo o MySql através de container da ferramenta Docker. Usando uma imagem de MySql como base, eu criei uma imagem própria 
+que já carrega o dump gerado com os posts do blog como parte da imagem. Sendo assim, ao criar e executar um container eu já tenho os dados pré-carregados.
+
+\subsection{Wikipedia}
+
+A coleta de dados da Wikipedia deu mais trabalho e digamos que foi muito mais interessante. Tive dois desafios nesta parte: o que baixar e como baixar.
+
+\subsubsection{Definindo o subconjunto de páginas}
+
+Fazer a coleta de todas as páginas da Wikipedia nunca foi minha intenção. Nem sei quantas páginas há mas imagino que seja um número tão grande que 
+não daria pra fazer nesse trabalho. Se não me engano há formas de baixar o conteúdo inteiro ou parte do conteúdo mas eu queria fazer a coleta 
+utilizando a API oficial deles, então não poderia ser um conjunto tão grande e seria até complexo de gerenciar localmente. Além disso, o subconjunto 
+de páginas que me interessa no trabalho é muito pequeno perto do universo completo da Wikipedia.
+
+Meu blog sempre foi mais um hobby que algo profissional. Não temos muito conteúdo como aqueles que vivem desse ramo profissionalmente e geograficamente 
+meus posts são limitados. A maioria de nossos posts vem dos seguintes países: Argentina, Chile, Estados Unidos, Nova Zelândia, Islândia, além do Brasil. 
+Decidi então procurar na Wikipedia conteúdo relacionado a estes países, mas não todos. E também não seria qualquer conteúdo, fiquei em textos 
+de alguma forma relacionados a Geografia, assunto que eu gosto muito e que influencia o conteúdo do blog, que tem muito conteúdo de lugares 
+relacionados a contato com natureza.
+
+A Wikipedia tem dois tipos de conteúdo importantes, categorias e páginas. Categorias são páginas especiais que tem uma lista de páginas ou 
+subcategorias que a compõem. Páginas contém apenas conteúdo relacionado a um assunto.
+
+Para fazer a coleta, inicialmente pensei em entrar na categoria principal de cada país, pegar a referência da categoria de Geografia 
+(quase todos têm uma) e coletar toda a árvore a partir dela, começando pela Argentina. Logo de cara eu percebi que não era uma boa ideia 
+pois diversas categorias tinham subcategorias ou até mesmo páginas que não eram relacionadas a Geografia. E além disso notei que algumas 
+subcategorias da Argentina envolviam inclusive referências a categorias de coisas do Brasil. 
+
+Resolvi então fazer uma espécie de curadoria. No conjunto de categorias armazenadas localmente eu adicionei um status, que poderia ter um dos valores:
+
+\begin{itemize}
+    \item \textbf{Check}: Aguardando aprovação para download da árvore embaixo daquela categoria
+    \item \textbf{Waiting}: Aguardando download, já aprovado
+    \item \textbf{Done}: Download feito com sucesso
+    \item \textbf{Skeep}: Marcada para não fazer download no momento
+\end{itemize}
+
+Decidi armazenar localmente conjuntos de dados separados para categorias e páginas. Isto porque a curadoria escolhida para a coleta
+de categorias envolvia uma parte manual, que seria a escolha de qual categoria eu iria fazer o download das páginas nela contidas. Desta 
+forma ficou mais fácil dividir o processo e fazer as duas coletas separadamente. A coleta de categorias, obviamente, teve que ser feita antes 
+porque esta envolveria a gravação dos metadados de quais páginas seriam coletadas.
+
+O processo completo envolveu duas iterações, uma para coleta das categorias e outra para coleta do conteúdo das páginas.
+
+\subsubsection{Coleta de categorias}
+
+Utilizando como controle os status mencionados anteriormente, eu segui o seguinte algoritmo: 
+
+\begin{enumerate}
+    \item Lê todas as categorias com status \textbf{Check}, ou seja, aguardando aprovação
+    \begin{enumerate}
+        \item Para cada categoria cujo assunto me interessava eu marcava com \textbf{Waiting}, ou seja, aprovada e aguardando download
+        \item Para cada categoria cujo assunto \textbf{não} me interessava eu marcava com \textbf{Skeep}, ou seja, ignore no momento
+    \end{enumerate}
+    \item Lê todas as categorias aguardando download
+    \item Para cada categoria aguardando download, executar os passos: 
+    \begin{enumerate}
+        \item Coleta os dados da categoria via API da Wikipedia
+        \item Grava cada subcategoria na collection categorias com o status \textbf{Check}
+        \begin{enumerate}
+            \item Estas ficam aguardando aprovação manual em iteração seguinte
+        \end{enumerate}
+        \item Grava os metadados de cada página localmente
+        \begin{enumerate}
+            \item Ainda não grava os conteúdos, visto que estes são feitos com chamada a API diferente
+            \item O download do conteúdo é explicado na seção seguinte
+        \end{enumerate}
+        \item Marca a categoria como download feito
+    \end{enumerate}
+    \item Volta para o início (passo 1) para recomeçar o processo
+\end{enumerate}
+
+Eu executei esta sequência de passos até ter uma quantidade de páginas boa o suficiente para identificar as semelhanças e ao final eu tinha 
+XXX páginas armazenadas localmente.
+
+\subsubsection{Coleta de páginas}
+
+Para as páginas eu fiz download do conteúdo tanto em formato \textit{wikitext} como \textit{text}, mesmo que no final só tenha trabalhado a 
+versão \textit{text} porque achei mais fácil fazer \textit{parse}. Foram executados duas iterações separadas, uma para cada tipo de conteúdo.
+
+Para controlar quais páginas eu já tinha coletado ou não eu usei os dois status abaixo:
+
+\begin{itemize}
+    \item \textbf{download}: Status do download do wikitext
+    \item \textbf{download\_text}: Status do download do wikitext
+\end{itemize}
+
+Neste caso como não envolveria a curadoria eu só usei dois valores possíveis:
+
+\begin{itemize}
+    \item \textbf{Waiting}: Aguardando download
+    \item \textbf{Done}: Download realizado com sucesso
+\end{itemize}
+
+A iteração de coleta neste caso foi muito mais simples e foi executada duas vezes, uma para formato de conteúdo.
+
+\begin{enumerate}
+    \item Ler páginas que estão aguardando download
+    \item Para cada página aguardando download
+    \begin{enumerate}
+        \item Faz o download da página, gravando o conteúdo localmente
+        \item Marca a página como download realizado com sucesso
+    \end{enumerate} 
+\end{enumerate}
+
+\subsubsection{Ferramentas utilizadas}
+
+Localmente eu resolvi guardar o conteúdo no \textit{MongoDB}. A escolha se deu pelo fato de que eu não sabia direito como seria meu modelo de dados e 
+com a estrutura flexível de modelo orientado a documentos eu poderia mudar a estrutura a qualquer momento sem me preocupar com um esquema rígido
+previamente definido. Com o tempo se mostrou uma boa escolha pois acabei adicionando novos campos, alterando valores de documentos anteriores 
+sem grandes problemas. A performance das operações também não se mostrou um problema.
+
+A Wikipedia disponibiliza uma API Rest com vários serviços para coleta de conteúdo. Eu utilizei dois serviços, um para recuperação de dados das 
+categorias e outro para recuperar o conteúdo. Para o conteúdo eu fiz a chamada ao serviço duas vezes por página, um cada formato.
+
+Exemplos de urls dos dois serviços:
+\begin{itemize}
+    \item Membros da categoria: \url{https://pt.wikipedia.org/w/api.php?action=query&format=json&list=categorymembers&cmtitle=Category%3AArgentina&cmlimit=200}
+    \item Conteúdo da página: \url{https://en.wikipedia.org/w/api.php?action=parse&format=json&pageid=3276454&prop=wikitext&formatversion=2}
+    \begin{itemize}
+        \item O campo \textit{prop} indica o formato do conteúdo retornado, sendo \textit{wikitext} ou \textit{text}
+    \end{itemize} 
+\end{itemize}
+
+Para fazer a chamada aos serviços da API eu usei o pacote \textit{requests} do Python, que retorna o resultado em formato \textit{JSON}.
+
+\subsection{Verbos em língua portuguesa}
+
+Como parte do trabalho eu precisei da lista de verbos em língua portuguesa para analisar o levantamento de tópicos em documentos após remoção de verbos, 
+que no contexto deste trabalho poderiam ser pouco relevantes ou até mesmo atrapalhar na definição dos tópicos.
+
+A lista de verbos foi recuperada fazendo webscraping do site \url{https://www.conjugacao.com.br/verbos-populares}. Foi utilizada o pacote requests do Python 
+para fazer a requisição das páginas e o pacote Beautiful Soap para extrair o conteúdo do resultado html retornado.
+
+O total de verbos contidos nesta página é de 5000 e para que fossem retornados todos foram necessárias 50 requisições (são 100 verbos em cada página), 
+uma para cada página de conteúdo no site.
+
+Os verbos são gravados localmente em uma collection do MongoDB para que possam ser utilizados mais de uma vez sem necessidade de download a cada execução.
+Cada documento gravado no MongoDB tem dois campos, o verbo original e o verbo \textit{stemmed}, conforme exemplo abaixo para o verbo \textit{falar}.
+
+\begin{lstlisting}
+    {
+        'verbo': 'falar',
+        'verbo_stemmed': 'fal'
+    }
+\end{lstlisting}

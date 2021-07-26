@@ -8,39 +8,41 @@
 \BOOKMARK [2][-]{subsection.3.1}{Posts Nerds Viajantes}{section.3}% 8
 \BOOKMARK [2][-]{subsection.3.2}{Wikipedia}{section.3}% 9
 \BOOKMARK [3][-]{subsubsection.3.2.1}{Definindo o subconjunto de p\341ginas}{subsection.3.2}% 10
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Coletando o subconjunto de p\341ginas}{subsection.3.2}% 11
-\BOOKMARK [2][-]{subsection.3.3}{Verbos em l\355ngua portuguesa}{section.3}% 12
-\BOOKMARK [1][-]{section.4}{Explora\347\343o dos dados}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{An\341lise do tamanho dos documentos}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.2}{An\341lise de palavras das fontes de dados}{section.4}% 15
-\BOOKMARK [1][-]{section.5}{Limpeza de texto}{}% 16
-\BOOKMARK [2][-]{subsection.5.1}{Limpeza comum}{section.5}% 17
-\BOOKMARK [2][-]{subsection.5.2}{Posts Nerds Viajantes}{section.5}% 18
-\BOOKMARK [3][-]{subsubsection.5.2.1}{Limpeza de palavras nos posts}{subsection.5.2}% 19
-\BOOKMARK [3][-]{subsubsection.5.2.2}{Limpeza de posts inteiros}{subsection.5.2}% 20
-\BOOKMARK [2][-]{subsection.5.3}{Wikipedia}{section.5}% 21
-\BOOKMARK [1][-]{section.6}{Download Wikipedia}{}% 22
-\BOOKMARK [2][-]{subsection.6.1}{Download de p\341ginas}{section.6}% 23
-\BOOKMARK [3][-]{subsubsection.6.1.1}{Problemas}{subsection.6.1}% 24
-\BOOKMARK [3][-]{subsubsection.6.1.2}{Solu\347\343o definitiva}{subsection.6.1}% 25
-\BOOKMARK [2][-]{subsection.6.2}{Explora\347\343o e limpeza de dados}{section.6}% 26
-\BOOKMARK [1][-]{section.7}{Treinamento de modelo}{}% 27
-\BOOKMARK [2][-]{subsection.7.1}{LDA}{section.7}% 28
-\BOOKMARK [3][-]{subsubsection.7.1.1}{Hiperpar\342metros}{subsection.7.1}% 29
-\BOOKMARK [2][-]{subsection.7.2}{C\341lculo de coer\352ncia}{section.7}% 30
-\BOOKMARK [3][-]{subsubsection.7.2.1}{An\341lise de coer\352ncias}{subsection.7.2}% 31
-\BOOKMARK [3][-]{subsubsection.7.2.2}{C\363digo fonte}{subsection.7.2}% 32
-\BOOKMARK [2][-]{subsection.7.3}{Testes de an\341lise de t\363picos}{section.7}% 33
-\BOOKMARK [3][-]{subsubsection.7.3.1}{C\363digo fonte}{subsection.7.3}% 34
-\BOOKMARK [3][-]{subsubsection.7.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.7.3}% 35
-\BOOKMARK [3][-]{subsubsection.7.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras espec\355ficas}{subsection.7.3}% 36
-\BOOKMARK [3][-]{subsubsection.7.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.7.3}% 37
-\BOOKMARK [1][-]{section.8}{Semelhan\347a entre documentos para textos desconhecidos}{}% 38
-\BOOKMARK [2][-]{subsection.8.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.8}% 39
-\BOOKMARK [1][-]{section.9}{Resutados}{}% 40
-\BOOKMARK [1][-]{section.10}{Tecnologias}{}% 41
-\BOOKMARK [1][-]{section.11}{Links}{}% 42
-\BOOKMARK [1][-]{section.12}{Refer\352ncias}{}% 43
-\BOOKMARK [2][-]{subsection.12.1}{Artigos}{section.12}% 44
-\BOOKMARK [3][-]{subsubsection.12.1.1}{Processamento de linguagem natural}{subsection.12.1}% 45
-\BOOKMARK [2][-]{subsection.12.2}{Ferramentas e tecnologias}{section.12}% 46
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Coleta de categorias}{subsection.3.2}% 11
+\BOOKMARK [3][-]{subsubsection.3.2.3}{Coleta de p\341ginas}{subsection.3.2}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.4}{Ferramentas utilizadas}{subsection.3.2}% 13
+\BOOKMARK [2][-]{subsection.3.3}{Verbos em l\355ngua portuguesa}{section.3}% 14
+\BOOKMARK [1][-]{section.4}{Explora\347\343o dos dados}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{An\341lise do tamanho dos documentos}{section.4}% 16
+\BOOKMARK [2][-]{subsection.4.2}{An\341lise de palavras das fontes de dados}{section.4}% 17
+\BOOKMARK [1][-]{section.5}{Limpeza de texto}{}% 18
+\BOOKMARK [2][-]{subsection.5.1}{Limpeza comum}{section.5}% 19
+\BOOKMARK [2][-]{subsection.5.2}{Posts Nerds Viajantes}{section.5}% 20
+\BOOKMARK [3][-]{subsubsection.5.2.1}{Limpeza de palavras nos posts}{subsection.5.2}% 21
+\BOOKMARK [3][-]{subsubsection.5.2.2}{Limpeza de posts inteiros}{subsection.5.2}% 22
+\BOOKMARK [2][-]{subsection.5.3}{Wikipedia}{section.5}% 23
+\BOOKMARK [1][-]{section.6}{Download Wikipedia}{}% 24
+\BOOKMARK [2][-]{subsection.6.1}{Download de p\341ginas}{section.6}% 25
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Problemas}{subsection.6.1}% 26
+\BOOKMARK [3][-]{subsubsection.6.1.2}{Solu\347\343o definitiva}{subsection.6.1}% 27
+\BOOKMARK [2][-]{subsection.6.2}{Explora\347\343o e limpeza de dados}{section.6}% 28
+\BOOKMARK [1][-]{section.7}{Treinamento de modelo}{}% 29
+\BOOKMARK [2][-]{subsection.7.1}{LDA}{section.7}% 30
+\BOOKMARK [3][-]{subsubsection.7.1.1}{Hiperpar\342metros}{subsection.7.1}% 31
+\BOOKMARK [2][-]{subsection.7.2}{C\341lculo de coer\352ncia}{section.7}% 32
+\BOOKMARK [3][-]{subsubsection.7.2.1}{An\341lise de coer\352ncias}{subsection.7.2}% 33
+\BOOKMARK [3][-]{subsubsection.7.2.2}{C\363digo fonte}{subsection.7.2}% 34
+\BOOKMARK [2][-]{subsection.7.3}{Testes de an\341lise de t\363picos}{section.7}% 35
+\BOOKMARK [3][-]{subsubsection.7.3.1}{C\363digo fonte}{subsection.7.3}% 36
+\BOOKMARK [3][-]{subsubsection.7.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.7.3}% 37
+\BOOKMARK [3][-]{subsubsection.7.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras espec\355ficas}{subsection.7.3}% 38
+\BOOKMARK [3][-]{subsubsection.7.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.7.3}% 39
+\BOOKMARK [1][-]{section.8}{Semelhan\347a entre documentos para textos desconhecidos}{}% 40
+\BOOKMARK [2][-]{subsection.8.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.8}% 41
+\BOOKMARK [1][-]{section.9}{Resutados}{}% 42
+\BOOKMARK [1][-]{section.10}{Tecnologias}{}% 43
+\BOOKMARK [1][-]{section.11}{Links}{}% 44
+\BOOKMARK [1][-]{section.12}{Refer\352ncias}{}% 45
+\BOOKMARK [2][-]{subsection.12.1}{Artigos}{section.12}% 46
+\BOOKMARK [3][-]{subsubsection.12.1.1}{Processamento de linguagem natural}{subsection.12.1}% 47
+\BOOKMARK [2][-]{subsection.12.2}{Ferramentas e tecnologias}{section.12}% 48
