@@ -1,4 +1,4 @@
-\section{Coleta de dados}
+\section{Coleta de Dados}
 
 Parte dedicada a documentação de coleta de dados para treinamento.
 
@@ -10,6 +10,31 @@ gerenciamento do serviço de hospedagem e carreguei localmente.
 
 Em meu computador pessoal eu executo o MySql através de container da ferramenta Docker. Usando uma imagem de MySql como base, eu criei uma imagem própria 
 que já carrega o dump gerado com os posts do blog como parte da imagem. Sendo assim, ao criar e executar um container eu já tenho os dados pré-carregados.
+
+Os campos que utilizamos na tabela de posts são:
+
+\begin{center}
+    \begin{tabular}{ |c|c| }
+        \hline
+        Nome do campo & tipo do campo \\
+        \hline
+        \hline
+        ID & bigint unsigned \\
+        \hline
+        post\_date & datetime \\
+        \hline
+        post\_content & longtext \\
+        \hline
+        post\_title & text \\
+        \hline
+        post\_name & varchar(200) \\
+        \hline
+        post\_modified & datetime \\
+        \hline
+        comment\_count & bigint \\
+        \hline
+    \end{tabular}
+\end{center}
 
 \subsection{Wikipedia}
 
@@ -83,6 +108,19 @@ Utilizando como controle os status mencionados anteriormente, eu segui o seguint
 Eu executei esta sequência de passos até ter uma quantidade de páginas boa o suficiente para identificar as semelhanças e ao final eu tinha 
 XXX páginas armazenadas localmente.
 
+Exemplo de um documento contendo uma categoria:
+
+\begin{lstlisting}
+    {
+        'pageid' : 67826,
+        'ns': 14,
+        'title': "Categoria:Geografia da Argentina",
+        'type': "subcat",
+        'download': "Done",
+        'country': "Argentina"
+    }
+\end{lstlisting}
+
 \subsubsection{Coleta de páginas}
 
 Para as páginas eu fiz download do conteúdo tanto em formato \textit{wikitext} como \textit{text}, mesmo que no final só tenha trabalhado a 
@@ -112,6 +150,24 @@ A iteração de coleta neste caso foi muito mais simples e foi executada duas ve
         \item Marca a página como download realizado com sucesso
     \end{enumerate} 
 \end{enumerate}
+
+Exemplo de documento contendo uma página com conteúdo:
+
+\begin{lstlisting}
+    {
+        'pageid': 22911,
+        'ns': 0,
+        'title': "Geografia da Argentina",
+        'type': "page",
+        'download': "Waiting",
+        'country': "Argentina",
+        'categories': Array
+                    "{{Sem notas}}{{Info/País/geografia física|...",
+        'wikitext': "|preposição = da |nome = ...",
+        'text': "<div class="mw-parser-output"><style data-mw-deduplicate="TemplateStyl...",
+        'text_clean': "A Geografia da Argentina é um domínio de estudos e conhecimentos sobre..."
+    }
+\end{lstlisting}
 
 \subsubsection{Ferramentas utilizadas}
 

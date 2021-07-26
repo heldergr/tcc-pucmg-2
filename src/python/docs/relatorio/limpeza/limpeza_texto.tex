@@ -1,4 +1,4 @@
-\section{Limpeza de texto}
+\section{Processamento/Tratamento de Dados}
 
 Nem sempre utilizamos o texto inteiro quando queremos extrair conhecimento do seu conteúdo, que no nosso caso significa encontrar tópicos com suas palavras e 
 encontrar documentos em que estes tópicos estão presentes. Muitas palavras não são interessantes, como por exemplo aquelas que não agregam valor 
@@ -70,7 +70,19 @@ execuções de treinamento do modelo foi identificado que alguns conjuntos de pa
 
 Além da limpeza de palavras dentro dos posts, foi necessário também remover alguns posts do conjunto a ser utilizado no treinamento.
 
-ESCREVER MAIS A RESPEITO.
+Nosso blog também tem um pouco de foco em fotografia e por muito tempo disponibilizamos \textbf{papéis de parede} de fotos que nós tiramos e gostamos. 
+Para divulgar os papéis de parede escrevemos vários posts e estes não são interessantes para o propósito deste trabalho, por isso resolvi removê-los.
+A remoção foi relativamente fácil, visto que todos os posts deste conjunto tem o atributo \textit{name} começando com o prefixo \textit{papel-de-parede}.
+
+Outro critério para remoção de posts inteiros foi o \textbf{tamanho do documento em tokens}. Em várias referências sobre o algoritmo de identificação 
+de tópicos LDA, é recomendado utilizar documentos cuja quantidade de tokens seja acima de 40 ou 50. Analisando os tamanhos posts do blog eu notei 
+que 42 tokens seria um bom limite e este passou a ser o tamanho a partir do qual os documentos seriam usados no treinamento.
+
+Além dos dois conjuntos acima eu também optei por analisar manual e visualmente o conjunto de posts para remover pontualmente alguns cujo conteúdo 
+não seria interessante no treinamento. Páginas na ferramenta \textit{Wordpress} são consideradas posts e a página de contato, por exemplo, 
+não interessa no nosso contexto. Posts com conteúdo publicitário também foram removidos. Posts com conteúdo de valor temporal (divulgação de um 
+evento, por exemplo) que não tem mais valor atualmente também foram removidos. A lista completa pode ser consultada no 
+\href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/limpeza/limpeza_posts.py}{módulo de limpeza de posts}.
 
 \subsection{Wikipedia}
 
