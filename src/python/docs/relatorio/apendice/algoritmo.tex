@@ -1,6 +1,6 @@
-\section{Algoritmo e estruturas de dados}
+\subsection{Algoritmo e estruturas de dados}
 
-\subsection{Fonte de dados}
+\subsubsection{Fonte de dados}
 Durante a implementação do projeto, um objetivo foi manter a rotina principal (treinamento, cálculo de probabilidade dos tópicos e semelhança entre documentos) independente dos dados de treinamento e também dos dados de teste. O motivo disto é tirar o acoplamento da estrutura dos dados, do conteúdo e da forma como é feita a coleta.
 
 Para isto foi proposta uma estrutura de dados onde foi definido o conceito de fonte de dados, que faz com que qualquer origem de dados escolhida pudesse ser trabalhada sem mudança no código fonte do algoritmo de recomendação.
@@ -24,7 +24,7 @@ Cada fonte de dados específica deve internamente carregar os dados e manter uma
 Desta forma as fontes de dados fornecem os dados de forma semelhante e podemos trabalhar com qualquer mídia e o algoritmo de recomendação não precisa ser alterado.
 Para trabalhar com uma nova fonte de dados bastaria implementar uma subclasse de \textit{FonteDados} e implementar a parte específica que carrega os dados, faz limpeza e retorna os tokens e o DataFrame com os dados dos documentos.
 
-\subsection{Treinamento LDA}
+\subsubsection{Treinamento LDA}
 
 O módulo de treinamento LDA é responsável por ajustar um modelo para determinação de tópicos para os documentos de um conjunto de textos, assim como as 
 palavras que mais contribuem para a formação de cada tópico. Recebe como parâmetros os documentos, o número de tópicos a serem escolhidos, 
@@ -70,9 +70,9 @@ Segue o fragmento de código que faz este trabalho de treinamento:
 
 Para referência, um link do \href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/treinamento/treinamento_lda.py}{código fonte do módulo de treinamento}.
 
-\subsection{Cálculo de semelhança}
+\subsubsection{Cálculo de semelhança}
 
-\subsection{Executor}
+\subsubsection{Executor}
 
 Foi criado um módulo executor para que pudessem ser variados os parâmetros de ajustes do modelo e gerar resultados para cada conjunto gerado por esta variação, permitindo uma comparação posterior dos resultados obtidos.
 Este módulo recebe como parâmetro uma lista de cenários de testes. Cada cenário contém as informações:

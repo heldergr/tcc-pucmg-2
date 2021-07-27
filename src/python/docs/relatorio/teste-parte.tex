@@ -3,6 +3,8 @@
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{listings}
+\usepackage{import}
+\usepackage{comment}
 
 \usepackage{xcolor}
 
@@ -30,6 +32,8 @@
     tabsize=2
 }
 
+\usepackage{graphicx}
+
 \lstset{
     breaklines=true,
     extendedchars=true,
@@ -50,6 +54,6 @@
 
 \tableofcontents{}
 
-\include{limpeza_texto}
+\import{explore/}{exploracao.tex}
 
 \end{document}
