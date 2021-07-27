@@ -14,7 +14,8 @@ class AnaliseNuvemPalavras:
 
     def gerar_nuvem_palavras(self, coluna_documento):
         texto_unico = self.__obter_texto_unico(coluna_documento)
-        wordcloud = WordCloud(background_color='white').generate(texto_unico)
+        wordcloud = WordCloud(background_color='white', width=1000, height=500).generate(texto_unico)
+        plt.figure(figsize=(12, 8))
         plt.imshow(wordcloud, interpolation='bilinear')
         plt.axis("off")
         plt.show()
