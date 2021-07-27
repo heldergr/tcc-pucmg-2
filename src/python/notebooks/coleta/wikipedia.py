@@ -226,7 +226,7 @@ class PaginaCollector:
             text = self.get_text(pageid)
             self.collection_conteudo.update_one(
                 { 'pageid': pageid },
-                { '$set': { 'text': text } }
+                { '$set': { 'text': text['parse']['text'] } }
             )
             self.collection.update_one(
                 { 'pageid': pageid },
@@ -240,4 +240,8 @@ class PaginaCollector:
 
     def show_text_download_statistics(self):
         pdc = self.get_pages_text_downloads_counts()
+        print(f'Page text download counts: {pdc}')
+
+    def show_download_statistics(self):
+        pdc = self.get_pages_downloads_counts()
         print(f'Page text download counts: {pdc}')

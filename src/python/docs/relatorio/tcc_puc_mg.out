@@ -1,45 +1,31 @@
-\BOOKMARK [1][-]{section.1}{Introdu\347\343o}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{Contextualiza\347\343o}{section.1}% 2
-\BOOKMARK [2][-]{subsection.1.2}{O problema proposto}{section.1}% 3
-\BOOKMARK [1][-]{section.2}{Coleta de Dados}{}% 4
-\BOOKMARK [2][-]{subsection.2.1}{Posts Nerds Viajantes}{section.2}% 5
-\BOOKMARK [2][-]{subsection.2.2}{Wikipedia}{section.2}% 6
-\BOOKMARK [3][-]{subsubsection.2.2.1}{Definindo o subconjunto de p\341ginas}{subsection.2.2}% 7
-\BOOKMARK [3][-]{subsubsection.2.2.2}{Coleta de categorias}{subsection.2.2}% 8
-\BOOKMARK [3][-]{subsubsection.2.2.3}{Coleta de p\341ginas}{subsection.2.2}% 9
-\BOOKMARK [3][-]{subsubsection.2.2.4}{Ferramentas utilizadas}{subsection.2.2}% 10
-\BOOKMARK [2][-]{subsection.2.3}{Verbos em l\355ngua portuguesa}{section.2}% 11
-\BOOKMARK [1][-]{section.3}{Processamento/Tratamento de Dados}{}% 12
-\BOOKMARK [2][-]{subsection.3.1}{Limpeza comum}{section.3}% 13
-\BOOKMARK [2][-]{subsection.3.2}{Posts Nerds Viajantes}{section.3}% 14
-\BOOKMARK [3][-]{subsubsection.3.2.1}{Limpeza de palavras nos posts}{subsection.3.2}% 15
-\BOOKMARK [3][-]{subsubsection.3.2.2}{Limpeza de posts inteiros}{subsection.3.2}% 16
-\BOOKMARK [2][-]{subsection.3.3}{Wikipedia}{section.3}% 17
-\BOOKMARK [1][-]{section.4}{Explora\347\343o dos dados}{}% 18
-\BOOKMARK [2][-]{subsection.4.1}{An\341lise do tamanho dos documentos}{section.4}% 19
-\BOOKMARK [2][-]{subsection.4.2}{An\341lise de palavras das fontes de dados}{section.4}% 20
-\BOOKMARK [1][-]{section.5}{Treinamento de modelo}{}% 21
-\BOOKMARK [2][-]{subsection.5.1}{LDA}{section.5}% 22
-\BOOKMARK [3][-]{subsubsection.5.1.1}{Hiperpar\342metros}{subsection.5.1}% 23
-\BOOKMARK [2][-]{subsection.5.2}{C\341lculo de coer\352ncia}{section.5}% 24
-\BOOKMARK [3][-]{subsubsection.5.2.1}{An\341lise de coer\352ncias}{subsection.5.2}% 25
-\BOOKMARK [3][-]{subsubsection.5.2.2}{C\363digo fonte}{subsection.5.2}% 26
-\BOOKMARK [2][-]{subsection.5.3}{Testes de an\341lise de t\363picos}{section.5}% 27
-\BOOKMARK [3][-]{subsubsection.5.3.1}{C\363digo fonte}{subsection.5.3}% 28
-\BOOKMARK [3][-]{subsubsection.5.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.5.3}% 29
-\BOOKMARK [3][-]{subsubsection.5.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras espec\355ficas}{subsection.5.3}% 30
-\BOOKMARK [3][-]{subsubsection.5.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.5.3}% 31
-\BOOKMARK [1][-]{section.6}{Semelhan\347a entre documentos para textos desconhecidos}{}% 32
-\BOOKMARK [2][-]{subsection.6.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.6}% 33
-\BOOKMARK [1][-]{section.7}{Resutados}{}% 34
-\BOOKMARK [1][-]{section.8}{Tecnologias}{}% 35
-\BOOKMARK [1][-]{section.9}{Links}{}% 36
-\BOOKMARK [1][-]{section.10}{Refer\352ncias}{}% 37
-\BOOKMARK [2][-]{subsection.10.1}{Artigos}{section.10}% 38
-\BOOKMARK [3][-]{subsubsection.10.1.1}{Processamento de linguagem natural}{subsection.10.1}% 39
-\BOOKMARK [2][-]{subsection.10.2}{Ferramentas e tecnologias}{section.10}% 40
-\BOOKMARK [1][-]{section.11}{Algoritmo e estruturas de dados}{}% 41
-\BOOKMARK [2][-]{subsection.11.1}{Fonte de dados}{section.11}% 42
-\BOOKMARK [2][-]{subsection.11.2}{Treinamento LDA}{section.11}% 43
-\BOOKMARK [2][-]{subsection.11.3}{C\341lculo de semelhan\347a}{section.11}% 44
-\BOOKMARK [2][-]{subsection.11.4}{Executor}{section.11}% 45
+\BOOKMARK [0][-]{chapter.1}{Introdu\347\343o}{}% 1
+\BOOKMARK [1][-]{subsection.1.0.1}{Contextualiza\347\343o}{chapter.1}% 2
+\BOOKMARK [2][-]{subsection.1.0.2}{O problema proposto}{subsection.1.0.1}% 3
+\BOOKMARK [1][-]{section.1.1}{Coleta de Dados}{chapter.1}% 4
+\BOOKMARK [2][-]{subsection.1.1.1}{Posts Nerds Viajantes}{section.1.1}% 5
+\BOOKMARK [2][-]{subsection.1.1.2}{Wikipedia}{section.1.1}% 6
+\BOOKMARK [2][-]{subsection.1.1.3}{Verbos em l\355ngua portuguesa}{section.1.1}% 7
+\BOOKMARK [0][-]{chapter.2}{Processamento/Tratamento de Dados}{}% 8
+\BOOKMARK [1][-]{subsection.2.0.1}{Limpeza comum}{chapter.2}% 9
+\BOOKMARK [2][-]{subsection.2.0.2}{Posts Nerds Viajantes}{subsection.2.0.1}% 10
+\BOOKMARK [2][-]{subsection.2.0.3}{Wikipedia}{subsection.2.0.1}% 11
+\BOOKMARK [1][-]{section.2.1}{Explora\347\343o dos dados}{chapter.2}% 12
+\BOOKMARK [2][-]{subsection.2.1.1}{An\341lise do tamanho dos documentos}{section.2.1}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{An\341lise de palavras das fontes de dados}{section.2.1}% 14
+\BOOKMARK [1][-]{section.2.2}{Treinamento de modelo}{chapter.2}% 15
+\BOOKMARK [2][-]{subsection.2.2.1}{LDA}{section.2.2}% 16
+\BOOKMARK [2][-]{subsection.2.2.2}{C\341lculo de coer\352ncia}{section.2.2}% 17
+\BOOKMARK [2][-]{subsection.2.2.3}{Testes de an\341lise de t\363picos}{section.2.2}% 18
+\BOOKMARK [1][-]{section.2.3}{Semelhan\347a entre documentos para textos desconhecidos}{chapter.2}% 19
+\BOOKMARK [2][-]{subsection.2.3.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.2.3}% 20
+\BOOKMARK [1][-]{section.2.4}{Resutados}{chapter.2}% 21
+\BOOKMARK [1][-]{section.2.5}{Tecnologias}{chapter.2}% 22
+\BOOKMARK [1][-]{section.2.6}{Links}{chapter.2}% 23
+\BOOKMARK [1][-]{section.2.7}{Refer\352ncias}{chapter.2}% 24
+\BOOKMARK [2][-]{subsection.2.7.1}{Artigos}{section.2.7}% 25
+\BOOKMARK [2][-]{subsection.2.7.2}{Ferramentas e tecnologias}{section.2.7}% 26
+\BOOKMARK [1][-]{section.2.8}{Algoritmo e estruturas de dados}{chapter.2}% 27
+\BOOKMARK [2][-]{subsection.2.8.1}{Fonte de dados}{section.2.8}% 28
+\BOOKMARK [2][-]{subsection.2.8.2}{Treinamento LDA}{section.2.8}% 29
+\BOOKMARK [2][-]{subsection.2.8.3}{C\341lculo de semelhan\347a}{section.2.8}% 30
+\BOOKMARK [2][-]{subsection.2.8.4}{Executor}{section.2.8}% 31

@@ -5,6 +5,9 @@ client = MongoClient()
 wikipedia_db = client.wikipedia
 pucmg_db = client['tcc-pucmg']
 
+def get_wikipedia_collection(collection_name):
+    return wikipedia_db[collection_name]
+
 def get_pages_content_collection():
     return wikipedia_db.pages_content
 

@@ -1,11 +1,13 @@
+from limpeza import wikipedia
 from fonte_dados.fonte_dados import FonteDados
 from limpeza import limpeza_texto
-from repository.mongo_utils import get_pages_content_collection
+from repository.mongo_utils import get_wikipedia_collection, get_pages_content_collection
 from repository.wikipedia import WikipediaRepo
 
 import pandas as pd
 
 wikipedia_repo = WikipediaRepo(collection=get_pages_content_collection())
+wikipedia_repo_brasil = WikipediaRepo(collection=get_wikipedia_collection('pages_content_brasil'))
 
 class Wikipedia(FonteDados):
 
@@ -14,7 +16,7 @@ class Wikipedia(FonteDados):
         self.__pages = None
 
     def carregar_dados(self, limpar_stopwords_especificas=True, limpar_verbos=True):
-        pages = wikipedia_repo.find_all()
+        pages = wikipedia_repo.find_all() + wikipedia_repo_brasil.find_all()
         self.__pages = pages
 
         pages_df = pd.DataFrame(pages)

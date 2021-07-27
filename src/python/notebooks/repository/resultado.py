@@ -26,3 +26,6 @@ class ResultadoRepo:
 
     def find_all(self):
         return self.__find({})
+
+    def count_resultados(self):
+        return self.__resultados_collection.count_documents({})

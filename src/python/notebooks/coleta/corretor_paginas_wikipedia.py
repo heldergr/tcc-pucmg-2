@@ -3,11 +3,22 @@ from pymongo import MongoClient
 mongo_client = MongoClient()
 db = mongo_client.wikipedia
 
+"""
+## Correção collection pages
+
+- Problema: a mesma página tinha sido baixada mais de uma vez porque era referenciada por várias coleções
+- Solução
+    * Renomear collection pages para pages_incorreto (feito no mongo shell)
+    * Recriar a collection pages com estrutura correta
+        * A categoria agora será um objeto com id e título ao invés de estes valores estarem soltos na páginas. Assim ficará melhor estuturado
+        * O objeto da página terá uma collection de categorias. Cada página lida da estrutura antiga terá na nova collection um array com as categorias que a referenciam
+    * Renomear pages_content para pages_content incorreto
+"""
 class CorretorEstruturaCategorias:
 
     def __init__(self, collection_name_incorreto, collection_name_correto) -> None:
-        self.__collection_incorreto = collection_name_incorreto
-        self.__collection_correto = collection_name_correto
+        self.__collection_incorreto = db[collection_name_incorreto]
+        self.__collection_correto = db[collection_name_correto]
 
     def corrigir_categorias(self):
         todas_paginas_incorreto = list(self.__collection_incorreto.find({}))

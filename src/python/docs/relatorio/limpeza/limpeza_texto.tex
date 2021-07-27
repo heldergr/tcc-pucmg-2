@@ -86,4 +86,18 @@ evento, por exemplo) que não tem mais valor atualmente também foram removidos.
 
 \subsection{Wikipedia}
 
-Limpeza de textos obtidos da Wikipedia.
+No caso dos posts do blog a limpeza de tags html em posts é feita no carregamento dos dados antes do treinamento, mas no caso das páginas da 
+Wikipedia eu resolvi fazer esta limpeza apenas uma vez e gravar em um atributo separado, aproveitando as facilidades do MongoDB para alteração 
+na estrutura de documentos.
+
+Ao fazer um teste com cerca de duas mil páginas o tempo para remover as tags foi mais de um minuto e como seria um trabalho a ser executado a 
+cada treinamento eu achei melhor já fazer este processo previamente.
+
+O campo utilizado com base para a limpeza foi o \textit{text}, que contém o conteúdo em html. Neste campo o conteúdo da página fica dentro de 
+parágrafos (atributo html \textit{p}) e elementos pré-formatados (atributo html \textit{pre}).
+
+Para cada texto eu utilizei o componente \textit{BeautifulSoup} do módulo \textit{bs4} para extrair todos os parágrafos e pré-formatados para, 
+em seguida, gravá-los em um campo separada chamado \textit{text\_clean}, que foi usado no identificação de documentos semelhantes.
+
+O código fonte completo pode ser encontrado no 
+\href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/limpeza/limpeza_posts.py}{módulo de limpeza da Wikipedia}.

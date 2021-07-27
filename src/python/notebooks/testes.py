@@ -7,9 +7,9 @@ from limpeza.wikipedia import WikipediaCleaner
 from limpeza.stopwords_especificas import StopwordsSpecificas
 from util import constants
 
-def executar_extracao_textos_puros():
+def executar_extracao_textos_puros(collection_name):
     wikipedia_cleaner = WikipediaCleaner()
-    wikipedia_cleaner.extrair_textos_puros()
+    wikipedia_cleaner.extrair_textos_puros(collection_name=collection_name)
 
 def executar_carregar_stopwords_especificas():
     stopwords_especificas = StopwordsSpecificas()
@@ -29,15 +29,13 @@ def executar_estatistica_palavras():
     analise_estatistica.exibir_total_tokens('documento')
 
 if __name__ == '__main__':
-
-    executar_estatistica_palavras()
+    executar_extracao_textos_puros('pages_content_brasil')
 
     run_all = False
-
     if run_all:
+        executar_estatistica_palavras()
         executar_informacoes_fontes_dados()
         executar_carregar_stopwords_especificas()
         wikipedia_repo = WikipediaRepo(collection=get_pages_content_collection())
         wikipedia_explorer = WikipediaExplorer(wikipedia_repo)
         wikipedia_explorer.explore()
-        executar_extracao_textos_puros()
