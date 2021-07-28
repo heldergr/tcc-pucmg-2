@@ -15,8 +15,8 @@ Cada documento aqui gravado deve conter os seguintes campos:
 """
 class ResultadoRepo:
 
-    def __init__(self) -> None:
-        self.__resultados_collection = get_resultados_collection()
+    def __init__(self, collection_name = None) -> None:
+        self.__resultados_collection = get_resultados_collection(collection_name)
 
     def insert_many(self, resultados):
         self.__resultados_collection.insert_many(resultados)

@@ -11,9 +11,10 @@ wikipedia_repo_brasil = WikipediaRepo(collection=get_wikipedia_collection('pages
 
 class Wikipedia(FonteDados):
 
-    def __init__(self, carregar_previamente=False):
+    def __init__(self, carregar_previamente=False, remover_textos_pequenos=True):
         super().__init__(carregar_previamente=carregar_previamente)
         self.__pages = None
+        self.__remover_textos_pequenos = remover_textos_pequenos
 
     def carregar_dados(self, limpar_stopwords_especificas=True, limpar_verbos=True):
         pages = wikipedia_repo.find_all() + wikipedia_repo_brasil.find_all()
@@ -32,9 +33,13 @@ class Wikipedia(FonteDados):
         n_tokens = [len(tks) for tks in tokens]
         pages_df['n_tokens'] = n_tokens
 
-
         pages_df.rename(columns={'text_clean': 'documento', 'pageid': 'id_documento', 'title': 'titulo'}, inplace=True)
         pages_df['nome'] = pages_df['titulo']
+
+        if self.__remover_textos_pequenos:
+            pages_df = pages_df[pages_df['n_tokens'] >= 40]
+            print('Novo shape de df da wikipedia:')
+            print(pages_df.shape)
 
         self.__pages_df = pages_df
 
