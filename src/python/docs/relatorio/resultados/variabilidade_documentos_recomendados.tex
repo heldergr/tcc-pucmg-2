@@ -91,7 +91,13 @@ Vamos ver agora a distribuição gráfica destes valores recomendados por tópic
 
 \includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_topics.png}
 
-112 possíveis.
+Em seguida vemos os 5 que mais se destacam nos dois extremos em relação ao parâmetro \textit{alpha}, os que têm maior e menor variação. 
+Cada combinação de documento de origem e valor de alpha aparece 112 vezes no resultado (7 \textit{num\_topics} * 4 \textit{eta} * 2 \textit{passes} * 2 \textit{cenario\_wp}).
+
+Assim como na comparação por tópicos, o documento de \textit{id} 5599 se mostrou o que menos é influenciado pela variação dos demais 
+parâmetros quando o valor alpha \textit{1.00}, tendo apenas 5 documentos distintos recomendados nos 112 resultados para esta combinação.
+
+No outro extremo temos o documento com \textit{id} 6798, que teve com valor \textit{alpha} 0.10 teve 77 recomendações distintas.
 
 \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -123,9 +129,19 @@ Vamos ver agora a distribuição gráfica destes valores recomendados por tópic
     \end{tabular}
 \end{center}
 
+O gráfico abaixo nos mostra que ao utilizar valor \textit{alpha} 1.0 a tendência é que a quantidade de documentos distintos recomendados por 
+documento de origem é muito menor, causando menor variabilidade. Lembrando que este valor mais alto indica pro algoritmo que mais tópicos definem 
+os contextos dos textos. Para valores \textit{alpha} 0.1 e 0.01 a variabilidade é maior mas com pouca diferença entre um e outro na distribuição.
+
 \includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_alpha.png}
 
-84 possíveis.
+O próximo parâmetro analisado é o \textit{eta}, onde também analisamos os 5 que mais se destacam nos dois extremos em relação ao parâmetro.
+Cada combinação de documento de origem e valor de \textit{eta} aparece 84 vezes no resultado (7 \textit{num\_topics} * 3 \textit{alpha} * 2 \textit{passes} * 2 \textit{cenario\_wp}).
+
+Aqui o documento com menor variação é o com \textit{id} 3339, que para o valor \textit{eta} 0.005 teve apenas 15 documentos distintos. Nota-se aqui
+que mesmo não sendo o que mais se destaca houve também pouca variação para o documento com \textit{id} 5599.
+No outro extremo temos o documento com \textit{id} 5641, que teve com valor \textit{eta} 0.005 teve 61 recomendações distintas, o que é um número 
+grande comparado com as 84 execuções para este par.
 
 \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -157,7 +173,17 @@ Vamos ver agora a distribuição gráfica destes valores recomendados por tópic
     \end{tabular}
 \end{center}
 
+A distribuição abaixo nos mostra que a maior concentração de documentos distintos é semelhante para qualquer valor de \textit{eta}, perto da faixa de 
+35 documentos. A diferença acontece na quantidade de valores nesta faixa, que aumenta quando se aumenta o \textit{eta} e na faixa com maior 
+quantidade de documentos distintos um valor mais baixo do parâmetro se destaca, com maior concentração).
+
 \includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_eta.png}
+
+O próximo parâmetro analisado é o \textit{passes}, onde abaixo analisamos os 5 que mais se destacam nos dois extremos em relação ao parâmetro.
+Cada combinação de documento de origem e valor de \textit{eta} aparece 168 vezes no resultado (7 \textit{num\_topics} * 3 \textit{alpha} * 4 \textit{eta} * 2 \textit{cenario\_wp}).
+
+Aqui o documento com menor variação novamente é o com \textit{id} 5599, que para o valor de \textit{passes} 2 teve apenas 26 documentos distintos. 
+No outro extremo temos o documento com \textit{id} 3326, que com valor de \textit{passes} 10 teve 102 recomendações distintas.
 
 \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -189,7 +215,18 @@ Vamos ver agora a distribuição gráfica destes valores recomendados por tópic
     \end{tabular}
 \end{center}
 
+A análise gráfica abaixo nos mostra que apesar de ter uma diferença na concentração na faixa com maior frequência, a variação para este parâmetro 
+não se mostrou muito significativa.
+
 \includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_passes.png}
+
+Em seguidas analisamos os extremos de variação ao limitar o tamanho dos documentos utilizados na comparação.
+Assim como no caso anterior, cada combinação de documento de origem e cenário Wikipedia aparece 168 vezes no resultado (7 \textit{num\_topics} * 3 \textit{alpha} * 4 \textit{eta} * 2 \textit{passes}).
+
+Aqui o documento com menor variação novamente é o com \textit{id} 8116, que para a base de comparação reduzida teve apenas 21 documentos distintos. 
+No outro extremo temos o documento com \textit{id} 6798, que na base de comparação completa 125 recomendações distintas.
+
+Um fato interessante a se notar é que os 5 que menos variam ocorreram na base reduzida, enquanto os 5 maiores aparecem na base de comparação completa.
 
 \begin{center}
     \begin{tabular}{|c|c|c|}
@@ -220,6 +257,12 @@ Vamos ver agora a distribuição gráfica destes valores recomendados por tópic
         \hline
     \end{tabular}
 \end{center}
+
+A análise gráfica abaixo nos mostra que ao excluir da comparação documentos com pouca quantidade de tokens a variação na quantidade de documentos
+distintos recomendados por documento de origem dimimui. Por aqui nota-se o mesmo que percebemos na tabela acima, que é a predominância da base reduzida
+no extremos de menor variação e da base completa na área de maior variação. Isto mostra uma tendência do algoritmo em "ter mais dúvidas" quando usamos 
+a base completa. Mas a diferença neste caso não ocorre por somente por causa do tamanho dos documentos, há também a diminuição nas opções disponíveis para
+comparação.
 
 \includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_cenario_wp.png}
 
