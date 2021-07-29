@@ -1,0 +1,66 @@
+\subsection{Tópicos e palavras dominantes}
+
+\subsubsection{Tópicos dominantes e seu percentual de contribuição em cada documento}
+
+No algoritmo LDA, cada documento é composto por múltiplos tópicos, mas tipicamente apenas um é dominante. Uma análise que pode ser feita após o 
+treinamento é ver qual o tópico dominante de cada documento, seu percentual de contribuição naquele documento e as palavras chave do tópico.
+
+\begin{center}
+    \begin{tabular}{| m{5em} | m{5em} | m{7em} | m{7em} | m{7em} |}
+        \hline
+        Número do documento & Tópico dominante & Percentual de contribuição & Palavras chave & Documento \\
+        \hline
+        0 & 19.0 & 0.9949 & bonit, temp, cidad, vist, cervej, aind, pra, g... & [santiag, mus, art, pré, colombi, vár, mes, pe... \\
+        \hline
+        1 & 6.0 & 0.9947 & congr, cidad, ambi, marin, noss, opç, cad, blo... & [santiag, bacan, dentr, opç, divers, blog, aqu... \\
+        \hline
+        2 & 8.0 & 0.9924 & glaci, temp, pouc, lag, seward, vist, pais, ai... & [palaci, moned, soment, moned, chilen, santiag... \\
+        \hline
+        3 & 55.0 & 0.4061 & câm, cidad, loj, estanh, cen, expos, são, peç,... & [hoj, seç, seman, câm, ent, últ, chil, argenti... \\
+        \hline
+        4 & 30.0 & 0.9891 & parqu, ônibu, temp, montanh, expos, fiz, cent,... & [monument, valley, unid, dentr, indígen, trib,... \\
+        \hline
+        5 & 1.0 & 0.9958 & sorvet, cidad, aind, histór, mund, uma, pouc, ... & [cristób, 880m, nível, 280m, nível, santiag, s... \\
+        \hline
+        6 & 54.0 & 0.8293 & routeburn, track, hut, mus, pais, câm, porqu, ... & [frutill, cidad, bel, alemã, não, muse, alemán... \\
+        \hline
+        7 & 4.0 & 0.9936 & argentin, prat, boa, bariloch, cord, cidad, ma... & [qu, país, boa, sempr, argentin, buen, air, de... \\
+        \hline
+        8 & 17.0 & 0.9967 & lag, parqu, barc, águ, bonit, cacho, pouc, táb... & [lag, andin, petrohué, antecipad, lug, bellav,... \\
+        \hline
+        9 & 8.0 & 0.9113 & glaci, temp, pouc, lag, seward, vist, pais, ai... & [catedr, metropolit, santiag, atr, religi, pop... \\ 
+        \hline
+    \end{tabular}
+\end{center}
+
+Em determinados momentos pode ser interessante ver os textos que melhor representam um tópico. A tabela a seguir mostra 10 tópicos e para cada tópico 
+mostra o maior percentual de contribuição daquele tópico, as palavras chaves que melhor o representam e parte do texto onde o tópico
+é mais significativo.
+
+\begin{center}
+    \begin{tabular}{| m{5em} | m{6em} | m{10em} | m{10em} |}
+        \hline
+        Tópico & \% Contribuição & Palavras chave & Texto representativo \\
+        \hline
+        0.0 & 0.9943 & urs, iso, boa, câm, parqu, cinderel, moment, voad, voo, cordilh & [selv, intenç, denal, nation, park, parqu, alasc, aind, parqu, animal, inclusiv, urs, espéci, gr... \\
+        \hline
+        1.0 & 0.9974 & sorvet, cidad, aind, histór, mund, uma, pouc, pesso, são, temp & [boa, gulose, princip, sorvet, sempr, sorvet, bel, horizont, cidad, dentr, sorvet, aless, uma, i... \\
+        \hline
+        2.0 & 0.7644 & alt, geral, caraç, cidad, santu, igrej, santiag, parqu, matriz, ônibu & [rapid, santiag, vall, estaçã, esqu, montanh, passe, princip, cidad, ônibu, hop, hop, off, final... \\
+        \hline
+        3.0 & 0.9978 & prai, bonit, mari, cidad, igrej, pouc, praç, rua, vist, fiz & [noss, fern, noronh, tour, apes, bacan, poi, noronh, fim, agênc, caminhon, 4x4, depois, turist, ... \\
+        \hline
+        4.0 & 0.9936 & argentin, prat, boa, bariloch, cord, cidad, mas, afinal, portugu, jauj & [qu, país, boa, sempr, argentin, buen, air, depois, bariloch, cidad, boa, bariloch, jauj, cardáp... \\
+        \hline
+        5.0 & 0.9974 & lago, lençol, maranh, cervej, cidad, parqu, águ, aind, temp, chei & [lençol, maranh, antig, junh, 2012, promoç, aére, bom, são, luí, maranh, lençol, maranh, lago, c... \\
+        \hline
+        6.0 & 0.9947 & congr, cidad, ambi, marin, noss, opç, cad, blog, sit, bel & [santiag, bacan, dentr, opç, divers, blog, aquí, blog, destemper, diss, mes, mes, varand, ótim, ... \\
+        \hline
+        7.0 & 0.9984 & glaci, temp, quilômetr, pouc, lad, barc, chuv, lag, bonit, jalap & [sul, argentin, chil, contém, dezen, glaci, uma, boa, barc, lag, argentin, nest, glaci, upsal, s... \\
+        \hline
+        8.0 & 0.9978 & glaci, temp, pouc, lag, seward, vist, pais, aind, montanh, bonit & [patagôn, calafat, dest, estânc, dentr, opç, cristin, apes, rebanh, ovelh, porqu, dentr, áre, pa... \\
+        \hline
+        9.0 & 0.9951 & animal, temp, vist, selv, expos, macr, long, lad, lag, yellowston & [yellowston, nation, park, parqu, nacion, unid, selv, sempr, chanc, animal, talv, bich, princip,... \\
+        \hline
+    \end{tabular}
+\end{center}

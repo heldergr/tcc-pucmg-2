@@ -1,0 +1,45 @@
+\subsection{Plano de execução de testes}
+
+Para executar o levantamento de documentos semelhantes além de usar os posts do blog como fonte origem de dados de treinamento e as páginas da 
+Wikipedia como fonte de dados de comparação eu resolvi variar os seguintes parâmetros, com a descrição dos valores utilizados.
+
+\begin{itemize}
+    \item \textbf{topics}: 57, 45, 72, 67, 39, 22, 101
+    \item \textbf{eta}: 0.005, 0.05, 0.5, 1
+    \item \textbf{alpha}: 0.01, 0.1, 1
+    \item \textbf{passes}: 2, 10
+\end{itemize}
+
+Combinando os 378 posts da fonte de origem com estes possíveis valores eu obtive 378 * 7 * 4 * 3 * 2 = \textbf{63504 resultados}. Este número 
+foi efetivamente multiplicado por 2 porque fiz os testes uma vez para todas páginas da Wikipedia e outra execução apenas para páginas contendo 
+apenas páginas que após a limpeza de dados básica tinha tamanho maior ou igual a 40 tokens. O resultado destas duas execuções foi colocado 
+em \textit{collections} separadas no MongoDB e neste relatório são usados os termos como \textbf{full} para referenciar o conjunto completo e 
+\textbf{gte40} para o conjunto limitado pelo tamanho.
+
+A execução dos testes foi feita através do módulo \textbf{Executor}, explicado no apêndice (COLOCAR LINK INTERNO?). O código para execução deste 
+módulo é o seguinte:
+
+\begin{lstlisting}[language=Python]
+from main.especificacao_testes import EspecificacaoTestes
+from main.executor import ExecutorTreinamento
+from repository.resultado import ResultadoRepo
+
+# Cria especificação de testes
+filename = 'especificao_completa.yml'
+especificacao_testes = EspecificacaoTestes(filename)
+cenarios = especificacao_testes.get_testes()
+
+# Executa treinamento
+executor = ExecutorTreinamento(cenarios)
+resultado_df = executor.executar_treinamento()
+
+# Grava resultados no MongoDB
+documentos = resultado_df.to_dict('records')
+resultado_repo = ResultadoRepo()
+resultado_repo.insert_many(documentos)
+\end{lstlisting}
+
+A lista de testes a serem executados foi determinadas em arquivo \textit{yml}, formato escolhido pela facildade de definir variações de valores
+de forma declarativa. Abaixo está a listagem do arquivo utilizado (que está no repositório do projeto).
+
+\lstinputlisting[caption=Especificação de execução de testes]{resultados/especificacao.yml}

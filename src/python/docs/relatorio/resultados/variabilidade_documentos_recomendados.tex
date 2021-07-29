@@ -1,0 +1,225 @@
+\subsection{Variabilidade de documentos recomendados}
+
+Outro fator interessante de analisar é a variabilidade de documentos recomendados ao variar os parâmetros de treinamento. No conjunto de resultados cada documento 
+de origem tem \textbf{336 valores}, número este que vem da combinação de valores possíves das variações dos parâmetros número de tópicos,
+\textit{alpha}, \textit{eta}, \textit{passes} e de 2 conjuntos de páginas diferentes.
+
+Agrupando por documento de origem eu contei a quantidade de documentos destinos diferentes que foram recomendados como o mais semelhante e abaixo
+está a lista ordenada contendo os 5 com menor variação e os 5 com maior.
+
+No geral o documento com \textit{id} 7923 teve 43 documentos de destino recomendados com o mais semelhante. Isto quer dizer que o post do blog com 
+este \textit{id} teve 43 páginas na Wikipedia recomendadas como a mais parecida entre as 336 comparações realizadas para este documento no total.
+
+No outro extremo temos o documento de origem com \textit{id} 6798, que teve 168 documentos distintos recomendados para este documento. Isto
+quer dizer que a variação nos parâmetros influenciou muito na identificação de semelhança para este documento.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        Id do documento de origem & Documentos destino diferentes \\
+        7923 & 43 \\
+        \hline
+        7131 & 45 \\
+        \hline
+        8116 & 46 \\
+        \hline
+        7108 & 48 \\
+        \hline
+        8146 & 51 \\
+        \hline
+        ... & ... \\
+        \hline
+        8896 & 157 \\
+        \hline
+        5641 & 158 \\
+        \hline
+        134 & 158 \\
+        \hline
+        3721 & 158 \\
+        \hline
+        6798 & 168 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+O gráfico a seguir mostra a distribuição da quantidade de documentos distintos por documento de origem. Notamos que a maior concentração
+de documentos semelhantes distintos recomendados por origem está perto de 120.
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos.png}
+
+Vamos então ver como esta variabilidade é influenciada pelos parâmetros de treinamento do algoritmo para entender quais tem maior peso.
+
+Começando pelo número de tópicos, vamos ver os 5 que mais se destacam nos dois extremos, os que têm maior e menor variação. Cada combinação de 
+documento de origem e número de tópicos aparece 48 vezes no resultado (3 \textit{alpha} * 4 \textit{eta} * 2 \textit{passes} * 2 \textit{cenario\_wp}).
+
+O documento de \textit{id} 5599 se mostrou o que menos é influenciado pela variação dos demais parâmetros quando o número de tópicos foi
+\textit{39}, tendo apenas 4 documentos distintos recomendados nos 48 resultados para esta combinação.
+
+No outro extremo temos o documento com \textit{id} 8896, que teve com 67 tópicos teve 38 recomendações distintas, uma variação muito grande.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Id do documento de origem & Número de tópicos & Documentos destino diferentes \\
+        \hline
+        5599 & 39 & 4 \\
+        \hline
+        14565 & 22 & 7 \\
+        \hline
+        5599 & 57 & 7 \\
+        \hline
+        14565 & 39 & 8 \\
+        \hline
+        13988 & 39 & 8 \\
+        \hline
+        ... & ... & ... \\
+        \hline
+        10475 & 72 & 36 \\
+        \hline
+        8896 & 57 & 36 \\
+        \hline
+        10399 & 101 & 36 \\
+        \hline
+        14946 & 45 & 37 \\
+        \hline
+        8896 & 67 & 38 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Vamos ver agora a distribuição gráfica destes valores recomendados por tópico.
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_topics.png}
+
+112 possíveis.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Id do documento de origem & Alpha & Documentos destino diferentes \\
+        \hline
+        5599 & 1.00 & 5 \\
+        \hline
+        13617 & 1.00 & 8 \\
+        \hline
+        13360 & 1.00 & 9 \\
+        \hline
+        13356 & 1.00 & 10 \\
+        \hline
+        15389 & 1.00 & 11 \\
+        \hline
+        ... & ... & ... \\
+        \hline
+        8896 & 0.10 & 76 \\
+        \hline
+        6637 & 0.10 & 76 \\
+        \hline
+        14946 & 0.01 & 77 \\
+        \hline
+        8896 & 0.01 & 77 \\
+        \hline
+        6798 & 0.10 & 77 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_alpha.png}
+
+84 possíveis.
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Id do documento de origem & Eta & Documentos destino diferentes \\
+        \hline
+        3339 & 0.005 & 15 \\
+        \hline
+        15389 & 0.005 & 15 \\
+        \hline
+        5599 & 0.050 & 15 \\
+        \hline
+        7185 & 1.000 & 16 \\
+        \hline
+        13870 & 0.050 & 16 \\
+        \hline
+        ... & ... & ... \\
+        \hline
+        8896 & 0.005 & 57 \\
+        \hline
+        6798 & 0.005 & 58 \\
+        \hline
+        8896 & 1.000 & 58 \\
+        \hline
+        14946 & 0.500 & 59 \\
+        \hline
+        5641 & 0.005 & 61 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_eta.png}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Id do documento de origem & Passes & Documentos destino diferentes \\
+        \hline
+        5599 & 2 & 26 \\
+        \hline
+        7923 & 27 & \\
+        \hline
+        7131 & 10 & 27 \\
+        \hline
+        7108 & 10 & 29 \\
+        \hline
+        8116 & 10 & 30 \\
+        \hline
+        ... & ... & ... \\
+        \hline
+        6766 & 10 & 94 \\
+        \hline
+        6798 & 10 & 95 \\
+        \hline
+        8018 & 10 & 96 \\
+        \hline
+        8896 & 2 & 100 \\
+        \hline
+        3326 & 10 & 102 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_passes.png}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline
+        Id do documento de origem & cenario\_wp & Documentos destino diferentes \\
+        \hline
+        8116 & gte42 & 21 \\
+        \hline
+        7131 & gte42 & 21 \\
+        \hline
+        7923 & gte42 & 24 \\
+        \hline
+        7344 & gte42 & 24 \\
+        \hline
+        7108 & gte42 & 25 \\
+        \hline
+        ... & ... & ... \\
+        \hline
+        5232 & full & 118 \\
+        \hline
+        5093 & full & 118 \\
+        \hline
+        3326 & full & 120 \\
+        \hline
+        8377 & full & 122 \\
+        \hline
+        6798 & full & 125 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\includegraphics[scale=0.7]{resultados/resources/distribuicao_semelhantes_distintos_cenario_wp.png}
+

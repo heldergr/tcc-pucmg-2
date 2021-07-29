@@ -37,19 +37,17 @@
 \BOOKMARK [3][-]{subsubsection.5.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.5.3}% 37
 \BOOKMARK [1][-]{section.6}{Semelhan\347a entre documentos para textos desconhecidos}{}% 38
 \BOOKMARK [2][-]{subsection.6.1}{C\341lculo de semelhan\347a \(Similarity query\)}{section.6}% 39
-\BOOKMARK [1][-]{section.7}{Resutados}{}% 40
-\BOOKMARK [2][-]{subsection.7.1}{Collections}{section.7}% 41
-\BOOKMARK [2][-]{subsection.7.2}{T\363picos e palavras dominantes}{section.7}% 42
-\BOOKMARK [3][-]{subsubsection.7.2.1}{T\363picos dominantes e seu percentual de contribui\347\343o em cada documento}{subsection.7.2}% 43
-\BOOKMARK [1][-]{section.8}{Links}{}% 44
-\BOOKMARK [1][-]{section.9}{Refer\352ncias}{}% 45
-\BOOKMARK [2][-]{subsection.9.1}{Artigos}{section.9}% 46
-\BOOKMARK [3][-]{subsubsection.9.1.1}{Processamento de linguagem natural}{subsection.9.1}% 47
-\BOOKMARK [2][-]{subsection.9.2}{Ferramentas e tecnologias}{section.9}% 48
-\BOOKMARK [1][-]{section.10}{Ap\352ndice}{}% 49
-\BOOKMARK [2][-]{subsection.10.1}{Algoritmo e estruturas de dados}{section.10}% 50
-\BOOKMARK [3][-]{subsubsection.10.1.1}{Fonte de dados}{subsection.10.1}% 51
-\BOOKMARK [3][-]{subsubsection.10.1.2}{Treinamento LDA}{subsection.10.1}% 52
-\BOOKMARK [3][-]{subsubsection.10.1.3}{C\341lculo de semelhan\347a}{subsection.10.1}% 53
-\BOOKMARK [3][-]{subsubsection.10.1.4}{Executor}{subsection.10.1}% 54
-\BOOKMARK [2][-]{subsection.10.2}{Tecnologias}{section.10}% 55
+\BOOKMARK [1][-]{section.7}{Resultados}{}% 40
+\BOOKMARK [2][-]{subsection.7.1}{Variabilidade de documentos recomendados}{section.7}% 41
+\BOOKMARK [1][-]{section.8}{Links}{}% 42
+\BOOKMARK [1][-]{section.9}{Refer\352ncias}{}% 43
+\BOOKMARK [2][-]{subsection.9.1}{Artigos}{section.9}% 44
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Processamento de linguagem natural}{subsection.9.1}% 45
+\BOOKMARK [2][-]{subsection.9.2}{Ferramentas e tecnologias}{section.9}% 46
+\BOOKMARK [1][-]{section.10}{Ap\352ndice}{}% 47
+\BOOKMARK [2][-]{subsection.10.1}{Algoritmo e estruturas de dados}{section.10}% 48
+\BOOKMARK [3][-]{subsubsection.10.1.1}{Fonte de dados}{subsection.10.1}% 49
+\BOOKMARK [3][-]{subsubsection.10.1.2}{Treinamento LDA}{subsection.10.1}% 50
+\BOOKMARK [3][-]{subsubsection.10.1.3}{C\341lculo de semelhan\347a}{subsection.10.1}% 51
+\BOOKMARK [3][-]{subsubsection.10.1.4}{Executor}{subsection.10.1}% 52
+\BOOKMARK [2][-]{subsection.10.2}{Tecnologias}{section.10}% 53
