@@ -20,3 +20,30 @@ def find_all_resultados():
 def distribuicao_distancias(resultados, hue='cenario_wp'):
     ax = sns.displot(resultados, x='distancia_destino', kind='hist', aspect=1.2, hue=hue, kde=True)
     ax.set(xlabel='Distância entre documentos', ylabel='Frequência', title='Distribuição da distância entre documentos')
+
+def distribuicao_distintos_destino_por_parametro(resultados, parametro):
+    grouped_origem = resultados.groupby(['id_documento_origem', parametro])
+    grouped_origem = grouped_origem.agg({'id_documento_destino': 'nunique'}).reset_index()
+    ax = sns.displot(grouped_origem, x='id_documento_destino', kind='hist', aspect=1.2, kde=True, hue=parametro)
+    ax.set(xlabel='Documentos distintos recomendados por origem', ylabel='Frequência', 
+        title='Quantidade documentos distintos recomendados por origem')
+
+def destinos_distintos_por_parametro(resultados, parametro, parametros_distintos=None):
+    grouped_parametro = resultados.groupby(['id_documento_origem', parametro])
+    grouped_parametro = grouped_parametro.agg({'id_documento_destino': 'nunique'}).reset_index().sort_values(by='id_documento_destino')
+    if parametros_distintos is not None:
+        grouped_parametro['possiveis'] = 336 / parametros_distintos
+    return grouped_parametro
+
+def adicionar_informacoes_posts(rs, posts, paginas):
+    # Adiciona info posts
+    mg = rs.merge(posts[['id_documento', 'nome']], left_on='id_documento_origem', right_on='id_documento')
+    mg.drop(columns=['id_documento'], inplace=True)
+    mg.rename(columns={'nome': 'nome_nv'}, inplace=True)
+
+    # adiciona info paginsa
+    mg = mg.merge(paginas[['id_documento', 'nome']], left_on='id_documento_destino', right_on='id_documento', how='left')
+    mg.drop(columns=['id_documento'], inplace=True)
+    mg.rename(columns={'nome': 'nome_wp'}, inplace=True)
+
+    return mg
