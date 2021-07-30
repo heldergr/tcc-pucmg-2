@@ -19,7 +19,7 @@ em \textit{collections} separadas no MongoDB e neste relatório são usados os t
 A execução dos testes foi feita através do módulo \textbf{Executor}, explicado no apêndice (COLOCAR LINK INTERNO?). O código para execução deste 
 módulo é o seguinte:
 
-\begin{lstlisting}[language=Python]
+\begin{lstlisting}[language=Python, style=mystyle, frame=lines, caption=Código fonte: Treinamento de modelo usando LDA]]
 from main.especificacao_testes import EspecificacaoTestes
 from main.executor import ExecutorTreinamento
 from repository.resultado import ResultadoRepo
@@ -42,4 +42,4 @@ resultado_repo.insert_many(documentos)
 A lista de testes a serem executados foi determinadas em arquivo \textit{yml}, formato escolhido pela facildade de definir variações de valores
 de forma declarativa. Abaixo está a listagem do arquivo utilizado (que está no repositório do projeto).
 
-\lstinputlisting[caption=Especificação de execução de testes]{resultados/especificacao.yml}
+\lstinputlisting[style=mystyle, frame=lines, caption=Especificação de execução de testes]{resultados/especificacao.yml}

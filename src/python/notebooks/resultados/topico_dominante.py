@@ -42,3 +42,13 @@ def get_most_significant_sentences(df_topic_sents_keywords):
     sent_topics_sorteddf_mallet.columns = ['Topic_Num', "Topic_Perc_Contrib", "Keywords", "Representative Text"]
 
     return sent_topics_sorteddf_mallet
+
+def print_topn_topics(lda_model, corpus, n=5):
+    for i, row_list in enumerate(lda_model[corpus]):
+        row = sorted(row_list, key=lambda x: (x[1]), reverse=True)
+        # print(row[:n])
+        print([f'{t[0]} = {t[1]:.4f}' for t in row[:n]])
+
+def print_words_by_topic(lda_model, topics):
+    for topic in topics:
+        print([f'{r[0]} = {r[1]:.4f}' for r in lda_model.show_topic(topic)])

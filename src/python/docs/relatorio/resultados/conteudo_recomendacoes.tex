@@ -1,0 +1,172 @@
+\subsection{Análise de conteúdo das recomendações}
+
+Uma coisa difícil em aprendizado não supervisionado é a validação da qualidade dos resultados obtidos. Neste trabalho seria avaliar o quanto faz sentido as recomendações 
+de páginsa da Wikipedia para cada post do blog. Com base nos resultados anteriores eu resolvi analisar de forma geral e também pontualmente algumas
+recomendações. 
+
+A validação que faço aqui é muito subjetiva, com base no meu entendimento se o conteúdo recomendado é relevante ou não e os critérios
+podem variar de post para post). Alguns critérios podem ser semelhança geográfica, semalhança de assunto, tipo de localidade, e por aí vai. Ao longo 
+
+Para dar um exemplo, um dos posts analisados abaixo é de uma visita ao Parque Nacional Denali, no Alasca. O que seria conteúdo relevante relacionado?
+Páginas falando do próprio Denali teriam relevância altíssima. Outras falando de outros parques nacionais (tipo de localidade) ou de outros lugares
+do Alasca (mesm estado) seriam também considerados relevantes por mim.
+
+\subimport{./}{vinte_mais_menos_frequentes.tex}
+
+\subsubsection{Análise de recomendações com foco nos posts de origem}
+
+Na seção de variabilidade de documentos recomendado vimos que o documento com \textit{id} 7923 (\textit{Jalapão - Alimentação}) foi o que teve o menor número de documentos distintos recomendados
+para ele em toda minha bateria de execuções, tendo 43 distintas páginas da Wikipedia recomendadas como a mais semelhante pra ele. Vamos então ver,
+dentre este conjunto, quais as páginas que tiveram maior número de recomendações.
+
+Este post fala sobre alimentação em uma atração turística do estado do Tocantins, então sendo assim eu acho que das 5 páginas mais recomendadas para 
+ele a primeira, quarta e quinta tem conteúdo relevante, enquanto a segunda e terceira nem tanto.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        Política Nacional de Resíduos Sólidos & 62 \\
+        \hline
+        Horseshoe Bend (Arizona) & 32 \\
+        \hline
+        Portal:Nova Zelândia/Colabore & 32 \\
+        \hline
+        Monumento Natural das Árvores Fossilizadas do Tocantins & 26 \\
+        \hline
+        Projeto Cerrado Verde & 26 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+No outro extremo da quantidade de páginas distintas recomendados para um mesmo post temos o com \textit{id} 6798 
+(\textit{Revelando a Foto - Detalhes em Caeté}), com 168 recomendações distintas das 336 feitas para este post. Trata-se de um post atípico
+em nosso blog, que fala de como foi tirada um foto em uma passeio de um dia para uma cidade próxima a BH. Mesmo entre as 5 páginas mais recomendadas 
+não há uma sequer que eu ache que tenha relevância para o assunto do post.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        Bible Belt & 8 \\
+        \hline
+        Praça Nauro Machado & 7 \\
+        \hline
+        Chonchi & 6 \\
+        \hline
+        Rakahanga & 5 \\
+        \hline
+        Reserva Biológica Poço das Antas & 5 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Nas análises anteriores, ao analisar o comportamento baseado em parâmetros, alguns posts se destacaram por ter menos variação entre os 
+recomendados para eles. Um destes foi o post de \textit{id} 5599 (\textit{Alasca - Visitando o Denali National Park and Preserve}), que teve a menor 
+variação de documentos recomendados ao analisar junto os parâmetros \textit{num\_topics} e \textit{alpha}.
+Resolvi analisar então as páginas de destino que mais foram recomendadas para este post, ordenadas pelo quantidade de recomendações de cada página.
+
+A tabela a seguir mostra que a página da Wikipedia \textit{Parque Nacional e Reserva de Denali}, com \textit{id} 1403174 foi recomendada 119 vezes 
+para o post acima, o que foi satisfatório visto que a página descreve exatamente o parque nacional que é foco do post em questão.
+
+A segunda página mais recomendada é sobre o Monte Denali, que é assunto discutido internamente no post, enquanto que a quinta mais recomendada é 
+sobre uma estrada no Alasca que fica próxima ao parque e de certa forma é conteúdo semelhante. 
+
+A terceira e quarta paǵinas que mais se destacam são de parques nacionais americanos. Mesmo não sendo próximos ao Denali não deixa de ser conteúdo
+relevante.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        Parque Nacional e Reserva de Denali & 119 \\
+        \hline
+        Monte Denali & 46 \\
+        \hline
+        Parque Nacional de Yosemite & 41 \\
+        \hline
+        Parque Nacional de Yellowstone & 17 \\
+        \hline
+        Dalton Highway & 8 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Na analisar de variação de posts recomendados considerando o parâmetro \textit{eta}, o post que mais se destacou foi o de \textit{3339} 
+(\textit{Lençóis Maranhenses - Lagoa Verde}). Resolvi então analisar as 5 páginas da Wikipedia que mais eram recomendadas para ele, também para
+verificar a relevância.
+
+A página da Wikipedia \textit{Reserva da Biosfera do Cinturão Verde de São Paulo} se destaca, com 86 recomendações para este post. Curiosamente 
+apesar do número alto e da semelhança encontrada no treinamento, eu acho que as páginas mais relevantes para este post seriam e quarta e a quinta, 
+que se referem a locais relacionados natureza e do estado do Maranhão. A quinta página, inclusive, se trata do parque nacional onde se encontra 
+a Laguna Verde e se mostra a recomendação mais relevante. Quando lidamos com aprendizado de máquina nem sempre o primeiro resultado pode ser 
+o mais relevante para o que queremos.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        Reserva da Biosfera do Cinturão Verde de São Paulo & 86 \\
+        \hline
+        Reserva Lagoa São Paulo & 35 \\
+        \hline
+        Lagoa Dom Helvécio & 20 \\
+        \hline
+        Área de Proteção Ambiental das Reentrâncias Maranhenses & 13 \\
+        \hline
+        Parque Nacional dos Lençóis Maranhenses & 9 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+Um outro post que achei interessante analisar foi o de \textit{14565}(\textit{Vídeo - Episódio Salar de Atacama}), que conforme vimos em análise 
+anterior teve baixa variação de páginas recomendadas no cenário de testes com menor número de tópicos (22). Ao analisar as páginas que mais lhe foram
+recomendadas eu achei o resultado muito interessante pois dos 10 listados abaixo 7 são do Atacama, região do assunto do post. A primeira da lista
+não é do Atacama mas também fala de vulcão, assunto tratado no conteúdo de origem. Mesmo os dois últimos, que seriam os menos relevantes, ainda 
+são interessantes para o assunto.
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        Osorno (vulcão) & 54 \\
+        \hline
+        Salar de Atacama & 51 \\
+        \hline
+        Gêiseres de Tatio & 37 \\
+        \hline
+        Vulcão Peña Blanca & 20 \\
+        \hline
+        San Pedro de Atacama & 20 \\
+        \hline
+        Puna atacamenha & 19 \\
+        \hline
+        Lascar (vulcão) & 11 \\
+        \hline
+        Vale do Salinas & 9 \\
+        \hline
+        Cerro Catedral & 6 \\
+        \hline
+        Montanhas Rochosas Canadianas & 6 \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\subimport{./}{conteudo_foco_recomendado.tex}
+
+\subimport{./}{analise_semelhanca.tex}
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        \textbf{Título documento destino} & \textbf{Recomendações} \\
+        \hline
+        a \\
+        \hline
+    \end{tabular}
+\end{center}

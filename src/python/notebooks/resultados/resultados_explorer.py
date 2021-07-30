@@ -47,3 +47,13 @@ def adicionar_informacoes_posts(rs, posts, paginas):
     mg.rename(columns={'nome': 'nome_wp'}, inplace=True)
 
     return mg
+
+def obter_topn_recomendacoes_por_post(rs, id_post, n):
+    rs_post = rs[rs['id_documento_origem'] == id_post]
+    colunas_retorno = ['titulo_documento_origem', 'id_documento_destino', 'titulo_documento_destino']
+    return rs_post.groupby(colunas_retorno).size().sort_values(ascending=False).iloc[:n,]
+
+def obter_topn_posts_por_recomendado(rs, id_recomendado, n):
+    resultados_rec = rs[rs['id_documento_destino'] == id_recomendado]
+    print(resultados_rec.shape)
+    return resultados_rec.groupby(['id_documento_origem', 'titulo_documento_origem']).size().sort_values(ascending=False)[:n,]
