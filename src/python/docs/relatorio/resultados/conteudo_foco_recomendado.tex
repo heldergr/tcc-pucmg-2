@@ -1,8 +1,9 @@
 \subsubsection{Análise de recomendações com foco nas páginas recomendadas}
 
-"""
-Paginas da wikipedia que foram recomendadas para mais posts de origem distintos.
-"""
+Esta seção tem como objetivo fazer uma análise de resultados agrupando pelas páginas recomendadas.
+
+A primeira análise foi verificar quais páginas são recomendadas para o maior número de posts distintos. A tabela abaixo 
+mostra que a página \textit{Horseshoe Bend (Arizona)} foi recomendada para 174 posts distintos.
 
 \begin{center}
     \begin{tabular}{|c|c|}
@@ -52,16 +53,13 @@ Paginas da wikipedia que foram recomendadas para mais posts de origem distintos.
     \end{tabular}
 \end{center}
 
-"""
-Analise de posts para os quais Horseshoe Bend (Arizona) foi recomendado como mais semelhante (id: 4053915)
+Com base na tabela anterior eu resolvi analisar para que tipo de post a página \textit{Horseshoe Bend (Arizona)} estava sendo muito recomendada.
 
-174 origem distintos, 1511 recomendações no total
-
-ESTE É UM EXCELENTE CANDIDATO A ENTENDER A SEMELHANÇA POR CAUSA DOS POSTS CERTEIROS NO INICIO E OS 8 DO JALAPAO EM SEGUIDA
-"""
-resultados\_explorer.obter\_topn\_posts\_por\_recomendado(resultados\_info, 4053915, 10)
-
-(1511, 16)
+Em primeiro lugar aparece o post \textit{Revelando a Foto - Horseshoe Bend} com 96 recomendações, o que é muito bom pois se trata do mesmo lugar.
+O segundo post que mais aparece é o \textit{Revelando a Foto - Lake Powell} com 49 recomendações e eu considero este outro bom resultado, já que ambos
+os posts são de lugares localizados na cidade de Page, no Arizona. Da terceira mais recomendada para baixo começa a ficar menos interessante mas 
+é muito interessante notar que a página \textit{Horseshoe Bend (Arizona)} da Wikipedia foi sucessivamente recomendada como semelhante aos posts 
+do Parque Estadual do Jalapão.
 
 \begin{center}
     \begin{tabular}{|c|c|}
@@ -91,13 +89,9 @@ resultados\_explorer.obter\_topn\_posts\_por\_recomendado(resultados\_info, 4053
     \end{tabular}
 \end{center}
 
-"""
-Analise de posts para os quais a página Campo de Gelo Sul da Patagonia foi recomendado como mais semelhante (id: 1393635)
-
-99 origem distintos, 390 recomendações no total
-"""
-resultados\_explorer.obter\_topn\_posts\_por\_recomendado(resultados\_info, 1393635, 10)
-(390, 16)
+Outro página que achei interessante analisar foi a do \textit{Campo de Gelo Sul da Patagonia}, próxima um locais onde eu tenho 
+uma grande quantidade de posts. Quase todos os posts da tabela são de lugares que têm geleiras (exceto o da \textit{Cachoeira da Maça}), 
+o que faz todo sentido para a recomendação de uma página sobre o Campo de Gelo. E quatro deles são especificamente da região do campo de gelo.
 
 \begin{center}
     \begin{tabular}{|c|c|}
@@ -127,7 +121,9 @@ resultados\_explorer.obter\_topn\_posts\_por\_recomendado(resultados\_info, 1393
     \end{tabular}
 \end{center}
 
-\textbf{Fitz Roy ((1348, 16)}
+Uma outra página que apareceu bastante como recomendada e chamou minha atenção foi a do Fitz Roy, uma montanha na Argentina. Resolvi analisar 
+e os 9 primeiros posts são da cidade onde está a montanha, o que faz todo sentido. Apenas o décimo posts, de uma antiga cervejaria de 
+Belo Horizonte, não faz sentido a recomendação.
 
 \begin{center}
     \begin{tabular}{|c|c|}

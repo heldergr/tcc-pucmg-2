@@ -1,3 +1,71 @@
 \subsubsection{Análise de semelhança entre documentos}
 
-tentativa de explicar a análise de semelhança entre documentos
+Como já disse anteriormente, me chamou atenção a página do \textit{Horseshoe Bend} da Wikipedia ser recomendada com tanta frequência.
+Relemebrando, os dois primeiros posts para os quais ela foi recomendada eram da cidade de Page (Arizona), o que faz todo sentido. Já 
+os três seguintes eram sobre o Jalapão, um parque estadual localizado no Tocantins, região norte do Brasil.
+
+Uma boa forma de tentar compreender este tipo de semalhança é listar os tópicos que mais contribuem para um texto, assim como as palavras que mais 
+contribuem para aqueles tópicos. Estas informações são retornadas através da API que faz o treinamento do modelo LDA do módulo \textit{gensim},
+que utilizamos neste projeto.
+
+Abaixo listamos os tópicos que mais contribuem para estes 5 primeiros posts e também para a página em questão. Nota-se na listagem 
+abaixo o quanto o tópico 16 é dominante em quatro destes posts e o 29 em outro. Para o texto da página da Wikipedia o post 16 também é dominante, 
+por mais que ele tenha outros tópicos também significatios.
+
+\begin{lstlisting}
+Topicos dominantes dos documentos de origem:
+['16 = 0.9358', '25 = 0.0576']
+['16 = 0.9957']
+['29 = 0.6963', '16 = 0.2232', '56 = 0.0739']
+['16 = 0.9953']
+['16 = 0.9952']
+
+Topicos dominantes dos documentos de destino:
+['16 = 0.4912', '29 = 0.1189', '19 = 0.1015', '20 = 0.0756', '52 = 0.0586'] 
+\end{lstlisting}
+
+Vendo que os tópicos 16 e 29 se destacam muito, resolvi listar as palavras que mais contribuem para a formação destes tópicos. Percebe-se pela listagem
+abaixo que estes tópico fazem todo sentido para os posts do Jalapão e deve ser dominante para o Horseshow Bend por causa de alguma palavra nele contida.
+
+\begin{lstlisting}
+Palavras dominantes no tópico 16:
+['jalap = 0.1216', 'cacho = 0.0302', 'águ = 0.0170', 'korub = 0.0168', 'velh = 0.0149', 'pra = 0.0140', 'temp = 0.0133', 'lei = 0.0125', 'expos = 0.0118', 'dun = 0.0109']
+
+Palavras dominantes no tópico 29:
+['vall = 0.0314', 'esqu = 0.0204', 'cidad = 0.0146', 'tr = 0.0141', 'lagun = 0.0123', 'aul = 0.0103', 'fiz = 0.0098', 'ski = 0.0092', 'pouc = 0.0089', 'santiag = 0.0088']
+\end{lstlisting}
+
+Outra associação frequente que achei curiosa foi de uma reserva perto das cidade de São Paulo com os posts dos Lençois Maranhenses.
+Para o post \textit{Lençois Maranhenses - Laguna Verde}, por exemplo, as cinco páginas a seguir foram as mais recomendadas, seguidas pela frequência:
+
+\begin{itemize}
+    \item Reserva da Biosfera do Cinturão Verde de São Paulo - 86
+    \item Reserva Lagoa São Paulo - 35
+    \item Lagoa Dom Helvécio - 20
+    \item Área de Proteção Ambiental das Reentrâncias Maranhenses - 13
+    \item Parque Nacional dos Lençóis Maranhenses - 9
+\end{itemize}
+
+Uma coisa curiosa que dá pra notar pela listagem abaixo é que o tópico dominante no post (23) não é o principal entre as páginas mas aparece quase 
+sempre os primeiros.
+
+\begin{lstlisting}
+Topicos dominantes dos documentos de origem:
+['23 = 0.9969']
+
+Topicos dominantes dos documentos de destino:
+['5 = 0.1445', '48 = 0.1265', '1 = 0.1034', '56 = 0.0746', '47 = 0.0629']
+['1 = 0.3182', '23 = 0.3118', '3 = 0.2009', '47 = 0.1232', '7 = 0.0327']
+['1 = 0.1431', '23 = 0.1185', '48 = 0.1097', '5 = 0.1003', '32 = 0.0935']
+['48 = 0.2415', '5 = 0.1617', '25 = 0.0722', '17 = 0.0668', '23 = 0.0577']
+['48 = 0.3327', '23 = 0.1629', '7 = 0.1074', '32 = 0.0849', '30 = 0.0756']
+\end{lstlisting}
+
+Analisando as palavras que mais contribuem para o tópico dominante acima citado nós podemos perceber várias palavras que fazem sentido no post dos 
+Lençois Maranhenses mas que também estão nos contextos das páginas mais recomendadas (note as palavras \textit{verd}, \textit{lago}, 
+\textit{águ}, etc). Neste caso ficou mais claro o motivo da semelhança entre posts e páginas que a princípio não teriam muita ligação.
+
+\begin{lstlisting}
+Palavras dominantes no tópico 29:
+['lago = 0.0629', 'verd = 0.0171', 'águ = 0.0166', 'prat = 0.0150', 'pouc = 0.0146', 'lençol = 0.0141', 'gent = 0.0127', 'barre = 0.0126', 'cidad = 0.0113', 'maranh = 0.0112']
+\end{lstlisting}
