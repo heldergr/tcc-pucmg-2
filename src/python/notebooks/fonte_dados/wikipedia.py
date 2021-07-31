@@ -38,8 +38,6 @@ class Wikipedia(FonteDados):
 
         if self.__remover_textos_pequenos:
             pages_df = pages_df[pages_df['n_tokens'] >= 40]
-            print('Novo shape de df da wikipedia:')
-            print(pages_df.shape)
 
         self.__pages_df = pages_df
 
