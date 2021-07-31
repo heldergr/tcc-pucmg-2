@@ -1,5 +1,7 @@
 \subsection{Algoritmo e estruturas de dados}
 
+Nesta seção eu descrevo as partes que eu julgo serem as mais importantes do projeto.
+
 \subsubsection{Fonte de dados}
 Durante a implementação do projeto, um objetivo foi manter a rotina principal (treinamento, cálculo de probabilidade dos tópicos e semelhança entre documentos) independente dos dados de treinamento e também dos dados de teste. O motivo disto é tirar o acoplamento da estrutura dos dados, do conteúdo e da forma como é feita a coleta.
 
@@ -7,22 +9,27 @@ Para isto foi proposta uma estrutura de dados onde foi definido o conceito de fo
 
 Uma fonte de dados é uma abstração que tem como funcionalidade carregar os documentos de algum lugar e disponibilizar para o algoritmo de treinamento. Para ficar genérico foi criada a classe \textit{FonteDados} contendo o contrato de uma fonte, ou seja, quais métodos uma classe concreta precisa ter para fornecer os dados que o algoritmo precisa para o treinamento e também para montar o resultado com a semelhança entre os textos.
 
-\includegraphics[scale=0.5]{fonte_dados.png}
+\includegraphics[scale=0.5]{diagramas/fonte_dados.png}
 
-Cada fonte de dados específica deve internamente carregar os dados e manter uma estrutura interna de forma a fornecer os documentos quebrados por tokens (palavras), assim como fornecer também um DataFrame contendo os seguintes dados:
+Cada fonte de dados específica deve carregar seus próprios dados e manter uma estrutura interna de forma a fornecer os documentos quebrados por 
+tokens (palavras), assim como fornecer também um DataFrame contendo os seguintes dados:
 
 \begin{itemize}
-    \item id\_documento: id do documento na fonte de dados
-    \item nome: nome do documento na fonte de dados
-    \item titulo: titulo descritivo do documento na fonte de dados
-    \item documento: conteudo original do documento
-    \item n\_characters: tamanho do documento em caracteres
-    \item tokens: tokens do documento apos limpeza
-    \item n\_tokens: tamanho do documento em tokens
+    \item \textit{id\_documento}: id do documento na fonte de dados
+    \item \textit{nome}: nome do documento na fonte de dados
+    \item \textit{titulo}: titulo descritivo do documento na fonte de dados
+    \item \textit{documento}: conteudo original do documento
+    \item \textit{n\_characters}: tamanho do documento em caracteres
+    \item \textit{tokens}: tokens do documento apos limpeza
+    \item \textit{n\_tokens}: tamanho do documento em tokens
 \end{itemize}
 
-Desta forma as fontes de dados fornecem os dados de forma semelhante e podemos trabalhar com qualquer mídia e o algoritmo de recomendação não precisa ser alterado.
-Para trabalhar com uma nova fonte de dados bastaria implementar uma subclasse de \textit{FonteDados} e implementar a parte específica que carrega os dados, faz limpeza e retorna os tokens e o DataFrame com os dados dos documentos.
+Desta forma as fontes de dados fornecem os dados de forma semelhante e mesmo trabalhando com mídias diferentes o algoritmo de recomendação não 
+precisa ser alterado. Para trabalhar com uma nova fonte de dados basta criar uma subclasse de \textit{FonteDados} e implementar a parte específica 
+que carrega os dados, faz limpeza e retorna os dados necessários no treinamento.
+
+\vspace{3mm} %3mm vertical space
+\lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Abstração de Fonte de Dados]{apendice/scripts/fonte_dados.py}
 
 \subsubsection{Treinamento LDA}
 
@@ -72,6 +79,17 @@ Para referência, um link do \href{https://github.com/heldergr/tcc-pucmg-2/blob/
 
 \subsubsection{Cálculo de semelhança}
 
+O módulo \textit{similarity} é responsável por calcular os documentos mais parecidos utilizando a \textbf{distância de Jensen-Shannon}.
+Ele é carregado com uma lista de probabilidades dos documentos que são as opções às quais eu quero procurar os mais parecidos a um documento que passo 
+como parâmetro no método \textit{get\_most\_similar\_documents()}.
+
+Exemplificando, neste trabalho eu queria obter as páginas das Wikipedia que mais se parecessem com os posts do blog. Sendo assim eu carreguei a classe
+\textit{SimilarityCalculator} com as probabilidades dos tópicos para cada página da Wikipedia e para cada post do blog eu chamei o método 
+\textit{get\_most\_similar\_documents()} para obter as páginas que mais se parecessem com este post.
+
+\vspace{3mm} %3mm vertical space
+\lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Cálculo de posts semelhantes]{apendice/scripts/similarity.py}
+
 \subsubsection{Executor}
 
 Foi criado um módulo executor para que pudessem ser variados os parâmetros de ajustes do modelo e gerar resultados para cada conjunto gerado por esta variação, permitindo uma comparação posterior dos resultados obtidos.
@@ -88,25 +106,26 @@ Este módulo recebe como parâmetro uma lista de cenários de testes. Cada cená
 Para cada combinação destes valores é feito o ajuste de modelo para os documentos de origem e o cálculo do documento de destino mais semelhante de 
 cada documento de origem com base nas probabilidades que o documento contenha cada tópico.
 
-\begin{comment}
-    \lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Cálculo de coerência de tópicos]{"/home/helder/estudos/tcc-pucmg-2/src/python/notebooks/main/executor.py"}
-\end{comment}
+O diagrama de sequência abaixo ilustra as operações que são realizadas e em qual ordem.
 
-Para referência, um link do \href{https://github.com/heldergr/tcc-pucmg-2/blob/main/src/python/notebooks/main/executor.py}{código fonte do executor de treinamento}.
+\includegraphics[scale=0.4]{diagramas/lda_treinamento_sequence_diagram.png}
 
-O resultado gerado é um DataFrame com as seguintes colunas:
+O resultado gerado pela execução do treinamento é um DataFrame com as seguintes colunas:
 
 \begin{itemize}
-    \item id\_cenario: identificador do cenário de testes
-    \item fonte\_origem: descrição da fonte de origem
-    \item id\_documento\_origem: identificador do documento na fonte de origem
-    \item titulo\_documento\_origem: título do documento na fonte de origem
-    \item fonte\_destino: descrição da fonte de destino
-    \item id\_documento\_destino: identificador do documento na fonte de destino que tem a menor distância para o da fonte de origem referenciado na coluna id\_documento\_origem
-    \item titulo\_documento\_destino: título do documento na fonte de destino
-    \item distancia\_destino: distância calculada entre o documento na fonte de origem e o docmento na fonte de destino
-    \item num\_topics: número de tópicos utilizado no modelo ajustado
-    \item passes: parâmetro passes do algoritmo LDA
-    \item eta: parâmetro eta do algoritmo LDA
-    \item alpha: parâmetro alpha do algoritmo LDA
+    \item \textit{id\_cenario}: identificador do cenário de testes
+    \item \textit{fonte\_origem}: descrição da fonte de origem
+    \item \textit{id\_documento\_origem}: identificador do documento na fonte de origem
+    \item \textit{titulo\_documento\_origem}: título do documento na fonte de origem
+    \item \textit{fonte\_destino}: descrição da fonte de destino
+    \item \textit{id\_documento\_destino}: identificador do documento na fonte de destino que tem a menor distância para o da fonte de origem referenciado na coluna id\_documento\_origem
+    \item \textit{titulo\_documento\_destino}: título do documento na fonte de destino
+    \item \textit{distancia\_destino}: distância calculada entre o documento na fonte de origem e o docmento na fonte de destino
+    \item \textit{num\_topics}: número de tópicos utilizado no modelo ajustado
+    \item \textit{passes}: parâmetro passes do algoritmo LDA
+    \item \textit{eta}: parâmetro eta do algoritmo LDA
+    \item \textit{alpha}: parâmetro alpha do algoritmo LDA
 \end{itemize}
+
+\vspace{3mm} %3mm vertical space
+\lstinputlisting[language=Python, style=mystyle, frame=lines, caption=Código fonte: Executor]{apendice/scripts/executor.py}

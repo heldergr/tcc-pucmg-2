@@ -1,18 +1,32 @@
-\section{Código fonte}
+\subsection{Código fonte}
 
-O código fonte do projeto está localizado na pasta \textit{src/python/notebooks} do projeto no git mencionado na seção de links. Foram escritos módulos
-específicas para diferentes tipo de tarefa. Abaixo estão listados os pacotes e suas respectivas responsabilidades:
+O código fonte do projeto está localizado na pasta \href{https://github.com/heldergr/tcc-pucmg-2/tree/main/src/python/notebooks}{src/python/notebooks} 
+do repositório git projeto (referência também na seção de links). Foram escritos módulos específicas para diferentes tipo de tarefa. 
+Abaixo estão listados os módulos e suas respectivas responsabilidades:
 
 \begin{itemize}
-    \item \textif{coleta}
-    \item \textif{estudos-similaridades}
-    \item \textif{explore}
-    \item \textif{fonte_dados}
-    \item \textif{limpeza}
-    \item \textif{main}
-    \item \textif{praticas}
-    \item \textif{repositorio}
-    \item \textif{similarity}
-    \item \textif{treinamento}
-    \item \textif{util}
+    \item \textit{coleta}: Coleta dos dados das fontes utilizadas no treinamento
+    \item \textit{explore}: Exploração estatística e gráfica dos documentos das fontes de dados para entendimento e processamento das informações
+    \item \textit{fonte\_dados}: Implementações das fontes de dados, responsáveis por fazer tratamentos específicos e entregar estes dados da 
+    forma como o algoritmo projetado espera
+    \item \textit{limpeza}: Limpeza de documentos completos e partes de documentos cujos conteúdos sejam irrelevantes e atrapalham o processamento ou resultado
+    \item \textit{main}: Executor principal, que carrega as fontes de dados, ajusta o modelo e calcula os documentos semelhantes
+    \item \textit{praticas}: Práticas para efeito de aprendizado e exploração de tecnologia, executadas durante a execução do trabalho
+    \item \textit{repositorio}: Camada de acesso a dados persistidos localmente
+    \item \textit{similarity}: Cálculo de similaridades entre os documentos
+    \item \textit{treinamento}: Ajuste de modelo de treinamento e levantamento de tópicos para os documentos
+    \item \textit{util}: Código com funções de propósito geral
+\end{itemize}
+
+Além dos módulos para execução de tarefas específicas, na raiz da pasta de código fonte estão notebooks e scripts Python que comandam a execução de 
+tarefas:
+
+\begin{itemize}
+    \item \textit{analise-palavras-fontes-dados.ipynb}: Análise exploratória das palavras das fontes de dados
+    \item \textit{calculo\_coerencias.py}: Execução do cálculo de coerência por número de tópicos
+    \item \textit{lda-gensim-executor.ipynb}: Execução de treinamento e cálculo de documentos semelhantes com base em especificação de testes
+    \item \textit{nerds-viajantes-analise-coerencia\_topicos.ipynb}: Análise estatística e gráfica dos dados de coerência gerados pela execução do script \textit{calculo\_coerencias.py}
+    \item \textit{nerds-viajantes-lda-analise-topicos.ipynb}: Análise de tópicos e palavras que mais contribuem no modelo gerado pelo treinamento
+    \item \textit{nerds-viajantes-visualizacao-resultados.ipynb}: Visualização gráfica e estatística dos resultados gerados na execução do treinamento e cálculo de semalhantes
+    \item \textit{wikipedia\_download.ipynb}: Orquestração e download de categorias e páginas da Wikipedia
 \end{itemize}

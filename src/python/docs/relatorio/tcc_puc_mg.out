@@ -25,7 +25,7 @@
 \BOOKMARK [3][-]{subsubsection.4.2.3}{Nuvem de palavras}{subsection.4.2}% 25
 \BOOKMARK [2][-]{subsection.4.3}{An\341lise de palavras e documentos da Wikipedia}{section.4}% 26
 \BOOKMARK [1][-]{section.5}{Treinamento de modelo}{}% 27
-\BOOKMARK [2][-]{subsection.5.1}{LDA}{section.5}% 28
+\BOOKMARK [2][-]{subsection.5.1}{LDA - Latent Dirichlet Allocation}{section.5}% 28
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Hiperpar\342metros}{subsection.5.1}% 29
 \BOOKMARK [2][-]{subsection.5.2}{C\341lculo de coer\352ncia}{section.5}% 30
 \BOOKMARK [3][-]{subsubsection.5.2.1}{An\341lise de coer\352ncias}{subsection.5.2}% 31
@@ -53,12 +53,12 @@
 \BOOKMARK [1][-]{section.8}{Links}{}% 53
 \BOOKMARK [1][-]{section.9}{Refer\352ncias}{}% 54
 \BOOKMARK [2][-]{subsection.9.1}{Artigos}{section.9}% 55
-\BOOKMARK [3][-]{subsubsection.9.1.1}{Processamento de linguagem natural}{subsection.9.1}% 56
-\BOOKMARK [2][-]{subsection.9.2}{Ferramentas e tecnologias}{section.9}% 57
-\BOOKMARK [1][-]{section.10}{Ap\352ndice}{}% 58
-\BOOKMARK [2][-]{subsection.10.1}{Algoritmo e estruturas de dados}{section.10}% 59
-\BOOKMARK [3][-]{subsubsection.10.1.1}{Fonte de dados}{subsection.10.1}% 60
-\BOOKMARK [3][-]{subsubsection.10.1.2}{Treinamento LDA}{subsection.10.1}% 61
-\BOOKMARK [3][-]{subsubsection.10.1.3}{C\341lculo de semelhan\347a}{subsection.10.1}% 62
-\BOOKMARK [3][-]{subsubsection.10.1.4}{Executor}{subsection.10.1}% 63
-\BOOKMARK [2][-]{subsection.10.2}{Tecnologias}{section.10}% 64
+\BOOKMARK [2][-]{subsection.9.2}{Ferramentas e tecnologias}{section.9}% 56
+\BOOKMARK [1][-]{section.10}{Ap\352ndice}{}% 57
+\BOOKMARK [2][-]{subsection.10.1}{C\363digo fonte}{section.10}% 58
+\BOOKMARK [2][-]{subsection.10.2}{Algoritmo e estruturas de dados}{section.10}% 59
+\BOOKMARK [3][-]{subsubsection.10.2.1}{Fonte de dados}{subsection.10.2}% 60
+\BOOKMARK [3][-]{subsubsection.10.2.2}{Treinamento LDA}{subsection.10.2}% 61
+\BOOKMARK [3][-]{subsubsection.10.2.3}{C\341lculo de semelhan\347a}{subsection.10.2}% 62
+\BOOKMARK [3][-]{subsubsection.10.2.4}{Executor}{subsection.10.2}% 63
+\BOOKMARK [2][-]{subsection.10.3}{Tecnologias}{section.10}% 64

@@ -1,11 +1,8 @@
-\BOOKMARK [1][-]{section.1}{Treinamento de modelo}{}% 1
-\BOOKMARK [2][-]{subsection.1.1}{LDA - Latent Dirichlet Allocation}{section.1}% 2
-\BOOKMARK [3][-]{subsubsection.1.1.1}{Hiperpar\342metros}{subsection.1.1}% 3
-\BOOKMARK [2][-]{subsection.1.2}{C\341lculo de coer\352ncia}{section.1}% 4
-\BOOKMARK [3][-]{subsubsection.1.2.1}{An\341lise de coer\352ncias}{subsection.1.2}% 5
-\BOOKMARK [3][-]{subsubsection.1.2.2}{C\363digo fonte}{subsection.1.2}% 6
-\BOOKMARK [2][-]{subsection.1.3}{Testes de an\341lise de t\363picos}{section.1}% 7
-\BOOKMARK [3][-]{subsubsection.1.3.1}{C\363digo fonte}{subsection.1.3}% 8
-\BOOKMARK [3][-]{subsubsection.1.3.2}{Execu\347\343o inicial ap\363s limpeza de textos b\341sica}{subsection.1.3}% 9
-\BOOKMARK [3][-]{subsubsection.1.3.3}{Execu\347\343o ap\363s remo\347\343o de palavras espec\355ficas}{subsection.1.3}% 10
-\BOOKMARK [3][-]{subsubsection.1.3.4}{Execu\347\343o ap\363s remo\347\343o de verbos}{subsection.1.3}% 11
+\BOOKMARK [1][-]{section.1}{Ap\352ndice}{}% 1
+\BOOKMARK [2][-]{subsection.1.1}{C\363digo fonte}{section.1}% 2
+\BOOKMARK [2][-]{subsection.1.2}{Algoritmo e estruturas de dados}{section.1}% 3
+\BOOKMARK [3][-]{subsubsection.1.2.1}{Fonte de dados}{subsection.1.2}% 4
+\BOOKMARK [3][-]{subsubsection.1.2.2}{Treinamento LDA}{subsection.1.2}% 5
+\BOOKMARK [3][-]{subsubsection.1.2.3}{C\341lculo de semelhan\347a}{subsection.1.2}% 6
+\BOOKMARK [3][-]{subsubsection.1.2.4}{Executor}{subsection.1.2}% 7
+\BOOKMARK [2][-]{subsection.1.3}{Tecnologias}{section.1}% 8
