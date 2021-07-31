@@ -4,7 +4,7 @@ Um dos parâmetros mais importantes para o algoritmo LDA é o número de tópico
 
 Sendo o LDA um algoritmo não supervisionado é muito difícil validar se o conjunto de tópicos selecionados para um determinado conjunto de documentos
 é útil e faz sentido. Não há uma lista de tópicos corretos previamente selecionados para comparar com os resultados obtidos. Uma forma de medir a 
-eficiência do número de tópicos escolhidos é a **coerência**, que é uma avaliação quantitativa da qualidade dos tópicos aprendidos para um determinado 
+eficiência do número de tópicos escolhidos é a \textbf{coerência}, que é uma avaliação quantitativa da qualidade dos tópicos aprendidos para um determinado 
 conjunto de documentos.
 
 Um conjunto de afirmações ou fatos é considerado coerente, se apoiarem um ao outro. Assim, um conjunto de fatos coerente pode ser interpretado 
@@ -46,23 +46,35 @@ de crescer e de certa forma e começa a oscilar para cima e para baixo sem grand
 
 Ordenando os valores das coerências nós obtemos as dez maiores e seus respectivos tópicos, conforme vemos abaixo ordenando começando pela maior.
 
+Esta lista da quantidade de tópicos com maior coerência foi muito importante porque dela eu tirei os números de tópicos que eu escolhi para 
+variar o parâmetro \textit{num\_topics} na execução do ajuste do modelo e comparação entre os documentos.
+
 \begin{center}
-\begin{tabular}{ |c|c| }
- \hline
- Número de tópicos & Coerência \\ [0.5ex]
- \hline\hline
- 57 & 0.4187279439804192 \\
- 45 & 0.4120513470103957 \\
- 72 & 0.4118140382511174 \\
- 67 & 0.4084148429857527 \\
- 39 & 0.4083294457749056 \\
- 22 & 0.4050952035903351 \\
- 66 & 0.4047401968259075 \\
- 101 & 0.4036451569534363 \\
- 69 & 0.4027847252786048 \\
- 26 & 0.4026587678111619 \\
- \hline
-\end{tabular}
+    \begin{tabular}{ |c|c| }
+        \hline
+        \textbf{Número de tópicos} & \textbf{Coerência} \\ [0.5ex]
+        \hline
+        57 & 0.4187279439804192 \\
+        \hline
+        45 & 0.4120513470103957 \\
+        \hline
+        72 & 0.4118140382511174 \\
+        \hline
+        67 & 0.4084148429857527 \\
+        \hline
+        39 & 0.4083294457749056 \\
+        \hline
+        22 & 0.4050952035903351 \\
+        \hline
+        66 & 0.4047401968259075 \\
+        \hline
+        101 & 0.4036451569534363 \\
+        \hline
+        69 & 0.4027847252786048 \\
+        \hline
+        26 & 0.4026587678111619 \\
+        \hline
+    \end{tabular}
 \end{center}
 
 Abaixo segue uma listagem com o código fonte usado para o cálculo das coerências para um conjunto de documentos e intervalo de números de tópicos.

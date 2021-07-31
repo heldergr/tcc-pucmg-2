@@ -1,19 +1,17 @@
 \section{Semelhança entre documentos para textos desconhecidos}
 
-Ao obter a distribuição de frequência de palavras em um novo texto o gensim apenas considera as palavras existentes no dicionário original que foram usadas para 
-treinar o modelo, descartando aquelas que não existiam. Estas últimas não serão consideradas na distribuição de tópicos. Isto é um problema na definição dos tópicos
-do novo texto mas importante para identificar semelhanças com os documentos originais.
-
-Uma forma de mitigar o problema acima é tentar fazer com que os dados de treinamento sejam o mais abrangente possível.
-
 \subsection{Cálculo de semelhança (Similarity query)}
 
-Com base na distribuição de tópicos em um novo texto nós podemos calcular a semalhança dele com outros documentos, por exemplo aqueles usados no treinamento
-do modelo. No caso deste trabalho será feita a comparação com os posts do blog Nerds Viajantes. Para o cálculo da semelhança nós usaremos uma métrica chamada
-\textbf{distância Jensen-Shannon} para encontrar os documentos que apresentam maior semalhança.
+Após o ajuste de um modelo usando LDA, uma das coisas que podemos fazer com base no resultado é obter a distribuição de tópicos para um documento.
+Isto na prática significa obter a lista de tópicos que o algoritmo encontrou para aquele texto. Esta lista contém duas informações: o identificador
+do tópico e o quanto o algoritmo entende que o tópico contribui para aquele documento, medido no valor de probabilidade que o tópico esteja 
+naquele documento.
 
-Esta métrica determina o quão próximos estatisticamente falando dois documentos estão próximos, comparando a divergência entre a distribuição de tópicos
-entre eles. Esta distância é simétrica, ou seja, a distância entre dois documentos A e B é a mesma de B e A, o que está de acordo com o propósito deste trabalho.
+Com base na distribuição de probabilidades de tópicos em dois documentos nós podemos calcular a semelhança entre eles. Para o cálculo da semelhança 
+nós usamos uma métrica chamada \textbf{distância Jensen-Shannon}, que determina o quão próximos estatisticamente falando dois documentos estão, 
+comparando a divergência entre a distribuição de tópicos entre eles. Quanto menor o valor da distância, maior a semelhança entre os dois documentos 
+de acordo com a distribuição de probabilidade. Esta distância é simétrica, ou seja, a distância entre dois documentos A e B é a mesma de B e A, o que está de acordo com o 
+propósito deste trabalho.
 
 Para distribuições discretas P e Q, a \textbf{divergência Jensen-Shannon}, JSD, é definida como:
 
@@ -23,8 +21,23 @@ onde \(M = 1/2(P + Q)\)
 
 A raiz quadrada da \textbf{divergência Jensen-Shannon} é a \textbf{distância Jensen-Shannon}: \(\sqrt{JSD(P||Q)}\)
 
-Quanto menor a \textbf{Jensen-Shannon distance} maior é a semelhança entre duas distrições, ou seja, maior a semelhança entre dois documentos.
+Quanto menor a \textbf{Jensen-Shannon distance} maior é a semelhança entre duas distribuições, ou seja, maior a semelhança entre dois documentos.
 
 Para encontrar os documentos mais semelhantes a um novo texto nós calculamos as probabilidades dos tópicos do novo texto e calculamos a 
 \textbf{distância Jensen-Shannon} deste para os textos aos quais queremos comparar (usando as probabilidades dos tópicos deles) e ordenamos pelas 
 menores distâncias para obter os mais semelhantes.
+
+\subsection{Dicionário de dados na comparação}
+
+Para obter a distribuição de tópicos de um documento é preciso ter a distribuição de frequência das palavras daquele documento. A distribuição
+de frequência de palavras em um documento é calculada utilizando, em conjunto, o dicionário usado como base para o treinamento e a lista de palavras 
+que compôem o documento.
+
+Ao obter a distribuição de frequência de palavras em um novo texto (que não estava no conjunto utilizado no treinamento), a implementação do 
+algoritmo LDA que escolhemos \textit{gensim} apenas considera as palavras existentes no dicionário original que foram usadas para treinar o modelo, 
+descartando aquelas que não existiam. Estas últimas não serão consideradas na distribuição de tópicos. Isto é um problema na definição dos tópicos 
+do novo texto mas importante para identificar semelhanças com os documentos originais.
+
+Uma forma de mitigar o problema acima é tentar fazer com que os dados de treinamento sejam o mais abrangente possível. No caso deste trabalho
+eu considerei que isso não seria um grande problema, já que o objetivo foi encontrar textos na base destino que fossem semelhantes aos textos da 
+base de origem.
