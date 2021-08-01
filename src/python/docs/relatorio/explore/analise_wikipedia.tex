@@ -42,13 +42,14 @@ Após a remoção dos verbos em língua portuguesa os 20 mais frequentes foram:
     [('áre', 3237), ('parqu', 2893), ('rio', 2765), ('brasil', 2543), ('grand', 2043), ('cidad', 1811), ('nacion', 1765), ('sul', 1762), ('popul', 1708), ('ano', 1565), ('argentin', 1507), ('outr', 1480), ('km2', 1467), ('águ', 1449), ('espéci', 1271), ('provínc', 1214), ('americ', 1144), ('tod', 1087), ('municípi', 1075), ('unid', 1039)]    
 \end{lstlisting}
 
-E por mas não menos importante fiz a análise estatística do tamanho dos documentos do conjunto de páginas e percebi que a quantidade de documentos
-considerados pequenos para LDA é grande. Como esta base é usada apenas para comparação e não para treinamento eu mantive os documentos pequenos.
+E por último mas não menos importante fiz a análise estatística do tamanho dos documentos do conjunto de páginas e percebi que a quantidade de documentos
+considerados pequenos para LDA é grande. Por este motivo eu resolvi executar treinamento e recomendação com dois cenários distintos, um envolvendo
+todas as páginas da Wikipedia e outro envolvendo um conjunto reduzido apenas com páginas com tamanho maior ou igual a 40 tokens.
 
 \begin{center}
     \begin{tabular}{|c|c|c|}
         \hline
-        Métrica & Tamanho Original & Tamanho sem Verbo \\
+        \textbf{Métrica} & \textbf{Tamanho Original} & \textbf{Tamanho sem Verbo} \\
         \hline
         count & 3016.000000 & 3016.000000 \\
         \hline
