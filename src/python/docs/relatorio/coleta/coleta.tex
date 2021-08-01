@@ -1,14 +1,15 @@
 \section{Coleta de Dados}
 
-Parte dedicada a documentação de coleta de dados para treinamento.
+A coleta de dados envolveu obter de suas origens e gravar localmente os dados das fontes. Como executei o treinamento várias vezes eu achei 
+melhor manter estes dados localmente.
 
 \subsection{Posts Nerds Viajantes}
 
-A coleta de dados dos posts do blog foi mais simples. O blog é publicado utilizando a ferramenta de gerenciamento de conteúdo Wordpress. Para manter 
-o conteúdo ele usa o banco de dados MySql. Como sou editor e proprietário do blog, eu fiz um dump do banco de dados através da ferramenta de 
+A coleta de dados dos posts do blog foi mais simples. O blog é publicado utilizando a ferramenta de gerenciamento de conteúdo \textit{Wordpress}. Para manter 
+o conteúdo ele usa o banco de dados \textit{MySql}. Como sou editor e proprietário do blog, eu fiz um dump do banco de dados através da ferramenta de 
 gerenciamento do serviço de hospedagem e carreguei localmente.
 
-Em meu computador pessoal eu executo o MySql através de container da ferramenta Docker. Usando uma imagem de MySql como base, eu criei uma imagem própria 
+Em meu computador pessoal eu executo o \textit{MySql} através de container da ferramenta \textit{Docker}. Usando uma imagem de \textit{MySql} como base, eu criei uma imagem própria 
 que já carrega o dump gerado com os posts do blog como parte da imagem. Sendo assim, ao criar e executar um container eu já tenho os dados pré-carregados.
 
 Os campos que utilizamos na tabela de posts são:
@@ -16,8 +17,7 @@ Os campos que utilizamos na tabela de posts são:
 \begin{center}
     \begin{tabular}{ |c|c| }
         \hline
-        Nome do campo & tipo do campo \\
-        \hline
+        \textbf{Nome do campo} & \textbf{tipo do campo} \\
         \hline
         ID & bigint unsigned \\
         \hline
@@ -49,7 +49,7 @@ de páginas que me interessa no trabalho é muito pequeno perto do universo comp
 
 Meu blog sempre foi mais um hobby que algo profissional. Não temos muito conteúdo como aqueles que vivem desse ramo profissionalmente e geograficamente 
 meus posts são limitados. A maioria de nossos posts vem dos seguintes países: Argentina, Chile, Estados Unidos, Nova Zelândia, Islândia, além do Brasil. 
-Decidi então procurar na Wikipedia conteúdo relacionado a estes países, mas não todos. E também não seria qualquer conteúdo, fiquei em textos 
+Decidi então procurar na Wikipedia conteúdo relacionado a estes países, mas não todos. E também não seria qualquer conteúdo, foquei em textos 
 de alguma forma relacionados a Geografia, assunto que eu gosto muito e que influencia o conteúdo do blog, que tem muito conteúdo de lugares 
 relacionados a contato com natureza.
 
@@ -106,7 +106,7 @@ Utilizando como controle os status mencionados anteriormente, eu segui o seguint
 \end{enumerate}
 
 Eu executei esta sequência de passos até ter uma quantidade de páginas boa o suficiente para identificar as semelhanças e ao final eu tinha 
-XXX páginas armazenadas localmente.
+3015 páginas armazenadas localmente.
 
 Exemplo de um documento contendo uma categoria:
 
