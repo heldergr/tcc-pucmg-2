@@ -1,5 +1,5 @@
 .vscode
-data
+local_data
 
 docker/nerdsviajantes_com.sql
 
